@@ -4,9 +4,9 @@ header:
     height: 200
     paddingX: 50
     paddingY: 0
-    align: center
+    align: top
     title:
-      - Input your title here.
+      - 303 See Other
     subtitle:
       - 活動の記録的な
     titleColor: 
@@ -18,7 +18,7 @@ header:
     spaceBetweenTitleSubtitle: 16
   
   - type: img
-    imageSrc: images/header/background.jpg
+    imageSrc: images/header/header.png
     imageSize: cover
     imageRepeat: no-repeat
     imagePosition: center
@@ -27,9 +27,9 @@ header:
     paddingY: 0
     align: center
     title:
-      -
+      - 303 See Other
     subtitle:
-      -
+      - 活動の記録的な
     titleColor:
     titleShadow: false
     titleFontSize: 44

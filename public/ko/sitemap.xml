@@ -3,25 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://takana-norimasa.github.io/blog/ko/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://takana-norimasa.github.io/blog/ja/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://takana-norimasa.github.io/blog/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/categories/"
-                />
-  </url>
-  
-  <url>
     <loc>https://takana-norimasa.github.io/blog/ko/</loc>
     <xhtml:link
                 rel="alternate"
@@ -37,6 +18,25 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://takana-norimasa.github.io/blog/ko/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://takana-norimasa.github.io/blog/ko/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://takana-norimasa.github.io/blog/ja/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://takana-norimasa.github.io/blog/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://takana-norimasa.github.io/blog/ko/categories/"
                 />
   </url>
   
