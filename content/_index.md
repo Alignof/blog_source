@@ -21,8 +21,8 @@ header:
     imageSrc: images/header/header.png
     imageSize: cover
     imageRepeat: no-repeat
-    imagePosition: center
-    height: 235
+    imagePosition: top
+    height: 250
     paddingX: 50
     paddingY: 0
     align: center
@@ -32,11 +32,11 @@ header:
       - 活動の記録的な
     titleColor:
     titleShadow: false
-    titleFontSize: 44
+    titleFontSize: 52
     subtitleColor:
     subtitleCursive: false
-    subtitleFontSize: 16
-    spaceBetweenTitleSubtitle: 20
+    subtitleFontSize: 20
+    spaceBetweenTitleSubtitle: 28
 
   - type: slide
     height: 235
