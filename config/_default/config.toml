@@ -1,9 +1,8 @@
-baseURL = "http://example.org"
-title = "Hugo Zzo Theme"
+baseURL = "https://takana-norimasa.github.io/blog"
+title = "example"
 theme = "zzo"
 
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+languageCode = "ja"
 hasCJKLanguage = true
 
 summaryLength = 70

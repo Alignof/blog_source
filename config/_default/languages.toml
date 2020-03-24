@@ -1,13 +1,7 @@
-[en]
-  title = "Hugo Zzo Theme"
-  languageName = "English"
+[ja]
+  title = "記録"
+  languageName = "Japanese"
   weight = 1
   languagedir = "ltr"
-  contentdir = "content/en"
+  contentdir = "content/"
 
-[ko]
-  title = "Hugo Zzo Theme"
-  languageName = "한국어"
-  weight = 2
-  languagedir = "ltr"
-  contentdir = "content/ko"
