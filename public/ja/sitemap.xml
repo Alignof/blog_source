@@ -11,11 +11,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="ja"
                 href="https://takana-norimasa.github.io/blog/ja/"
                 />
@@ -27,11 +22,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://takana-norimasa.github.io/blog/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -49,11 +39,6 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/series/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="ja"
                 href="https://takana-norimasa.github.io/blog/ja/series/"
                 />
@@ -65,11 +50,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://takana-norimasa.github.io/blog/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"

@@ -1,7 +1,7 @@
 [[main]]
   identifier = "about"
-  name = "About me"
-  url = "https://takana-norimasa.github.io/"
+  name = "About"
+  url = "about"
   weight = 1
 
 [[main]]

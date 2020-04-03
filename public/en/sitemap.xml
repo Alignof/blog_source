@@ -33,41 +33,6 @@
   </url>
   
   <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/</loc>
-    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/shortcode/</loc>
-    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/shortcodes/</loc>
-    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/</loc>
-    <lastmod>2020-01-25T06:40:51+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://takana-norimasa.github.io/blog/ja/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://takana-norimasa.github.io/blog/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://takana-norimasa.github.io/blog/showcase/hugo/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url>
@@ -84,11 +49,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://takana-norimasa.github.io/blog/ja/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -118,17 +78,17 @@
   </url>
   
   <url>
+    <loc>https://takana-norimasa.github.io/blog/posts/</loc>
+    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://takana-norimasa.github.io/blog/series/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
                 href="https://takana-norimasa.github.io/blog/ja/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/series/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -140,6 +100,21 @@
   <url>
     <loc>https://takana-norimasa.github.io/blog/categories/syntax/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://takana-norimasa.github.io/blog/tags/</loc>
+    <lastmod>2019-12-20T12:00:06+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://takana-norimasa.github.io/blog/ja/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://takana-norimasa.github.io/blog/tags/"
+                />
   </url>
   
   <url>
@@ -155,126 +130,6 @@
   <url>
     <loc>https://takana-norimasa.github.io/blog/series/themes-guide/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/privacy/</loc>
-    <lastmod>2019-12-19T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/rich-content/</loc>
-    <lastmod>2019-12-19T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/shortcodes/</loc>
-    <lastmod>2019-12-19T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/hugo/</loc>
-    <lastmod>2019-12-18T10:33:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/categories/hugo/</loc>
-    <lastmod>2019-12-18T10:33:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/syntax-highlight/</loc>
-    <lastmod>2019-12-18T10:33:41+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/math-typesetting/</loc>
-    <lastmod>2019-12-17T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/amoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/bamoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/emoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/emoji-support/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/gamoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/namoji/</loc>
-    <lastmod>2019-12-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/categories/diagram/</loc>
-    <lastmod>2019-11-18T21:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-viz/</loc>
-    <lastmod>2019-11-18T21:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-wavedrom/</loc>
-    <lastmod>2019-11-18T18:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-chartjs/</loc>
-    <lastmod>2019-11-18T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-js-sequence-diagrams/</loc>
-    <lastmod>2019-11-18T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/tags/diagram/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-mermaid/</loc>
-    <lastmod>2019-11-17T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/categories/math/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-mathjax/</loc>
-    <lastmod>2019-11-16T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-katex/</loc>
-    <lastmod>2019-11-15T12:00:06+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/posts/test-flowchart/</loc>
-    <lastmod>2019-11-14T12:00:06+09:00</lastmod>
   </url>
   
   <url>
@@ -329,11 +184,6 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://takana-norimasa.github.io/blog/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://takana-norimasa.github.io/blog/ko/"
                 />
     <xhtml:link
                 rel="alternate"

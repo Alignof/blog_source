@@ -14,31 +14,13 @@
     <managingEditor>neuromancer_wg@outlook.jp (Takana Norimasa)</managingEditor>
     <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 25 Jan 2020 06:40:51 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
         <atom:link href="https://takana-norimasa.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
-      
-      <item>
-        <title>shortcode</title>
-        <link>https://takana-norimasa.github.io/blog/tags/shortcode/</link>
-        <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/shortcode/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
       
       <item>
         <title>css</title>
@@ -101,168 +83,6 @@
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
         <guid>https://takana-norimasa.github.io/blog/tags/themes/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>privacy</title>
-        <link>https://takana-norimasa.github.io/blog/tags/privacy/</link>
-        <pubDate>Thu, 19 Dec 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/privacy/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>shortcodes</title>
-        <link>https://takana-norimasa.github.io/blog/tags/shortcodes/</link>
-        <pubDate>Thu, 19 Dec 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/shortcodes/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>hugo</title>
-        <link>https://takana-norimasa.github.io/blog/tags/hugo/</link>
-        <pubDate>Wed, 18 Dec 2019 10:33:41 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/hugo/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>amoji</title>
-        <link>https://takana-norimasa.github.io/blog/tags/amoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/amoji/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>bamoji</title>
-        <link>https://takana-norimasa.github.io/blog/tags/bamoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/bamoji/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>emoji</title>
-        <link>https://takana-norimasa.github.io/blog/tags/emoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/emoji/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>gamoji</title>
-        <link>https://takana-norimasa.github.io/blog/tags/gamoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/gamoji/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>namoji</title>
-        <link>https://takana-norimasa.github.io/blog/tags/namoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/namoji/</guid>
-        <description></description>
-        
-        <dc:creator>Takana Norimasa</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>diagram</title>
-        <link>https://takana-norimasa.github.io/blog/tags/diagram/</link>
-        <pubDate>Sun, 17 Nov 2019 12:00:06 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
-        
-        <guid>https://takana-norimasa.github.io/blog/tags/diagram/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
