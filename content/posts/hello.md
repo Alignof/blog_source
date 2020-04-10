@@ -6,6 +6,7 @@ hideToc: false
 enableToc: true
 enableTocContent: false
 author: Takana Norimasa
+authorEmoji: false
 draft: true
 
 tags:

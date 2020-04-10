@@ -1,9 +1,9 @@
 logoText = "303 See Other"
 logoType = "short" # long, short
-description = "The Zzo theme for Hugo example site."
-custom_css = ["css/custom.css"]
+description = "活動の記録的な"
+custom_css = []
 custom_js = []
-useFaviconGenerator = true # https://www.favicon-generator.org/
+useFaviconGenerator = false # https://www.favicon-generator.org/
 meta_image = ""
 themecolor = ""
 
@@ -30,6 +30,7 @@ enableSearch = true
 enableSearchHighlight = true
 enableGoToTop = true
 enableWhoami = true
+authorImage = "images/whoami/avator_mod.jpeg"
 summaryShape = "classic" # card, classic, compact
 searchResultPosition = "main" # side, main
 archiveGroupByDate = "2006" # "2006-01": group by month, "2006": group by year
@@ -185,6 +186,7 @@ commento = false
   username = ""
 [[share]]
   name = "twitter"
+  username = "@lIlIIllIIIlIlIl"
 
 [[footerLinks]]
   name = ""
