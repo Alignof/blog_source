@@ -23,12 +23,30 @@
 
       
       <item>
-        <title>Hugo</title>
-        <link>https://takana-norimasa.github.io/blog/showcase/hugo/</link>
+        <title>Seigenkousya</title>
+        <link>https://takana-norimasa.github.io/blog/showcase/seigenkousya/</link>
         <pubDate>Sun, 19 Jan 2020 21:04:11 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Sun, 19 Jan 2020 21:04:11 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/showcase/hugo/</guid>
+        <guid>https://takana-norimasa.github.io/blog/showcase/seigenkousya/</guid>
+        <description></description>
+        
+        <dc:creator>Takana Norimasa</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Takana-Norimasa</title>
+        <link>https://takana-norimasa.github.io/blog/showcase/takana-norimasa/</link>
+        <pubDate>Sun, 19 Jan 2020 21:04:11 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <atom:modified>Sun, 19 Jan 2020 21:04:11 +0900</atom:modified>
+        <guid>https://takana-norimasa.github.io/blog/showcase/takana-norimasa/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
