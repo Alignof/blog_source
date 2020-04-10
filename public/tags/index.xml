@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/tags/</link>
+    <link>https://takana-norimasa.github.io/tags/</link>
     <description>Recent content in Tags on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://takana-norimasa.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>css</title>
-        <link>https://takana-norimasa.github.io/blog/tags/css/</link>
+        <link>https://takana-norimasa.github.io/tags/css/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/tags/css/</guid>
+        <guid>https://takana-norimasa.github.io/tags/css/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>html</title>
-        <link>https://takana-norimasa.github.io/blog/tags/html/</link>
+        <link>https://takana-norimasa.github.io/tags/html/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/tags/html/</guid>
+        <guid>https://takana-norimasa.github.io/tags/html/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>markdown</title>
-        <link>https://takana-norimasa.github.io/blog/tags/markdown/</link>
+        <link>https://takana-norimasa.github.io/tags/markdown/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/tags/markdown/</guid>
+        <guid>https://takana-norimasa.github.io/tags/markdown/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -78,11 +78,11 @@
       
       <item>
         <title>themes</title>
-        <link>https://takana-norimasa.github.io/blog/tags/themes/</link>
+        <link>https://takana-norimasa.github.io/tags/themes/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/tags/themes/</guid>
+        <guid>https://takana-norimasa.github.io/tags/themes/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -96,11 +96,11 @@
       
       <item>
         <title>index</title>
-        <link>https://takana-norimasa.github.io/blog/tags/index/</link>
+        <link>https://takana-norimasa.github.io/tags/index/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/tags/index/</guid>
+        <guid>https://takana-norimasa.github.io/tags/index/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>

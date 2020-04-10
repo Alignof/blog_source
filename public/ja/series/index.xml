@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/ja/series/</link>
+    <link>https://takana-norimasa.github.io/ja/series/</link>
     <description>Recent content in Series on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
@@ -15,7 +15,7 @@
     <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/ja/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://takana-norimasa.github.io/ja/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     
