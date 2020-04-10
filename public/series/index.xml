@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/series/</link>
+    <link>https://takana-norimasa.github.io/blog/series/</link>
     <description>Recent content in Series on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://takana-norimasa.github.io/blog/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Themes Guide</title>
-        <link>https://takana-norimasa.github.io/series/themes-guide/</link>
+        <link>https://takana-norimasa.github.io/blog/series/themes-guide/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/series/themes-guide/</guid>
+        <guid>https://takana-norimasa.github.io/blog/series/themes-guide/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>

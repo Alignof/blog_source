@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/categories/</link>
+    <link>https://takana-norimasa.github.io/blog/categories/</link>
     <description>Recent content in Categories on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://takana-norimasa.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>syntax</title>
-        <link>https://takana-norimasa.github.io/categories/syntax/</link>
+        <link>https://takana-norimasa.github.io/blog/categories/syntax/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/categories/syntax/</guid>
+        <guid>https://takana-norimasa.github.io/blog/categories/syntax/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>themes</title>
-        <link>https://takana-norimasa.github.io/categories/themes/</link>
+        <link>https://takana-norimasa.github.io/blog/categories/themes/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/categories/themes/</guid>
+        <guid>https://takana-norimasa.github.io/blog/categories/themes/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>

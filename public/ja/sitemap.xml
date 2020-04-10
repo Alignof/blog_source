@@ -3,58 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://takana-norimasa.github.io/ja/</loc>
+    <loc>https://takana-norimasa.github.io/blog/ja/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://takana-norimasa.github.io/"
+                href="https://takana-norimasa.github.io/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://takana-norimasa.github.io/ja/"
+                href="https://takana-norimasa.github.io/blog/ja/"
                 />
   </url>
   
   <url>
-    <loc>https://takana-norimasa.github.io/ja/categories/</loc>
+    <loc>https://takana-norimasa.github.io/blog/ja/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://takana-norimasa.github.io/categories/"
+                href="https://takana-norimasa.github.io/blog/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://takana-norimasa.github.io/ja/categories/"
+                href="https://takana-norimasa.github.io/blog/ja/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://takana-norimasa.github.io/ja/series/</loc>
+    <loc>https://takana-norimasa.github.io/blog/ja/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://takana-norimasa.github.io/series/"
+                href="https://takana-norimasa.github.io/blog/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://takana-norimasa.github.io/ja/series/"
+                href="https://takana-norimasa.github.io/blog/ja/series/"
                 />
   </url>
   
   <url>
-    <loc>https://takana-norimasa.github.io/ja/tags/</loc>
+    <loc>https://takana-norimasa.github.io/blog/ja/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://takana-norimasa.github.io/tags/"
+                href="https://takana-norimasa.github.io/blog/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://takana-norimasa.github.io/ja/tags/"
+                href="https://takana-norimasa.github.io/blog/ja/tags/"
                 />
   </url>
   
