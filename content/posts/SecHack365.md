@@ -175,6 +175,10 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 着いてすぐに札幌ラーメンを食しました（当然の権利）
 {{<img src="/images/SecHack365/Sapporo.JPG">}}
 
+久しぶりに飛行機に乗ったのですが保安検査場で引っかかりました。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【悲報】保安検査WA</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1145217457918844928?ref_src=twsrc%5Etfw">June 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+実はこれ以後保安検査場は僕の因縁の相手になります。
+
 最初にさくらインターネット株式会社 のデータセンターを見学させていただきました。
 思っていた以上にセキュリティが厳しくてビックリしました。（場所も機密とのこと）
 普段はめったに見られないデータセンターを見学できただけでなくそこで働かれている方のお話も聞けてよかったです。
@@ -450,6 +454,10 @@ SecHackでは事務局の方がいろいろお菓子とかジュースとか用�
 本当に楽しくて夢のような三日感でした。
 終わった後本当に寂しかったです。
 
+#### vs.保安検査場
+
+
+
 ### 成果発表会（秋葉原回）
 さぁ成果発表会です！！！と言いたいところだったのですが2019年度の成果発表会は開催延期となってしまいました...
 > SecHack365 成果発表会 開催延期について
@@ -460,4 +468,15 @@ SecHackでは事務局の方がいろいろお菓子とかジュースとか用�
 残念ですが、中止ではなく延期なのでそれまでに準備して行きたいと思います。
 
 ## 1年間参加した感想
-1年間SecHack365に参加した感想は、
+さて1年間SecHack365に参加した感想ですが、なにより参加して良かったなと思いました。これが第一です。
+
+## 次年度の参加者に向けて
+
+
+あと、飛行機での移動が多くなるので保安検査に引っかかりそうなものは予め荷物から出しておきましょう。（3敗）
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">vs保安検査 （1勝3敗1分）<br><br>神奈川 : 引き分け（対戦なし）<br>北海道 : 負け（はさみ）<br>福岡 : 勝ち<br>宮城 : 負け（カッター,はさみ,ナイフ）【スペシャルゲスト:ポリスメン】<br>愛媛 : 負け（はさみ,千枚通し,半田ごて）<br>沖縄 : ？？？</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1222833650082803712?ref_src=twsrc%5Etfw">January 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+（沖縄では保安検査に打ち勝ちましたが行きの飛行機に乗り遅れたので多分敗北）
+
+
+
