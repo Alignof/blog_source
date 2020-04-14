@@ -309,6 +309,11 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 なるべく早く準備を始めるとか...（分かっていても難しいですが...）
 
 舞台は奥道後です。温泉ですよ温泉。
+{{<img src="/images/SecHack365/Dougo.jpg">}}
+ちなみに集合場所の最寄り駅までは路面電車で行きました。
+{{<img src="/images/SecHack365/train.jpg">}}
+路面電車って初めて乗ったかもしれない。風情があって素敵な電車でした。
+
 愛媛回のメインは前回同様のポスター発表とデモに加えて15分の発表もあります。
 両方あるので準備が大変でした...
 ちなみに今回のポスターはA0サイズです。こんなにでかいポスターは生まれて初めてです。
@@ -321,14 +326,65 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 ハードウェアは恐ろしいですね。
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これが会場の魔物です <a href="https://t.co/NHMGeQwGFf">https://t.co/NHMGeQwGFf</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201056164282322945?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
+そして当然のように現れるおいしいお食事。
+{{<img src="/images/SecHack365/Ehime.jpg">}}
+最高です。鯛めしが美味しかった（小並感）
+ここらへんから年の近い子と食べるようになりました（若い子っていいわね。[^5]）
+[^5]:そうわね。
+
 二日目の夜にはマツダの方のセキュリティに関するお話や噺家の方の講演がありました。
 毎回言えることですが様々な分野の方のお話を聞けて楽しいです。
 車も落語も好きなので楽しめました。
 
 原則、僕は夜はあんまり交流するよりも、意固地になって会場で居残って動かないプロトタイプを修理してるタイプでしたがこの日は確かみんなと遊んだ気がします（全体を通してその方が良かったかもしれない）
-まぁ、残って修理をしていてもそれはそれで居残り組で話したりワイワイしながらやることも（人がいれば）できるのでそれはそれで楽しいですが。
-確かセキュリティ大喜利とかをした思い出があります。僕は正真正銘のコミュ症ですがもうここまでくれば流石に多少は大丈夫です。
-やっぱり
+まぁ、残って修理をしていてもそれはそれで居残り組で話したり助け合いながら作業することも（人がいれば）できるのでそれはそれで楽しいものです。
+確かセキュリティ大喜利とかをした思い出があります。僕は全日本コミュ症選手権ベスト8の猛者ですがもうここまでくれば流石に多少は大丈夫です。
+やっぱり普段とはちがう人とワイワイできて楽しかったです。
+世代も分野も違う人なので多分SecHackが無ければ一生出会うことがなかった仲間でしょう。
+調子に乗って遅くまで起きていました。（すごいいい思い出）
+
+いろんな人と話して上機嫌で部屋に戻る途中でこんな場所に出ました。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">豆知識<br>3階の3301号室に向かう突き当たりの先はめちゃくちゃ怖い空間が広がっている<br>僕は怖すぎて引き返した</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200427559399251968?ref_src=twsrc%5Etfw">November 29, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{<img src="/images/SecHack365/horror.jpg">}}
+
+廊下から一段折れていて控室という意味不明な張り紙とその奥に見える白い扉。
+扉を開けると真っ暗やみでなんか外に繋がっているっぽい。
+プロのビビリストである僕は即座に怖くなって引き返しました。（写真がぶれているのはそのせいです。）
+
+ちなみに、翌日知ったのですが会場へのものすごい近道でした（知らずにすごい遠回りをしていた）
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">僕の中で話題のめちゃくちゃ怖い空間（通称:メコワ）ですが会場前のスロープを登るとそこに繋がっていることが分かりました<br>わざわざエレベーターまで行って一度登って降りていた僕の苦労は一体 <a href="https://t.co/7eTNaYizRY">https://t.co/7eTNaYizRY</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200827304047341569?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+美味しいものも思い出も講演も発表も満喫したので楽しかったです。
+SecHackでは事務局の方がいろいろお菓子とかジュースとか用意してくれるのですごいありがたいです。
+今回はありがたいことにみかんが用意されていました。（これがなかったら危うく愛媛でみかんを喰わずに帰ることだった...）
+本当にいたれりつくせりでこんなものも用意されていました。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">うどんキャラメル残り1個なのでトレーニーの方オススメですよ<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200610835770425345?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ちなみに帰りの空港で再会しました。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">お、お前は... <a href="https://t.co/kpxYjcZqb3">pic.twitter.com/kpxYjcZqb3</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201038017491636224?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+空港で美味しそうなスイーツを買ったりトレーニーさんとお話したりもはや僕に抜かりはありません。
+<blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://t.co/4WLHfpYegD">pic.twitter.com/4WLHfpYegD</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201051149404495872?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+圧倒的成長。
+
+
+### 沖縄回
+最終決戦の地は沖縄です。
+ちなみに僕は初沖縄です！（プチ情報）
+
+初っ端電車が遅れて飛行機に間に合わなくなる大ガバムーブをカマします。
+かなりの焦りを見せまして慌てて電車の中で航空会社に電話をかけていました。（このままの予定だとフライト-2分前くらいに着く（アカン））
+結局電車が遅れたことを伝えたら快く次の便に振り替えてくださって普通に間に合いました。
+危なかった...
+皆さんは気をつけましょう。
+
+さて沖縄回のメインは最終発表です。
+この一年間自分がやってきたことについて発表します。
+ちなみに、この発表は優秀修了生の審査も兼ねています。表現力・技術力・アイデアの3つの観点から評価しこれらの総合点で6件の優秀修了生を選出するそうです。
+僕はというと作ったデバイスで身を固めて発表しました。これが一番イメージが伝わるかなぁと。
+発表中は自分の言いたい放題できるので発表していて楽しかったです。
+
+他の人の発表も全員分聞けたので楽しかったです。
+
 
 
 
