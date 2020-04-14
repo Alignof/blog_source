@@ -280,8 +280,55 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 展示では色々な人に見ていただきたくさん意見を貰いました。
 僕より詳しい人がいっぱいいるのでありがたかったです。
 晩ごはんはもちろん素敵です（この頃から写真を撮ることを覚え始めている（えらい））
+{{<img src="/images/SecHack365/dinner.jpg">}}
+
+夜にはくぼたつ道場。
+珍しくトレーナー達が（無茶振りで）お手本を見せることに。（頂上決戦かな？）
+いろいろなトレーナーのやりたいことが聞けておもしろかったです。（珍しくトレーナーの慌てた姿も見られました。）
+僕もやってみたのですが、相手に質問をせずにどんどん自分のやりたいことを言っていくのは思索駆動的には新鮮でした。
+
+宮城回の舞台は松島だったのですが、窓からの景色が綺麗ですごい良かったです。
+{{<img src="/images/SecHack365/matsushima2.jpg">}}
+解散後には暇があったので松島周辺を観光しました。
+{{<img src="/images/SecHack365/matsushima1.jpg">}}
+すごく綺麗でいいところです。
+実際に島に上陸して中まで楽しめてよかったです。
+帰りは[@tomio2480](https://twitter.com/tomio2480)氏と牛タンを食べ圧倒的勝利を納めました。
+<blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://t.co/nu97UOIRgW">pic.twitter.com/nu97UOIRgW</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1180798766128848896?ref_src=twsrc%5Etfw">October 6, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+松島、絶景が拝めて美味しいものも食べられて最高でした。（若干の旅行気分）
+実はこの翌週にプロコンが待ち受けていて地獄を見ることになるのですが。
 
 
+### 愛媛回
+11月29日（金）〜12月1日（日）
+初四国です。（多分）
+そして定期テスト初日と一日目が被りました（絶望）
+どうにか追試をやっていただけるとのことで不参加という事態は避けられましたが、テスト勉強と資料づくりとプロトタイプ制作の3つを並行して行うという地獄を味わいました。
+もはやこれはどうしようもないことですが、事前に学校の予定とSecHackの予定を照らし合わせて事前に覚悟をする必要はあると思います。
+なるべく早く準備を始めるとか...（分かっていても難しいですが...）
+
+舞台は奥道後です。温泉ですよ温泉。
+愛媛回のメインは前回同様のポスター発表とデモに加えて15分の発表もあります。
+両方あるので準備が大変でした...
+ちなみに今回のポスターはA0サイズです。こんなにでかいポスターは生まれて初めてです。
+一日目がポスター発表+デモで二日目が発表って感じです。
+そして今回も会場の魔物に襲われます。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今回もオフライン回の魔物に進捗をやられた<br>家では動いてたんですよ本当に...</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200993934542917632?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+なんて恐ろしい...
+ここまで来ると動かないときの準備もしてます。（用意周到（そういう問題じゃない））
+ハードウェアは恐ろしいですね。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これが会場の魔物です <a href="https://t.co/NHMGeQwGFf">https://t.co/NHMGeQwGFf</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201056164282322945?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+二日目の夜にはマツダの方のセキュリティに関するお話や噺家の方の講演がありました。
+毎回言えることですが様々な分野の方のお話を聞けて楽しいです。
+車も落語も好きなので楽しめました。
+
+原則、僕は夜はあんまり交流するよりも、意固地になって会場で居残って動かないプロトタイプを修理してるタイプでしたがこの日は確かみんなと遊んだ気がします（全体を通してその方が良かったかもしれない）
+まぁ、残って修理をしていてもそれはそれで居残り組で話したりワイワイしながらやることも（人がいれば）できるのでそれはそれで楽しいですが。
+確かセキュリティ大喜利とかをした思い出があります。僕は正真正銘のコミュ症ですがもうここまでくれば流石に多少は大丈夫です。
+やっぱり
 
 
 
