@@ -303,7 +303,7 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 ### 愛媛回
 11月29日（金）〜12月1日（日）
 初四国です。（多分）
-そして定期テスト初日と一日目が被りました（絶望）
+そして定期テスト最終日と一日目が被りました（絶望）
 どうにか追試をやっていただけるとのことで不参加という事態は避けられましたが、テスト勉強と資料づくりとプロトタイプ制作の3つを並行して行うという地獄を味わいました。
 もはやこれはどうしようもないことですが、事前に学校の予定とSecHackの予定を照らし合わせて事前に覚悟をする必要はあると思います。
 なるべく早く準備を始めるとか...（分かっていても難しいですが...）
@@ -368,8 +368,13 @@ SecHackでは事務局の方がいろいろお菓子とかジュースとか用�
 
 
 ### 沖縄回
-最終決戦の地は沖縄です。
-ちなみに僕は初沖縄です！（プチ情報）
+1月31日（金）〜2月2日（日）
+最終決戦の地は沖縄です。（写真はホテルからの眺め）
+{{<img src="/images/SecHack365/okinawa1.jpg">}}
+ちなみに僕は初沖縄です！（要らぬプチ情報）
+そして...**また定期試験と被りました（全ギレ**
+しかも今度は初日です。（絶望）
+テスト勉強と資料づくりとプロトタイプ制作の3つを並行して行うという地獄を味わいました。（二敗目）
 
 初っ端電車が遅れて飛行機に間に合わなくなる大ガバムーブをカマします。
 かなりの焦りを見せまして慌てて電車の中で航空会社に電話をかけていました。（このままの予定だとフライト-2分前くらいに着く（アカン））
@@ -377,15 +382,82 @@ SecHackでは事務局の方がいろいろお菓子とかジュースとか用�
 危なかった...
 皆さんは気をつけましょう。
 
+会場についてまず嬉しかったのは一年間所望し続けていたマウンテンデューが置いてあったことです。（事務局さんありがとう！！）
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">遂に最終回にして僕の願いが届きました<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a> <a href="https://t.co/xSpdH9Wyp8">https://t.co/xSpdH9Wyp8</a> <a href="https://t.co/6J7APQy54O">pic.twitter.com/6J7APQy54O</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223128465102139393?ref_src=twsrc%5Etfw">January 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+みんなを見て久しぶりだなぁと思ったと共に何故か一昨日あたりも会わなかった...？って感じになりました。
+近いようで遠いようで近い存在。SecHackのトレーニーは不思議な関係だと思います。
+
 さて沖縄回のメインは最終発表です。
 この一年間自分がやってきたことについて発表します。
 ちなみに、この発表は優秀修了生の審査も兼ねています。表現力・技術力・アイデアの3つの観点から評価しこれらの総合点で6件の優秀修了生を選出するそうです。
-僕はというと作ったデバイスで身を固めて発表しました。これが一番イメージが伝わるかなぁと。
+最終発表はかなりの長期戦で一日目と二日目をフルで使います。
+僕は二日目だったので一日目の夜は遅くまでスライドを書いたりしてました。（既に終わっている子と話したり楽しかったです）
+
+当日の発表ですが、僕はというと作ったデバイスで身を固めて発表しました。これが一番イメージが伝わるかなぁと。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">えっ怖...<br>皆さん気を付けてください <a href="https://t.co/FH5LRnHyaM">https://t.co/FH5LRnHyaM</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223506809035509763?ref_src=twsrc%5Etfw">February 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 発表中は自分の言いたい放題できるので発表していて楽しかったです。
+ちなみにこんな発言をしたら、
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これで開催レポートのサムネは俺のものだ<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223510026486050816?ref_src=twsrc%5Etfw">February 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-他の人の発表も全員分聞けたので楽しかったです。
+本当に[沖縄回のレポート](https://sechack365.nict.go.jp/report/2019/report06.html)のサムネになりました。
 
+最終発表は福岡回と同様に他の人の発表も全員分聞けます。（全員分やるので2日に分けてやります）
+すごい発表ばかりで度肝を抜かれました。あんなにすごい発表を一度に聞けるなんて本当に貴重な機会だったと思います。
+成果発表会では優秀修了生の発表しか聞けないので全員分の壇上での発表を聞けるのはトレーニーの特権ですね。
+事前に何度も発表練習を聞いている同じ思索駆動の仲間の発表でも壇上だと全然違ったりして新鮮でした。（みんな本当にすごかった）
 
+全員の発表が終わるとみんなお疲れ様ムードに。
+温泉に浸かったりLTをやったり色々楽しめました。
+年が近いやつら組でアニメの上映会もやりました。（こういうのがやりたかったのです！僕は）
+全員（というか約二名）恋アスの圧倒的 **_Power_** に敗北していて面白かったです。[^6]
+こういう機会はなかなか無かったのですっごい楽しかったです。（小学生以下の感想）
+あと、僕と同じ雑誌を購読している子がいて地味にびっくりしました。
+[^6]:なんでお前他人事なの？
 
+三日目は優秀修了生の発表だったのですが、どうしても決まらなかったらしく数日後におあずけに。
+できれば直接優秀修了生におめでとうを言いたかったところですが、まさか決まらないほど審査が難航するとは...
+それほど接戦だったのでしょうか...？
+なので急遽竹迫さんのLTに。全部聞きたかったのですが昨日色々うろうろしているうちにリュックサックを紛失したので仕方なくそれを探す旅に。
+結局トレーナー控室に預けられていて無事見つかりました。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ありました<br>お騒がせしました <a href="https://t.co/tH9qo6CHgB">https://t.co/tH9qo6CHgB</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223766649574051841?ref_src=twsrc%5Etfw">February 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
+コースワークでは区切りの挨拶。
+いつもの通り半円になって一人ずつ挨拶をしました。
+みんなの前に経つと何故か安心感があってこの一年間で実際には六度ほどしか会ってないのにすごくなつかしい顔ぶれに見えて不思議な気分になりました。
+あぁこれで終わりなのかな...となんだか寂しくなりました。
 
+その後は北海道回でもデータセンターにお邪魔したさくらインターネットの田中社長の公演がありました。
+スライドもお話も面白くてためになりました。（聞いててすっかり引き込まれた）
+みんな終わった後、田中社長やトレーナーにサインを頂いてました。
+
+最後は全員で沖縄の聖地[斎場御嶽](https://okinawa-nanjo.jp/sefa/)に。
+途中で海の前で集合写真を撮ったのですがすごい綺麗でした。
+{{<img src="/images/SecHack365/okinawa2.jpg">}}
+{{<img src="/images/SecHack365/okinawa3.jpg">}}
+
+こんなにきれいな海を見たのは初めてかも知れません。
+道中にシーサーが置かれていたり自販機がローカル感満載だったりして沖縄に来たんだなぁと思いました。（ずっと会場にいたので尚更）
+{{<img src="/images/SecHack365/caesar.jpg">}}
+
+見学の後もマンゴーアイスを食べたりサトウキビジュースを飲んだり短いながらも沖縄を満喫しました。
+空港に着いてからもA&Wに行ったり楽しめました。（そういう意味でも一年で成長した気がする）
+
+帰りは飛行機がまさかの遅延して帰りが0時をすぎるというハプニングもありましたが無事家にたどり着きました。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">帰宅<br>今日のことは一生忘れないと思う<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223986831395454981?ref_src=twsrc%5Etfw">February 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+本当に楽しくて夢のような三日感でした。
+終わった後本当に寂しかったです。
+
+### 成果発表会（秋葉原回）
+さぁ成果発表会です！！！と言いたいところだったのですが2019年度の成果発表会は開催延期となってしまいました...
+> SecHack365 成果発表会 開催延期について
+3月6日（金）に開催予定でしたSecHack365成果発表会は、新型コロナウイルスの感染拡大防止の観点から開催を延期することを決定いたしました。開催時期につきましては改めて本Webサイトでご案内いたします。また、当日公開予定でした作品等につきましてはWebサイトで公開する予定です。
+ご参加を予定されていた方には大変申し訳ありませんが、何卒ご理解をいただきますようお願い申し上げます。
+[https://sechack365.nict.go.jp/presentation.html](https://sechack365.nict.go.jp/presentation.html)
+
+残念ですが、中止ではなく延期なのでそれまでに準備して行きたいと思います。
+
+## 1年間参加した感想
+1年間SecHack365に参加した感想は、
