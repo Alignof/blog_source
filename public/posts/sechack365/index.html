@@ -1,0 +1,3582 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head prefix="og: http://ogp.me/ns#">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SecHack365 &#39;19 参加録 – 303 See Other</title>
+    
+
+
+<script src="/blog/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
+
+<script defer src="/blog/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
+
+<script defer src="/blog/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
+
+<script defer src="/blog/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+
+<script defer src="/blog/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+
+<script defer src="/blog/js/helper/closest.min.js"></script>
+  
+<script>
+  "use strict";
+
+  
+  
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  
+  if (!String.prototype.includes) {
+    String.prototype.includes = function (search, start) {
+      'use strict';
+
+      if (search instanceof RegExp) {
+        throw TypeError('first argument must not be a RegExp');
+      }
+      if (start === undefined) { start = 0; }
+      return this.indexOf(search, start) !== -1;
+    };
+  }
+
+  
+  Document.prototype.append = Element.prototype.append = function append() {
+    this.appendChild(_mutation(arguments));
+  };
+  function _mutation(nodes) {
+    if (!nodes.length) {
+      throw new Error('DOM Exception 8');
+    } else if (nodes.length === 1) {
+      return typeof nodes[0] === 'string' ? document.createTextNode(nodes[0]) : nodes[0];
+    } else {
+      var
+      fragment = document.createDocumentFragment(),
+      length = nodes.length,
+      index = -1,
+      node;
+
+      while (++index < length) {
+        node = nodes[index];
+
+        fragment.appendChild(typeof node === 'string' ? document.createTextNode(node) : node);
+      }
+
+      return fragment;
+    }
+  }
+
+  
+  if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    };
+  }
+  
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    var navCollapseBtn = document.querySelector('.navbar__burger');
+    navCollapseBtn ? navCollapseBtn.addEventListener('click', function (e) {
+      var navCollapse = document.querySelector('.navbarm__collapse');
+
+      if (navCollapse) {
+        var dataOpen = navCollapse.getAttribute('data-open');
+
+        if (dataOpen === 'true') {
+          navCollapse.setAttribute('data-open', 'false');
+          navCollapse.style.maxHeight = 0;
+          navCollapseBtn.classList.remove('is-active');
+        } else {
+          navCollapse.setAttribute('data-open', 'true');
+          navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
+          navCollapseBtn.classList.add('is-active');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var summaryContainer = document.querySelector('.summary__container');
+    var searchResult = document.querySelector('.search-result');
+    var searchResultCloseBtn = document.querySelector('.search-result__close');
+    searchResultCloseBtn ? searchResultCloseBtn.addEventListener('click', function (e) {
+      searchResult.setAttribute('data-display', 'none');
+      summaryContainer.setAttribute('data-display', 'block');
+    }) : null;
+    
+
+
+    
+    document.querySelectorAll('.tab') ? 
+    document.querySelectorAll('.tab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var tabLinks = elem.querySelectorAll('.tab__link');
+      var tabContents = elem.querySelectorAll('.tab__content');
+      var ids = [];
+
+      tabLinks && tabLinks.length > 0 ?
+      tabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                tabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              tabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    
+
+
+    
+    document.querySelectorAll('.codetab') ? 
+    document.querySelectorAll('.codetab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var codetabLinks = elem.querySelectorAll('.codetab__link');
+      var codetabContents = elem.querySelectorAll('.codetab__content');
+      var ids = [];
+
+      codetabLinks && codetabLinks.length > 0 ?
+      codetabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                codetabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              codetabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    
+
+
+    
+    var gttBtn = document.getElementById("gtt");
+    gttBtn.style.display = "none";
+    gttBtn.addEventListener('click', function () {
+      if (window.document.documentMode) {
+        document.documentElement.scrollTop = 0;
+      } else {
+        scrollToTop(250);
+      }
+    });
+
+    function scrollToTop(scrollDuration) {
+      var scrollStep = -window.scrollY / (scrollDuration / 15);
+      var scrollInterval = setInterval(function () {
+        if (window.scrollY != 0) {
+          window.scrollBy(0, scrollStep);
+        }
+        else clearInterval(scrollInterval);
+      }, 15);
+    }
+
+    var scrollFunction = function () {
+      if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        gttBtn.style.display = "block";
+      } else {
+        gttBtn.style.display = "none";
+      }
+    }
+    
+
+
+    
+    var expandBtn = document.querySelectorAll('.expand__button');
+
+    for (let i = 0; i < expandBtn.length; i++) {
+      expandBtn[i].addEventListener("click", function () {
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          this.querySelector('svg').classList.add('expand-icon__right');
+          this.querySelector('svg').classList.remove('expand-icon__down');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          this.querySelector('svg').classList.remove('expand-icon__right');
+          this.querySelector('svg').classList.add('expand-icon__down');
+        }
+      });
+    }
+    
+
+
+    
+    var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var tocElem = document.querySelector('.toc');
+    var tableOfContentsElem = tocElem ? tocElem.querySelector('#TableOfContents') : null;
+    var toggleTocElem = document.getElementById('toggle-toc');
+    var singleContentsElem = document.querySelector('.single__contents');
+    var navbar = document.querySelector('.navbar');
+    var tocFlexbox = document.querySelector('.toc__flexbox');
+    var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
+    var expandContents = document.querySelectorAll('.expand__content');
+    var boxContents = document.querySelectorAll('.box');
+    var notAllowedTitleIds = null;
+
+    
+    var tocFolding = JSON.parse("true");
+    
+    var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
+    
+    if (tocLevels) {
+      tocLevels = tocLevels.toString();
+    } else {
+      tocLevels = "h1, h2, h3, h4, h5, h6";
+    }
+
+    
+    singleContentsElem && singleContentsElem.querySelectorAll(".tab") ?
+    singleContentsElem.querySelectorAll(".tab").forEach(function (elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
+    
+    expandContents ? expandContents.forEach(function(elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
+    
+    boxContents ? boxContents.forEach(function(elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
+    
+    window.onscroll = function () {
+      scrollFunction();
+      
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) { 
+        if (st < 250) {
+          gttBtn.style.display = "none";
+        } else {
+          gttBtn.style.display = "block";
+        }
+
+        if (st < 45) {
+          return null;
+        }
+        
+        if (!navbar.classList.contains('navbar--hide')) {
+          navbar.classList.add('navbar--hide');
+        } else if (navbar.classList.contains('navbar--show')) {
+          navbar.classList.remove('navbar--show');
+        }
+
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
+              }
+
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+              
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox) {
+              tocFlexbox.setAttribute('data-position', '');
+              if (!tocFlexbox.classList.contains('hide')) {
+                tocFlexbox.classList.add('hide');
+              }
+            }
+            if (tocFlexboxOuter) {
+              tocFlexboxOuter.setAttribute('data-position', '');
+              if (!tocFlexboxOuter.classList.contains('hide')) {
+                tocFlexboxOuter.classList.add('hide');
+              }
+            }
+          }
+        }
+      } else { 
+        if (st < 250) {
+          gttBtn.style.display = "none";
+        }
+
+        if (navbar.classList.contains('navbar--hide')) {
+          navbar.classList.remove('navbar--hide');
+        } else if (!navbar.classList.contains('navbar--show')) {
+          navbar.classList.add('navbar--show');
+        }
+
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
+              }
+              
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox && !tocFlexbox.classList.contains('hide')) {
+              tocFlexbox.classList.add('hide');
+            }
+            if (tocFlexboxOuter && !tocFlexboxOuter.classList.contains('hide')) {
+              tocFlexboxOuter.classList.add('hide');
+            }
+          }
+          
+        }
+
+        if (tableOfContentsElem && document.documentElement.scrollTop < 250) {
+          if (false === tocFolding) {
+
+          } else {
+            tableOfContentsElem.querySelector('ul') ?
+              tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              }) : null;
+          }
+        }
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    };
+  
+
+
+  
+    var localTheme = localStorage.getItem('theme');
+    var rootEleme = document.getElementById('root');
+    var selectThemeElem = document.querySelectorAll('.select-theme');
+    var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+
+    var setMetaColor = function(themeColor) {
+      var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
+      var metaThemeColor = document.getElementsByName('theme-color')[0];
+      var metaMsapplicationNavbuttonColor = document.getElementsByName('msapplication-navbutton-color')[0];
+      var metaAppleMobileWebAappStatusBarStyle = document.getElementsByName('apple-mobile-web-app-status-bar-style')[0];
+
+      if (themeColor.includes('dark')) {
+        metaMsapplicationTileColor.setAttribute('content', '#fcfcfa');
+        metaThemeColor.setAttribute('content', '#403E41');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#403E41');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#403E41');
+      } else if (themeColor.includes('light')) {
+        metaMsapplicationTileColor.setAttribute('content', '#555');
+        metaThemeColor.setAttribute('content', '#eee');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee');
+      } else if (themeColor.includes('hacker')) {
+        metaMsapplicationTileColor.setAttribute('content', '#e3cd26');
+        metaThemeColor.setAttribute('content', '#252526');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#252526');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#252526');
+      } else if (themeColor.includes('solarized')) {
+        metaMsapplicationTileColor.setAttribute('content', '#d3af86');
+        metaThemeColor.setAttribute('content', '#51412c');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#51412c');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#51412c');
+      } else if (themeColor.includes('kimbie')) {
+        metaMsapplicationTileColor.setAttribute('content', '#586e75');
+        metaThemeColor.setAttribute('content', '#eee8d5');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
+      } 
+    }
+    
+    if (localTheme) {
+      selectThemeItemElem ? 
+      selectThemeItemElem.forEach(function (elem) {
+        if (elem.text.trim() === localTheme) {
+          elem.classList.add('is-active');
+        } else {
+          elem.classList.remove('is-active');
+        }
+      }) : null;
+
+      setMetaColor(localTheme);
+    } else {
+      setMetaColor(rootEleme.className);
+    }
+
+    selectThemeItemElem ? 
+    selectThemeItemElem.forEach(function (v, i) {
+      v.addEventListener('click', function (e) {
+        var selectedThemeVariant = e.target.text.trim();
+        localStorage.setItem('theme', selectedThemeVariant);
+        setMetaColor(selectedThemeVariant);
+
+        rootEleme.removeAttribute('class');
+        rootEleme.classList.add('theme__' + selectedThemeVariant);
+        selectThemeElem.forEach(function(rootElem) {
+          rootElem.querySelectorAll('a').forEach(function (elem) {
+            if (elem.classList) {
+              if (elem.text.trim() === selectedThemeVariant) {
+                if (!elem.classList.contains('is-active')) {
+                  elem.classList.add('is-active');
+                }
+              } else {
+                if (elem.classList.contains('is-active')) {
+                  elem.classList.remove('is-active');
+                }
+              }
+            }
+          });
+        });
+
+        if (window.mermaid) {
+          if (selectedThemeVariant === "dark" || selectedThemeVariant === "hacker") {
+            mermaid.initialize({ theme: 'dark' });
+            location.reload();
+          } else {
+            mermaid.initialize({ theme: 'default' });
+            location.reload();
+          }
+        }
+
+        var utterances = document.querySelector('iframe');
+        if (utterances) {
+          utterances.contentWindow.postMessage({
+            type: 'set-theme',
+            theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
+          }, 'https://utteranc.es');
+        }
+      });
+    }) : null;
+  
+
+
+  
+    
+    var permalink = JSON.parse("\"https://takana-norimasa.github.io/blog/posts/sechack365/\"");
+    var searchResults = null;
+    var searchMenu = null;
+    var searchText = null;
+    
+    
+    var enableSearchHighlight = JSON.parse("true");
+    
+    var searchResultPosition = JSON.parse("\"main\"");
+    
+    var sectionType = JSON.parse("\"posts\"");
+
+    var fuse = null;
+
+    (function initFuse() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', permalink + "index.json");
+      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+            includeMatches: enableSearchHighlight,
+            shouldSort: true,
+            threshold: 0.4,
+            location: 0,
+            distance: 100,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
+          });
+          window.fuse = fuse;
+        }
+        else {
+          console.error('[' + xhr.status + ']Error:', xhr.statusText);
+        }
+      };
+      xhr.send();
+    })();
+
+    function makeLi(ulElem, obj) {
+      var li = document.createElement('li');
+      li.className = 'search-result__item';
+      
+      var a = document.createElement('a');
+      a.innerHTML = obj.title;
+      a.setAttribute('class', 'search-result__item--title');
+      a.setAttribute('href', obj.permalink);
+
+      var descDiv = document.createElement('div');
+      descDiv.setAttribute('class', 'search-result__item--desc');
+      if (obj.description) {
+        descDiv.innerHTML = obj.description;
+      } else if (obj.content) {
+        descDiv.innerHTML = obj.content.substring(0, 225);
+      }
+      
+      li.appendChild(a);
+      li.appendChild(descDiv);
+      ulElem.appendChild(li);
+    }
+
+    function makeHighlightLi(ulElem, obj) {
+      var li = document.createElement('li');
+      li.className = 'search-result__item';
+      var descDiv = null;
+
+      var a = document.createElement('a');
+      a.innerHTML = obj.item.title;
+      a.setAttribute('class', 'search-result__item--title');
+      a.setAttribute('href', obj.item.uri);
+
+      if (obj.matches && obj.matches.length) {
+        for (var i = 0; i < obj.matches.length; i++) {
+          if ('title' === obj.matches[i].key) {
+            a = document.createElement('a');
+            a.innerHTML = generateHighlightedText(obj.matches[i].value, obj.matches[i].indices);
+            a.setAttribute('class', 'search-result__item--title');
+            a.setAttribute('href', obj.item.uri);
+          }
+          
+          if ('description' === obj.matches[i].key) {
+            descDiv = document.createElement('div');
+            descDiv.setAttribute('class', 'search-result__item--desc');
+            descDiv.innerHTML = generateHighlightedText(obj.item.description, obj.matches[i].indices);
+          } else if ('content' === obj.matches[i].key) {
+            if (!descDiv) {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = generateHighlightedText(obj.item.content.substring(0, 150), obj.matches[i].indices);
+            }
+          } else {
+            if (obj.item.description) {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = obj.item.description;
+            } else {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = obj.item.content.substring(0, 150);
+            }
+          }
+        }
+
+        li.appendChild(a);
+        if (descDiv) {
+          li.appendChild(descDiv);
+        }
+        if (li) {
+          ulElem.appendChild(li);
+        }
+      }
+    }
+
+    function renderSearchResultsSide(searchText, results) {
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+      
+      var ul = document.createElement('ul');
+      ul.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length) {
+        results.forEach(function (result) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.setAttribute('href', result.uri);
+          a.setAttribute('class', 'dropdown-item');
+          a.appendChild(li);
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.title;
+          titleDiv.setAttribute('class', 'menu-item__title');
+
+          var descDiv = document.createElement('div');
+          descDiv.setAttribute('class', 'menu-item__desc');
+          if (result.description) {
+            descDiv.innerHTML = result.description;
+          } else if (result.content) {
+            descDiv.innerHTML = result.content.substring(0, 150);
+          }
+
+          li.appendChild(titleDiv);
+          li.appendChild(descDiv);
+          ul.appendChild(a);
+        });
+      } else {
+        var li = document.createElement('li');
+        li.setAttribute('class', 'dropdown-item');
+        li.innerText = 'No results found';
+        ul.appendChild(li);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      
+      searchMenu.appendChild(ul);
+    }
+
+    function renderSearchHighlightResultsSide(searchText, results) {
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+
+      var ul = document.createElement('ul');
+      ul.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length) {
+        results.forEach(function (result) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          var descDiv = null;
+
+          a.setAttribute('href', result.item.uri);
+          a.setAttribute('class', 'dropdown-item');
+          a.appendChild(li);
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.item.title;
+          titleDiv.setAttribute('class', 'menu-item__title');
+          
+          if (result.matches && result.matches.length) {
+            for (var i = 0; i < result.matches.length; i++) {
+              if ('title' === result.matches[i].key) {
+                titleDiv.innerHTML = generateHighlightedText(result.matches[i].value, result.matches[i].indices);
+              }
+
+              if ('description' === result.matches[i].key) {
+                descDiv = document.createElement('div');
+                descDiv.setAttribute('class', 'menu-item__desc');
+                descDiv.innerHTML = generateHighlightedText(result.item.description, result.matches[i].indices);
+              } else if ('content' === result.matches[i].key) {
+                if (!descDiv) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = generateHighlightedText(result.item.content.substring(0, 150), result.matches[i].indices);
+                }
+              } else {
+                if (result.item.description) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = result.item.description;
+                } else {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = result.item.content.substring(0, 150);
+                }
+              }
+            }
+            
+            li.appendChild(titleDiv);
+            if (descDiv) {
+              li.appendChild(descDiv);
+            }
+            ul.appendChild(a);
+          }
+        });
+      } else {
+        var li = document.createElement('li');
+        li.setAttribute('class', 'dropdown-item');
+        li.innerText = 'No results found';
+        ul.appendChild(li);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      searchMenu.appendChild(ul);
+    }
+
+    function renderSearchResultsMobile(searchText, results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'mobile-search__content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.uri);
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + result.title + '</div><div class="mobile-search__item--desc">' + (result.description ? result.description : result.content) + '</div></div>';
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        content.appendChild(item);
+      }
+
+      let wrap = document.getElementById('search-mobile-results');
+      while (wrap.firstChild) {
+        wrap.removeChild(wrap.firstChild)
+      }
+      searchResults.appendChild(content);      
+    }
+
+    function renderSearchHighlightResultsMobile(searchText, results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var ul = document.createElement('div');
+      ul.setAttribute('class', 'mobile-search__content');
+
+      if (results.length) {
+        results.forEach(function (result) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          var descDiv = null;
+
+          a.setAttribute('href', result.item.uri);
+          a.appendChild(li);
+          li.setAttribute('class', 'mobile-search__item');
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.item.title;
+          titleDiv.setAttribute('class', 'mobile-search__item--title');
+          
+          if (result.matches && result.matches.length) {
+            for (var i = 0; i < result.matches.length; i++) {
+              if ('title' === result.matches[i].key) {
+                titleDiv.innerHTML = generateHighlightedText(result.matches[i].value, result.matches[i].indices);
+              }
+
+              if ('description' === result.matches[i].key) {
+                descDiv = document.createElement('div');
+                descDiv.setAttribute('class', 'mobile-search__item--desc');
+                descDiv.innerHTML = generateHighlightedText(result.item.description, result.matches[i].indices);
+              } else if ('content' === result.matches[i].key) {
+                if (!descDiv) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = generateHighlightedText(result.item.content.substring(0, 150), result.matches[i].indices);
+                }
+              } else {
+                if (result.item.description) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.description;
+                } else {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.content.substring(0, 150);
+                }
+              }
+            }
+            
+            li.appendChild(titleDiv);
+            if (descDiv) {
+              li.appendChild(descDiv);
+            }
+            ul.appendChild(a);
+          }
+        });
+      } else {
+        var item = document.createElement('span');
+        ul.appendChild(item);
+      }
+
+      let wrap = document.getElementById('search-mobile-results');
+      while (wrap.firstChild) {
+        wrap.removeChild(wrap.firstChild)
+      }
+      searchResults.appendChild(ul);
+    }
+
+    function generateHighlightedText(text, regions) {
+      if (!regions) {
+        return text;
+      }
+
+      var content = '', nextUnhighlightedRegionStartingIndex = 0;
+
+      regions.forEach(function(region) {
+        if (region[0] === region[1]) {
+          return null;
+        }
+        
+        content += '' +
+          text.substring(nextUnhighlightedRegionStartingIndex, region[0]) +
+          '<span class="search__highlight">' +
+            text.substring(region[0], region[1] + 1) +
+          '</span>' +
+        '';
+        nextUnhighlightedRegionStartingIndex = region[1] + 1;
+      });
+
+      content += text.substring(nextUnhighlightedRegionStartingIndex);
+
+      return content;
+    };
+
+    var searchElem = document.getElementById('search');
+    var searchMobile = document.getElementById('search-mobile');
+    var searchResultsContainer = document.getElementById('search-results');
+
+    searchElem ?
+    searchElem.addEventListener('input', function(e) {
+      if (!e.target.value | window.innerWidth < 770) {
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+      
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
+      } else {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+        
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function(item) {
+          item.addEventListener('mousedown', function(e) {
+            e.target.click();
+          });
+        }) : null;
+      }
+    }) : null;
+
+    searchElem ? 
+    searchElem.addEventListener('blur', function() {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+      searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+    }) : null;
+
+    searchElem ? 
+    searchElem.addEventListener('click', function(e) {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+      if (!e.target.value) {
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
+      } else{
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function (item) {
+          item.addEventListener('mousedown', function (e) {
+            e.target.click();
+          });
+        }) : null;
+      }
+    }) : null;
+
+    var searchMenuElem = document.getElementById("search-menu");
+    var activeItem = document.querySelector('#search-menu .dropdown-item.is-active');
+    var activeIndex = null;
+    var items = null;
+    var searchContainerMaxHeight = 350;
+
+    searchElem ? 
+    searchElem.addEventListener('keydown', function(e) {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+
+      if (e.key === 'Escape') {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      }
+
+      var items = document.querySelectorAll('#search-menu .dropdown-item');
+      var keyCode = e.which || e.keyCode;
+
+      if (!items || !items.length) {
+        return null;
+      }
+      
+      if (e.key === 'ArrowDown' || keyCode === 40) {
+        if (activeIndex === null) {
+          activeIndex = 0;
+          items[activeIndex].classList.remove('is-active');
+        } else {
+          items[activeIndex].classList.remove('is-active');
+          activeIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        }
+        items[activeIndex].classList.add('is-active');
+
+        let overflowedPixel = items[activeIndex].offsetTop + items[activeIndex].clientHeight - searchContainerMaxHeight;
+        if (overflowedPixel > 0) {
+          document.querySelector(".search-content").scrollTop += items[activeIndex].getBoundingClientRect().height;
+        } else if (activeIndex === 0) {
+          document.querySelector(".search-content").scrollTop = 0;
+        }
+      } else if (e.key === 'ArrowUp' || keyCode === 38) {
+        if (activeIndex === null) {
+          activeIndex = items.length - 1;
+          items[activeIndex].classList.remove('is-active');
+        } else {
+          items[activeIndex].classList.remove('is-active');
+          activeIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        }
+        items[activeIndex].classList.add('is-active');
+        
+        let overflowedPixel = items[activeIndex].offsetTop + items[activeIndex].clientHeight - searchContainerMaxHeight;
+        if (overflowedPixel < 0) {
+          document.querySelector(".search-content").scrollTop -= items[activeIndex].getBoundingClientRect().height;
+        } else {
+          document.querySelector(".search-content").scrollTop = overflowedPixel + items[activeIndex].getBoundingClientRect().height;
+        }
+      } else if (e.key === 'Enter' || keyCode === 13) {
+        if (items[activeIndex] && items[activeIndex].getAttribute('href')) {
+          location.href = items[activeIndex].getAttribute('href');
+        }
+      } else if (e.key === 'Escape' || keyCode === 27) {
+        e.target.value = null;
+        if (searchResults) {
+          searchResults.classList.remove('is-active');
+        }
+      }
+    }) : null;
+
+    searchMobile ? 
+    searchMobile.addEventListener('input', function(e) {
+      if (!e.target.value) {
+        let wrap = document.getElementById('search-mobile-results');
+        while (wrap.firstChild) {
+          wrap.removeChild(wrap.firstChild);
+        }
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+      renderSearchResultsMobile(searchText, results);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResultsMobile(searchText, results);
+      } else {
+        renderSearchResultsMobile(searchText, results);
+      }
+    }) : null;
+  
+
+
+  
+    var mobileSearchInputElem = document.querySelector('#search-mobile');
+    var mobileSearchClassElem = document.querySelector('.mobile-search');
+    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
+    var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
+    var mobileSearchContainer = document.querySelector('#search-mobile-container');
+    var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
+    var htmlElem = document.querySelector('html');
+
+    if (mobileSearchClassElem) {
+      mobileSearchClassElem.style.display = 'none';
+    }
+
+    mobileSearchBtnElem ? 
+    mobileSearchBtnElem.addEventListener('click', function () {
+      if (mobileSearchContainer) {
+        mobileSearchContainer.style.display = 'block';
+      }
+
+      if (mobileSearchInputElem) {
+        mobileSearchInputElem.focus();
+      }
+
+      if (htmlElem) {
+        htmlElem.style.overflowY = 'hidden';
+      }
+    }) : null;
+
+    mobileSearchCloseBtnElem ? 
+    mobileSearchCloseBtnElem.addEventListener('click', function() {
+      if (mobileSearchContainer) {
+        mobileSearchContainer.style.display = 'none';
+      }
+
+      if (mobileSearchInputElem) {
+        mobileSearchInputElem.value = '';
+      }
+      
+      if (mobileSearchResultsElem) {
+        while (mobileSearchResultsElem.firstChild) {
+          mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+        }
+      }
+
+      if (htmlElem) {
+        htmlElem.style.overflowY = 'visible';
+      }
+    }) : null;
+
+    mobileSearchInputElem ?
+    mobileSearchInputElem.addEventListener('keydown', function(e) {
+      var keyCode = e.which || e.keyCode;
+      if (e.key === 'Escape' || keyCode === 27) {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'none';
+        }
+        
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.value = '';
+        }
+
+        if (mobileSearchResultsElem) {
+          while (mobileSearchResultsElem.firstChild) {
+            mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+          }
+        }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'visible';
+        }
+      }
+    }) : null;
+  
+
+
+  
+    function renderSearchResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+      
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
+
+    function renderSearchHighlightResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeHighlightLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
+  
+  });
+</script>    
+    
+
+
+<link rel="stylesheet" href="/blog/css/main.min.css">
+
+
+    
+<meta name="description" content="SecHack365 &#39;19の参加録" />
+
+
+<meta name="keywords" content="参加録,SecHack365">
+
+<meta name="created" content="2020-04-10T15:55:05&#43;0900">
+<meta name="modified" content="2020-04-10T15:55:05&#43;0900">
+<meta property="article:published_time" content="2020-04-10T15:55:05&#43;0900">
+
+<meta name="author" content="Takana Norimasa">
+<meta property="article:author" content="https://takana-norimasa.github.io/blog/posts/sechack365/@Takana Norimasa">
+
+
+<meta property="og:site_name" content="303 See Other">
+<meta property="og:title" content="SecHack365 &#39;19 参加録">
+<meta property="og:url" content="https://takana-norimasa.github.io/blog/posts/sechack365/">
+<meta property="og:type" content="article">
+<meta property="og:description" content="SecHack365 &#39;19の参加録">
+
+<meta name="generator" content="Hugo 0.67.0" />
+<meta name="msapplication-TileColor" content="#fff">
+
+<meta name="theme-color" content="#fff">
+
+<meta name="msapplication-navbutton-color" content="#fff">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+<link rel="canonical" href="https://takana-norimasa.github.io/blog/posts/sechack365/">
+
+<link rel="manifest" href="/blog/manifest.json">
+
+  
+  <link rel="shortcut icon" href="/blog/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/blog/favicon.png" sizes="any" type="image/png" />
+  
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "SecHack365 '19 参加録",
+    "datePublished": "2020-04-10T15:55:05+09:00",
+    "dateModified": "2020-04-10T15:55:05+09:00",
+    "url" : "https://takana-norimasa.github.io/blog/posts/sechack365/",
+    "description": "SecHack365 '19の参加録",
+    "keywords": ["参加録","SecHack365"],
+    "author": {
+      "@type": "Person",
+      "name": "Takana Norimasa"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://takana-norimasa.github.io/blog/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "303 See Other",
+      "url": "https://takana-norimasa.github.io/blog/"
+    }
+  }
+</script>
+
+    
+  
+  
+
+
+
+
+
+
+
+    
+
+	
+	<link rel="shortcut icon" href="/blog/favicon/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="/blog/favicon/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/blog/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/blog/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/blog/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/blog/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/blog/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/blog/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/blog/favicon/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/blog/favicon/apple-touch-icon-180x180.png" />
+</head>
+
+<body id="root" class="theme__mytheme">
+    <script>
+        var localTheme = localStorage.getItem('theme');
+        if (localTheme) {
+            document.getElementById('root').className = 'theme__' + localTheme;
+        }
+    </script>
+    <div id="container">
+        
+
+
+
+
+
+        <div class="wrapper" data-type="posts" data-kind="page">
+            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
+  <div class="navbar__brand">
+    
+    <a href="/blog/" title="Home" rel="home" class="navbar__logo-link">
+      <img src="/blog/logo.png" alt="Home" class="navbar__logo">
+    </a>
+    
+    
+      <a href="/blog/" title="Home" rel="home" class="navbar__title-link">
+        <h6 class="navbar__title">303 See Other</h6>
+      </a>
+    
+  </div>
+
+  
+<div class="theme theme-mobile" data-ani="true">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="" data-ani="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
+      
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          mytheme
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          dark
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          light
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
+        </a>
+        
+      
+    </div>
+  </div>
+</div>
+
+
+<div id="mobileSearchBtn" class="mobile-search__btn" data-ani="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+</div>
+
+<div id="search-mobile-container" class="mobile-search hide" data-dir="ltr">
+  <div class="mobile-search__top">
+    <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="Search" class="mobile-search__top--input"/>
+    <div id="search-mobile-close" class="mobile-search__top--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
+  </div>
+  <div id="search-mobile-results" class="mobile-search__body">
+    
+  </div>
+</div>
+
+
+<a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false"
+  data-ani="true">
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>
+<div class="navbarm__collapse" data-open="false">
+  <ul dir="ltr">
+    
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="https://takana-norimasa.github.io/">About me</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/blog/archive">Archive</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/blog/posts">Posts</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/blog/showcase">Showcase</a>
+        </li>
+      
+      
+    
+
+    
+      <li class="navbarm__menu--item ">
+        <a href="/blog/tags" class="navbarm__menu--term" data-index="0">
+          Tags
+        </a>
+      </li>
+    
+      <li class="navbarm__menu--item ">
+        <a href="/blog/categories" class="navbarm__menu--term" data-index="1">
+          Categories
+        </a>
+      </li>
+    
+      <li class="navbarm__menu--item ">
+        <a href="/blog/series" class="navbarm__menu--term" data-index="2">
+          Series
+        </a>
+      </li>
+    
+  </ul>
+</div>
+  <div class="navbar__menu">
+  
+<div class="theme" data-ani="true">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" data-ani="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
+      
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          mytheme
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          dark
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          light
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
+        </a>
+        
+      
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  
+  
+  
+  
+  <a href="https://takana-norimasa.github.io/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">About me</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/blog/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Archive</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/blog/posts" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">Posts</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/blog/showcase" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">Showcase</a>
+  
+  
+</div>
+</nav>
+            
+            
+
+<main class="single__main main-main">
+  
+    <nav class="breadcrumb hide" aria-label="breadcrumbs">
+  <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
+  <ol>
+    
+  
+  
+  
+  
+  
+  <li >
+    
+      <a href="https://takana-norimasa.github.io/blog/" class="capitalize">303 See Other</a>
+    
+  </li>
+  
+  
+  <li >
+    
+      <a href="https://takana-norimasa.github.io/blog/posts/" class="capitalize">Posts</a>
+    
+  </li>
+  
+  
+  <li  class="is-active" >
+    
+      <span>SecHack365 &#39;19 参加録</span>
+    
+  </li>
+  
+  </ol>
+  
+</nav>
+  
+  
+  <div class="single ">
+    <div class="single__nojs">This page looks best with JavaScript enabled</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
+    <h2 class="single__title" data-ani="true">SecHack365 &#39;19 参加録</h2>
+    <div class="single__meta">
+      
+<div class="single__infos">
+  <time class="single__info" title="Written At">📅&nbsp;Apr 10, 2020 </time>
+  
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;32&nbsp;min read </span>
+  
+  &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Takana Norimasa</span>
+  
+  <span class="single__info">
+    
+  </span>
+</div>
+      
+<ul class="single__tags caption">
+  
+  🏷️
+  
+
+  <li><a href="https://takana-norimasa.github.io/blog/tags/sechack365/" class="single__tag" title="SecHack365">#SecHack365</a></li>
+
+  <li><a href="https://takana-norimasa.github.io/blog/tags/%E5%8F%82%E5%8A%A0%E9%8C%B2/" class="single__tag" title="参加録">#参加録</a></li>
+
+</ul>
+    </div>
+    <article class="single__contents" data-dir="ltr" data-ani="true">
+      
+      <p>2019年5月の頭、部屋で500円で買ったジャンクモニタを汗だくになりながら分解してたら電話がかかってきた。<br />
+今では聞き馴染みのあるあの人の声だった。<br />
+「SecHack365事務局の&hellip;」<br />
+最初は平静を装っていたが最後は相槌を打つ声が震えていたと思う。<br />
+まさか、応募2年目にして選考を通るなんて&hellip; 嬉しさ半分驚き半分で電話を切った。<br />
+この日から僕の長いようで短い（ようで長い）1年間が始まったのである。<br />
+（良さげなプロローグ終わり）</p>
+<h2 id="はじめに">はじめに</h2>
+<p>2019年度SecHack365を修了したので参加録を書こうと思います。（そのためにこのサイトを構築した）<br />
+昨年応募する際に去年の修了生の方の記事が大いに参考になったので自分の経験も役に立ったらと思ったのと、ただ単に思い出に浸りたかったので書いていきます。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/DSC_0706.JPG"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+</p>
+<h2 id="自己紹介">自己紹介</h2>
+<p>SecHack365 ’19の思索駆動コースの修了生です。<br />
+テーマは「セキュアな入出力装置の開発」。<br />
+参加時は高専3年生でした。<br />
+Twitter: <a href="https://twitter.com/lIlIIllIIIlIlIl">@lIlIIllIIIlIlIl</a></p>
+<p>高専志望時からセキュリティ分野に興味があったので1年の頃からCTFとか講習会とかインターンシップとかトレンドマイクロのガーディアンプロジェクトとかセキュリティに関係がありそうなものにはかたっぱしから応募してました。<br />
+おかげでとりあえず薄く広くセキュリティ分野について学んでいました。<br />
+とはいえ、特別何かできることがあるわけでもなくそろそろ何を専門にするのか決めなくちゃなぁと考えていました。（これは今でも考えています）<br />
+SecHack365のことは2年のときには既に知っていたので2018年度にも応募してた（はず（記憶が曖昧<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>））<br />
+ショルダーハッキングに関することをやってみたいなとぼんやり思っていたのでそれで応募することに決めました。<br />
+後述するとおり2019年度は5つの中から応募時にコースを選択する必要がありました。<br />
+最初はショルダーハッキングの攻撃部分の研究をやろうかなと考えていたので研究駆動コースに応募しようかなと考えていたのですが、攻撃部分だけ研究してもなぁ&hellip;と思ったので防ぐ側のこともやってみたくなり、様々な面からショルダーハッキングの問題を考えたかったので思索駆動コースに応募することを決めました。<br />
+思索駆動の選考課題はかなりシンプルだったように思えます。（どれくらい言っていいのか分からない）</p>
+<h2 id="sechack365とは">SecHack365とは</h2>
+<p>一年間を振り返る前に<a href="https://sechack365.nict.go.jp/document/">SecHack365</a>について紹介したいと思います。<br />
+SecHack365とは国立研究開発法人情報通信研究機構（NICT）が主催するセキュリティに関する長期ハッカソンです。<br />
+5月から翌年3月までの約1年間サイバーセキュリティに関する研究や開発、発表を行います。<br />
+<a href="https://sechack365.nict.go.jp/document/">公式サイト</a>には以下のようにあります。</p>
+<blockquote>
+<p>若手セキュリティイノベーター育成プログラム SecHack365は、25 歳以下の学生や社会人から公募選抜する 40 名程度の受講者を対象に、サイバーセキュリティに関するソフトウェア開発や研究、実験、発表を一年間継続してモノづくりをする機会を提供する長期ハッカソンです。全国の一流研究者・技術者や受講者等との交流をするなかで、自ら手を動かし、セキュリティに関わるモノづくりができる人材 (セキュリティイノベーター) を育てます。</p>
+</blockquote>
+<blockquote>
+<p>我が国のサイバーセキュリティ産業は、世界のセキュリティソフトウェア市場における存在感が決して大きくないなど、欧米等海外に比べ遅れています。サイバー攻撃が多様化・悪質化する現在において、私たちが自らの手で自らの社会の安全を守っていくためには、既存のセキュリティソフトウェア等をユーザーとして「利用」するだけでなく、新たなソフトウェア等を自ら「研究・開発」していくことができる人材を育成していく必要があります。このような我が国におけるセキュリティイノベーター育成の必要性から、国立研究開発法人情報通信研究機構ナショナルサイバートレーニングセンターでは、未来のサイバーセキュリティ研究者・起業家の創出に向けて、若手の方を対象に、セキュリティ関連技術の研究・開発を一年間をかけて本格的に指導するプログラム SecHack365 を平成 29 年度から開講しています。</p>
+</blockquote>
+<p>他のイベントと明確に異なる点は1年間という長い開催期間と、お宿が素敵だということです。<br />
+僕は1年間なんて長い期間1つのものを開発したことがなかったのでこれだけでも貴重な経験になりました。<br />
+数ヶ月に1度、集合回なるものが存在してそこで全員のトレーニーが集合して企業見学とかコースごとに活動をしたり成果を見せ合ったりします。<br />
+これがまた色んな人とお話ができたり素敵なお宿に泊まったり大きな声では言えませんが凄まじく楽しいです。（大声）<br />
+トレーナートレーニー含めて色んなすごい人を間近で見ることができるのもSecHack365の大きな魅力だと思います。<br />
+本当にこんなすごい人実在するのか&hellip;と驚嘆できます。（技術面だけじゃなくて人間的な部分まで知れてさらに友達になれるのはすごいと思う）<br />
+そして、そんな素敵なイベントへの参加費用を学生に限り全額NICTが負担してくれます！やさしい！（小学生以下の感想）</p>
+<h3 id="コースについて">コースについて</h3>
+<p>2019年度のSecHack365にはコースが5つありました。（これは多分毎年違います。最初の年度はコース自体がありませんでしたし、’18年度は3コースでした）<br />
+5つのコースは以下の通りです。</p>
+<blockquote>
+<ul>
+<li>表現駆動コース<br />
+・アイデアをかたちにする、その過程で価値を最大化するなどサービスを磨きあげるコース。<br />
+・グループでのハッカソン実施によるサービスづくりを進める</li>
+<li>学習駆動コース<br />
+・興味ある技術や作りたいものに対して、付加的な学習をしながら開発を進めるコース<br />
+・付加学習により他技術や他分野を知ることで、作るもののアイディアの幅を広げる</li>
+<li>開発駆動コース<br />
+・まずは実装を作り上げることに重きをおく、開発指導に特化したコース<br />
+・開発テーマや分野が定まっている受講生を受け入れて開発を進めるための指導を実施する</li>
+<li>思索駆動コース<br />
+・思索を通じて問題を深掘りし、その解決を行うコース<br />
+・日常に遍在する違和感に立ち向かう人材を育成する</li>
+<li>研究駆動コース<br />
+・研究的プロセスに基づいたアイデア、仮説立案と検証評価を重視したコース<br />
+・研究者的なスキルを磨いて、将来の研究者になり得る人材を育成する</li>
+</ul>
+</blockquote>
+<p>応募するときは過去の修了生の記事を見ておおまかに雰囲気を掴んでおくと良いかもしれません（実際難しいけど）<br />
+今思うと僕のテーマって思索駆動にぴったりだったんだな&hellip;</p>
+<h2 id="1年間の振り返り">1年間の振り返り</h2>
+<p>ということで1年間の活動を振り返っていきたいと思います。<br />
+といっても頭を洗ったことを忘れて2回シャンプーをするような男なので記憶力には期待しないでください。<br />
+神奈川回を機にTwitterを始めていて本当に良かった&hellip;</p>
+<h3 id="合否通知から神奈川回まで">合否通知から神奈川回まで</h3>
+<p>合格通知を頂いてからは事務手続きをしたり事前アンケートに答えてたりしました。<br />
+僕らのコースでは自己紹介スライドを作成するのが最初の課題でした。<br />
+ログを見返したらこのときから僕のスピーカーノート芸は存在してたらしいです。（超懐かしい）</p>
+<h3 id="神奈川回">神奈川回</h3>
+<p>5月17日（金）〜5月19日（日）<br />
+出発の地は神奈川です。<br />
+わりかし家から近めなのでのんびり出た記憶。<br />
+悠長に家系ラーメン総本山の吉村家に行ってます。（SecHackラーメン3連戦の初戦「横浜ラーメン」）<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/Yokohama.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+</p>
+<p>おいしかったです。ちなみにそれ以外に写真は撮ってませんでした。なんで（殺意）<br />
+駅を降りると既にそれらしい人が数人スーツケースを引いてました。<br />
+会場の前に誰かに話しかけてもらったのを覚えてます。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>1日目はオリエンテーションとトレーナーを囲む会といってトレーナーさんの話を聞けるコーナーがありました。<br />
+SecHackの特徴としてトレーナー陣が豪華だなと個人的には思います。<br />
+様々な分野の方がいて聞いていて面白かったです。<br />
+2日目はアイデアソンを行いました。<br />
+今思えば全体でこういうことをするのは最初で最後でしたね&hellip;<br />
+ランダムに振り分けられたチームでアイデア出しから発表までやりました。今もう一度やったら違った雰囲気になるんだろうなぁ&hellip;<br />
+それからコースワークの時間もありました。<br />
+用意したスライドを使って自己紹介です。スライドを頑張って用意して良かった！( ⁎˃ᴗ˂⁎)<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<p>3日目の朝になると集合回ももう終盤です。<br />
+たしかコースワークをした覚えがあります。<br />
+このコースワークでは今後の思索駆動コースで重要な役割を果たすアレをやったのですが、やったことを1から10まで書いてもしゃーないのであえて書きません。（もう既にネタバレ気味になっているこの記事）<br />
+それから今まで渋っていたTwitterもこの機会にはじめました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">早速一つマンダラートを埋めてやりたいと思います。<br>対戦よろしくお願いします。<a href="https://twitter.com/hashtag/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E3%83%84%E3%82%A4%E3%83%BC%E3%83%88?src=hash&amp;ref_src=twsrc%5Etfw">#はじめてのツイート</a><a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1129742120779177988?ref_src=twsrc%5Etfw">May 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>SecHackは長期間のハッカソンなので習慣化の取り組みがあります。始めたのはその一環であるマンダラートがきっかけですね。<br />
+マンダラートの取り組みについては<a href="https://sechack365.nict.go.jp/report/2019/report01.html">公式の開催レポート</a>にも書かれていたと思います。<br />
+なんともあっという間な3日間でした。</p>
+<p>この3日間でも衝撃を受けることばかりでした。<br />
+特に思索駆動コースでの誰かと対話して思索を深めていくという経験はしたことがなかったので新鮮でした。<br />
+こんなにも新しい視点とか考えが生まれるものなのかとびっくりしました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">他人と意見を出し合っていく中で自分の意見が核心に近づいて行く感覚は感動ものだし多分SecHackに行かなければ自分は一生味わっていなかったかもしれない(何故か毎回討論中は気が付かないで後から気が付くけど)</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1130846574492315654?ref_src=twsrc%5Etfw">May 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>当時の自分も興奮気味。</p>
+<p>逆に反省点はあんまり誰かとお話できなかったかなと思いました。（今思えばなおさら）<br />
+持ち前の圧倒的コミュ症が遺憾なく発揮されていました。<br />
+それでも夕食で誰かと一緒に話すのは楽しいですが。（集合回が終わるごとにお話してくれた方ありがとうございましたみたいなツイートをしていた気がする）</p>
+<p>そんな感じで最初の神奈川回が終わりました。<br />
+感想として楽しかったってめっちゃ言っていた記憶。</p>
+<h4 id="習慣化はじまる">習慣化はじまる</h4>
+<p>ことの発端はこのツイート。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">一週間分の思索とかいろいろ一つのスライドにまとめて毎週出したいな</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1131214255884099584?ref_src=twsrc%5Etfw">May 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>せっかく念願叶ってSecHackに参加してるんだからなにかモチベーションを保てることをしたいなぁ（自分がダメ人間なのは自分がよく分かってる）と思ってこんなことを考えてました。<br />
+ちょうど神奈川回で習慣化の話を聞いた後だったのでやってみようと思ったのです。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/typetalk_ss.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+以後、この一週間ごとのスライドが僕のSecHackの活動の基準となっていきます&hellip;</p>
+<h3 id="interop-tokyo--shownet">Interop Tokyo &amp; ShowNet</h3>
+<p>SecHack365の枠で<a href="https://www.interop.jp/2019/">Interop Tokyo</a> のShowNetに招待していただきました。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/Interop.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+交通費は自費ですが、会場はなんと幕張メッセ。<br />
+チーバくんの口元からおへそあたりを毎日往復してる僕にしてみれば庭みたいなものです。<br />
+平日開催でしたが、運良く定期テストの終わりと被っており普通に行けました。（ラッキー）<br />
+最先端の大規模ネットワーク構築のお話と実際の運用を見られてかなり勉強になりました。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/shownet.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+会場で運用されている機器も大迫力です。<br />
+Interopは企業向けイベントなので学生はShownet以外はチョロっと覗くくらいが丁度いいと思います。（向こうは企業の人間だと思って話しかけてくるのでお互い気まずいかも(一敗)）<br />
+かなり勉強になったし行ってみて良かったです。</p>
+<h3 id="北海道回">北海道回</h3>
+<p>6月28日（金）〜6月30日（日）<br />
+英検の2次試験と被りました（一敗）<br />
+事前に申請すれば別日程にできる可能性もあるのでみんなはそこらへんのスケジュール管理はしっかりしよう！（教訓）<br />
+第二回は北海道回です。僕は初北海道です。（不要な情報）<br />
+<del>SecHackラーメン3連戦の2戦目の地でもあります。</del><br />
+着いてすぐに札幌ラーメンを食しました（当然の権利）<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/Sapporo.JPG"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+</p>
+<p>久しぶりに飛行機に乗ったのですが保安検査場で引っかかりました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【悲報】保安検査WA</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1145217457918844928?ref_src=twsrc%5Etfw">June 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>実はこれ以後保安検査場は僕の因縁の相手になります。</p>
+<p>最初にさくらインターネット株式会社のデータセンターを見学させていただきました。<br />
+思っていた以上にセキュリティが厳しくてビックリしました。（場所も機密とのこと）<br />
+普段はめったに見られないデータセンターを見学できただけでなくそこで働かれている方のお話も聞けてよかったです。<br />
+北海道の広大な立地と低い気温がデータセンターにピッタリなんだとか。<br />
+すごく広かったのととにかくセキュリティが厳重だったのが印象的でした。<br />
+そして例によって行きのバスでぼっち席を決めてしまう凡ミスのやらかし。最後までこのやらかしは多々ありますけど。<br />
+そのまま夕食。豪華でした。（写真を撮るのがへたくそなので誰かの写真を見てください）<br />
+あとSecHackのシャツをいただきました。基本的には集合回ではこれを着ます。かなり素敵。</p>
+<p>二日目はコースワークと縁日がありました。<br />
+高まりすぎて鼻血を出した記憶。<br />
+縁日とは有志のトレーナーの方々による技術ワークショップです。<br />
+2つまで選べるのですが、どれも魅力的でかなり迷いました。<br />
+結局、今岡先生の「LANパケット盗聴ガジェットの作り方」と衛藤先生の「ネットワークハッキング~自由を手に入れよう！誰でもできるネットワークすり抜け術~」を受講しました。<br />
+どちらも実践的で面白かったです。こんな経験めったにできないと思います。</p>
+<p>その後には倫理についての講義がありました。<br />
+現役の検事さんである増田検事から法律面での講義です。<br />
+普段セキュリティを学ぶ上で法律面での問題とか疑問って色々出てきますが、実際の検事さんから法律のお話を聞けたのはすごいありがたかったです。<br />
+余談ですが、増田さんは気さくにお話をしてくださる方でいつも温泉でトレーニーと話してました。（宮城回まで帯同されていました）<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup><br />
+思い出深いトレーニーも多いでしょう。<br />
+基本的にSecHackでは温泉での思い出が多い気がします。（SecHackあるある）</p>
+<p>北海道回のホテルにはプールがあったので水着を持っていた僕は（何で？）せっかくなので泳ぎました。<br />
+夜は温泉入ったりゲームコーナーに行ったり卓球をしたり最早リゾート気分です。<br />
+特に発表もなく、このあたりが一番楽な（慢心）期間だったと思います。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">寿司→水泳→温泉→卓球→乗馬→開発 <a href="https://t.co/sRetiSPQpu">https://t.co/sRetiSPQpu</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1144974000856039424?ref_src=twsrc%5Etfw">June 29, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>そして神奈川回の週からやっている週報が評価されて佳山先生から富士通羊羹をいただきました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">佳山トレーナーに富士通羊羹を頂きました！<br>これからも精進します！<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a> <a href="https://t.co/xw598Ht1ny">pic.twitter.com/xw598Ht1ny</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1145161617551683584?ref_src=twsrc%5Etfw">June 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>非常に美味しかったです。<br />
+羊羹の外箱が後のプロトタイプの寸法の規格になったとか&hellip;</p>
+<p>初北海道でしたが、涼しくてとっても良いところでした。<br />
+どちらかというと縁日とかデータセンター見学といったインプットが中心の集合回でした。<br />
+すごく楽しかったです。友達をつくるならここがチャンスかも知れません。</p>
+<h3 id="福岡回">福岡回</h3>
+<p>8月21日（水）〜8月23日（金）<br />
+道に迷った（一敗）<br />
+早めに現地に着くという勝ち確ムーブをカマしておきながら肝心の道中で道に迷って遅刻ぎりぎりのムーブをやらかす。<br />
+旅先で必ずトラブルに見舞われる僕の習性があからさまに現れていますね&hellip;<br />
+ちなみにこれはまだ時間に余裕があった頃。（早めに着いても時間を潰さなくてはならなくてあんまり変わらない（挙げ句道に迷う）ので賢い選択じゃなかった）<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/Hakata.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+</p>
+<p>はい。SecHackラーメン3連戦最終戦です。（横浜→札幌→博多）<br />
+福岡回のメインは全員がスライドを使って自分のテーマについて発表するというものです。</p>
+<p>1日目は<a href="https://nulab.com/ja/">nulab</a>さんのところで社員さんのお話を聞くところからスタートしました。<br />
+技術的なところだけじゃなくて働き方とかどこに住むかとか社会人になったときの細かいお話が聞けて面白かったです。<br />
+地方で働くのもたのしそうだなぁと思いました。</p>
+<p>そして&hellip;</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">またぼっちバスを決めてしまった（学習しない人間</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1164100948156829696?ref_src=twsrc%5Etfw">August 21, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>なんで学習できないんですかね&hellip;（二敗目）<br />
+しかし、移動中の車窓から見られる海はとっても素敵でした。<br />
+途中両側が砂浜になっているところを通るのですがそこがとても綺麗でした。<br />
+夜ご飯は例にもれず美味しかったです。（明太子がたらふく食べられて満足）</p>
+<p>二日目は朝から夕方までずっと発表です。<br />
+一人（または1チーム）6分で自分のやりたいテーマに関してプレゼンします。（全員分やる）<br />
+助言とか指導を得たり一緒に取り組んでくれる仲間を探すのがおおまかな目的です。<br />
+ここでやっと全員のやりたいことが明らかになる気がします。（そしてやっと顔とTwitterアイコンが一致する）<br />
+発表はオンラインゼミとかでやっているのでそこまで緊張しませんが、待ってる間はやっぱり緊張します。<br />
+発表中は緊張しなくても発表前は緊張するのはあるあるですね&hellip;<br />
+聴講者は発表を聞くだけじゃなくて発表に対してコメントをするルールなので聞いてる側も暇しているわけではないですし、発表する側はたくさん意見をもらえるので良いシステムです。</p>
+<p>発表が終わった後はみんなでホテルの前の海へ。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/sea.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+（写真はコースワークの散策で撮った）<br />
+水着を持ってきていたのでしばらくみんなで海で遊びました。<br />
+見事に綺麗な青い海と白い砂浜です。<br />
+長時間の発表で疲れていたので丁度いい癒やしになりました。</p>
+<p>この回からありがたいことに事務局の方が会場を夜まで開放してくださいました。<br />
+持ってきたプロトタイプを直したり作っているものについて話したりしました。<br />
+以降、この時間でプロトタイプを直したり助言をいただくことが多くなりました。<br />
+この回から方向性がハッキリしてきたと思います。<br />
+バスが出るまでの時間も横山先生とお話させていただき色々考えていました。<br />
+トレーニーの方とも議論したりお話できて良かったです。</p>
+<p>帰りの飛行機で窓から花火が見えました。<br />
+3日間という短い間ですが、終わってしまうとすっごい寂しいです。</p>
+<h3 id="宮城回">宮城回</h3>
+<p>10月4日（金）〜10月6日（日）<br />
+今回は飛行機じゃなくて新幹線を利用しました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新幹線での開発は楽しいなぁ <a href="https://t.co/MR1xhONJJv">pic.twitter.com/MR1xhONJJv</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1179937683260370945?ref_src=twsrc%5Etfw">October 4, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>飛行機に比べて新幹線の快適さにビックリ。</p>
+<p>宮城回では主にポスター発表とデモがあります。<br />
+各自、機材とか資料とかポスターを用意して会場に乗り込みます。<br />
+僕は前回に引き続きハードウェア面でのアプローチに挑戦したのですが、トラブル続きで大変でした。<br />
+というか、電子工作とは縁があんまり無い科の出身でブレッドボードはよく扱っていましたがはんだ付けとかはほとんど初挑戦でした。</p>
+<p>思索駆動コースは自分が提起した問題があってそこから思索して問題解決の形とか方法を見つける感じなので何かに特化してるよりも広く何かを学んでいると良いかも知れません。（自分の得意な分野にもっていくことも可能ですが）<br />
+僕は新しいことに挑戦して表現の幅が広がったらなぁと思ったのとハードウェアのデバイスを作ったほうが自分の問題を解決できそうかなぁと思って挑戦しました。<br />
+今考えたら技術面でも他のコースの人とかにトレーナーにガンガン頼ったほうが良かったかなぁと思います。</p>
+<p>展示では色々な人に見ていただきたくさん意見を貰いました。<br />
+僕より詳しい人がいっぱいいるのでありがたかったです。<br />
+晩ごはんはもちろん素敵です（この頃から写真を撮ることを覚え始めている（えらい））<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/dinner.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+</p>
+<p>夜にはくぼたつ道場。<br />
+珍しくトレーナー達が（無茶振りで）お手本を見せることに。（頂上決戦かな？）<br />
+いろいろなトレーナーのやりたいことが聞けておもしろかったです。（珍しくトレーナーの慌てた姿も見られました。）<br />
+僕もやってみたのですが、相手に質問をせずにどんどん自分のやりたいことを言っていくのは思索駆動的には新鮮でした。</p>
+<p>宮城回の舞台は松島だったのですが、窓からの景色が綺麗ですごい良かったです。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/matsushima2.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+解散後には暇があったので松島周辺を観光しました。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/matsushima1.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+すごく綺麗でいいところです。<br />
+実際に島に上陸して中まで楽しめてよかったです。<br />
+帰りは<a href="https://twitter.com/tomio2480">@tomio2480</a>氏と牛タンを食べ圧倒的勝利を納めました。</p>
+<blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://t.co/nu97UOIRgW">pic.twitter.com/nu97UOIRgW</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1180798766128848896?ref_src=twsrc%5Etfw">October 6, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>松島、絶景が拝めて美味しいものも食べられて最高でした。（若干の旅行気分）<br />
+実はこの翌週に高専プロコンが待ち受けていて地獄を見ることになるのですが。</p>
+<h3 id="愛媛回">愛媛回</h3>
+<p>11月29日（金）〜12月1日（日）<br />
+初四国です。（多分）<br />
+そして定期テスト最終日と一日目が被りました（絶望）<br />
+どうにか追試をやっていただけるとのことで不参加という事態は避けられましたが、テスト勉強と資料づくりとプロトタイプ制作の3つを並行して行うという地獄を味わいました。<br />
+もはやこれはどうしようもないことですが、事前に学校の予定とSecHackの予定を照らし合わせて事前に覚悟をする必要はあると思います。<br />
+なるべく早く準備を始めるとか&hellip;（分かっていても難しいですが&hellip;）</p>
+<p>舞台は奥道後です。温泉ですよ温泉。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/Dougo.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+ちなみに集合場所の最寄り駅までは路面電車で行きました。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/train.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+路面電車って初めて乗ったかもしれない。風情があって素敵な電車でした。</p>
+<p>愛媛回のメインは前回同様のポスター発表とデモに加えて15分の発表もあります。<br />
+両方あるので準備が大変でした&hellip;<br />
+ちなみに今回のポスターはA0サイズです。こんなにでかいポスターは生まれて初めてです。<br />
+一日目がポスター発表+デモで二日目が発表って感じです。<br />
+そして今回も会場の魔物に襲われます。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今回もオフライン回の魔物に進捗をやられた<br>家では動いてたんですよ本当に...</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200993934542917632?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>なんて恐ろしい&hellip;<br />
+ここまで来ると動かないときの準備もしてます。（用意周到（そういう問題じゃない））<br />
+ハードウェアは恐ろしいですね。（毎晩会場に残ってひーひー言いながら直していたのはいい思い出）</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これが会場の魔物です <a href="https://t.co/NHMGeQwGFf">https://t.co/NHMGeQwGFf</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201056164282322945?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>そして当然のように現れるおいしいお食事。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/Ehime.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+最高です。鯛めしが美味しかった（小並感）<br />
+ここらへんから年の近い子と食べるようになりました（若い子っていいわね。<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>）</p>
+<p>二日目の夜にはマツダの方のセキュリティに関するお話や噺家の方の講演がありました。<br />
+毎回言えることですが様々な分野の方のお話を聞けて楽しいです。<br />
+車も落語も好きなので楽しめました。</p>
+<p>原則、僕は夜はあんまり交流するよりも、意固地になって会場で居残って動かないプロトタイプを修理してるタイプでしたがこの日は確かみんなと遊んだ気がします（全体を通してその方が良かったかもしれない）<br />
+まぁ、残って修理をしていてもそれはそれで居残り組で話したり助け合いながら作業することも（人がいれば）できるのでそれはそれで楽しいものです。<br />
+確かセキュリティ大喜利とかをした思い出があります。僕は全日本コミュ症選手権ベスト8の猛者ですがもうここまでくれば流石に多少は大丈夫です。<br />
+やっぱり普段とはちがう人とワイワイできて楽しかったです。<br />
+世代も分野も違う人なので多分SecHackが無ければ一生出会うことがなかった仲間でしょう。<br />
+調子に乗って遅くまで起きていました。（すごいいい思い出）</p>
+<p>いろんな人と話して上機嫌で部屋に戻る途中でこんな場所に出ました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">豆知識<br>3階の3301号室に向かう突き当たりの先はめちゃくちゃ怖い空間が広がっている<br>僕は怖すぎて引き返した</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200427559399251968?ref_src=twsrc%5Etfw">November 29, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/horror.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+
+<p>廊下から一段折れていて控室という意味不明な張り紙とその奥に見える白い扉。<br />
+扉を開けると真っ暗やみでなんか外に繋がっているっぽい。<br />
+プロのビビリストである僕は即座に怖くなって引き返しました。（写真がぶれているのはそのせいです。）</p>
+<p>ちなみに、翌日知ったのですが会場へのものすごい近道でした（知らずにすごい遠回りをしていた）</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">僕の中で話題のめちゃくちゃ怖い空間（通称:メコワ）ですが会場前のスロープを登るとそこに繋がっていることが分かりました<br>わざわざエレベーターまで行って一度登って降りていた僕の苦労は一体 <a href="https://t.co/7eTNaYizRY">https://t.co/7eTNaYizRY</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200827304047341569?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>美味しいものも思い出も講演も発表も満喫したので楽しかったです。<br />
+SecHackでは事務局の方がいろいろお菓子とかジュースとか用意してくれるのですごいありがたいです。<br />
+今回はありがたいことにみかんが用意されていました。（これがなかったら危うく愛媛でみかんを喰わずに帰ることだった&hellip;）<br />
+本当にいたれりつくせりでこんなものも用意されていました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">うどんキャラメル残り1個なのでトレーニーの方オススメですよ<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200610835770425345?ref_src=twsrc%5Etfw">November 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ちなみに帰りの空港で再会しました。
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">お、お前は... <a href="https://t.co/kpxYjcZqb3">pic.twitter.com/kpxYjcZqb3</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201038017491636224?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>空港で美味しそうなスイーツを買ったりトレーニーさんとお話したりもはや僕に抜かりはありません。</p>
+<blockquote class="twitter-tweet"><p lang="und" dir="ltr"><a href="https://t.co/4WLHfpYegD">pic.twitter.com/4WLHfpYegD</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201051149404495872?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+圧倒的成長。
+<h3 id="沖縄回">沖縄回</h3>
+<p>1月31日（金）〜2月2日（日）<br />
+最終決戦の地は沖縄です。（写真はホテルからの眺め）<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/okinawa1.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+ちなみに僕は初沖縄です！（要らぬプチ情報）<br />
+そして&hellip;<strong>また定期試験と被りました（全ギレ</strong><br />
+しかも今度は初日です。（絶望）<br />
+テスト勉強と資料づくりとプロトタイプ制作の3つを並行して行うという地獄を味わいました。（二敗目）</p>
+<p>初っ端電車が遅れて飛行機に間に合わなくなる大ガバムーブをカマします。<br />
+かなりの焦りを見せまして慌てて電車の中で航空会社に電話をかけていました。（このままの予定だとフライト-2分前くらいに着く（アカン））<br />
+結局電車が遅れたことを伝えたら快く次の便に振り替えてくださって普通に間に合いました。<br />
+危なかった&hellip;<br />
+皆さんは気をつけましょう。</p>
+<p>会場についてまず嬉しかったのは一年間所望し続けていたマウンテンデューが置いてあったことです。（事務局さんありがとう！！）</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">遂に最終回にして僕の願いが届きました<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a> <a href="https://t.co/xSpdH9Wyp8">https://t.co/xSpdH9Wyp8</a> <a href="https://t.co/6J7APQy54O">pic.twitter.com/6J7APQy54O</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223128465102139393?ref_src=twsrc%5Etfw">January 31, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>みんなを見て久しぶりだなぁと思ったと共に何故か一昨日あたりも会わなかった&hellip;？って感じになりました。<br />
+近いようで遠いようで近い存在。SecHackのトレーニーは不思議な関係だと思います。</p>
+<p>さて沖縄回のメインは最終発表です。<br />
+この一年間自分がやってきたことについて発表します。<br />
+ちなみに、この発表は優秀修了生の審査も兼ねています。表現力・技術力・アイデアの3つの観点から評価しこれらの総合点で6件の優秀修了生を選出するそうです。<br />
+最終発表はかなりの長期戦で一日目と二日目をフルで使います。<br />
+僕は二日目だったので一日目の夜は遅くまでスライドを書いたりしてました。（既に終わっている子と話したり楽しかったです）</p>
+<p>当日の発表ですが、僕はというと作ったデバイスで身を固めて発表しました。これが一番イメージが伝わるかなぁと。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">えっ怖...<br>皆さん気を付けてください <a href="https://t.co/FH5LRnHyaM">https://t.co/FH5LRnHyaM</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223506809035509763?ref_src=twsrc%5Etfw">February 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>発表中は自分の言いたい放題できるので発表していて楽しかったです。<br />
+ちなみにこんな発言をしたら、</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これで開催レポートのサムネは俺のものだ<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223510026486050816?ref_src=twsrc%5Etfw">February 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>本当に<a href="https://sechack365.nict.go.jp/report/2019/report06.html">沖縄回のレポート</a>のサムネになりました。</p>
+<p>最終発表は福岡回と同様に他の人の発表も全員分聞けます。（全員分やるので2日に分けてやります）<br />
+すごい発表ばかりで度肝を抜かれました。あんなにすごい発表を一度に聞けるなんて本当に貴重な機会だったと思います。<br />
+成果発表会では優秀修了生の発表しか聞けないので全員分の壇上での発表を聞けるのはトレーニーの特権ですね。<br />
+事前に何度も発表練習を聞いている同じ思索駆動の仲間の発表でも壇上だと全然違ったりして新鮮でした。（みんな本当にすごかった）</p>
+<p>全員の発表が終わるとみんなお疲れ様ムードに。<br />
+温泉に浸かったりLTをやったり色々楽しめました。<br />
+年が近いやつら組でアニメの上映会もやりました。（こういうのがやりたかったのです！僕は）<br />
+全員（というか約二名）恋アスの圧倒的 <strong><em>Power</em></strong> に敗北していて面白かったです。<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup><br />
+こういう機会はなかなか無かったのですっごい楽しかったです。（小学生以下の感想）<br />
+あと、僕と同じ雑誌を購読している子がいて地味にびっくりしました。</p>
+<p>三日目は優秀修了生の発表だったのですが、どうしても決まらなかったらしく数日後におあずけに。<br />
+できれば直接優秀修了生におめでとうを言いたかったところですが、まさか決まらないほど審査が難航するとは&hellip;<br />
+それほど接戦だったのでしょうか&hellip;？<br />
+なので急遽竹迫さんのLTに。全部聞きたかったのですが昨日色々うろうろしているうちにリュックサックを紛失したので仕方なくそれを探す旅に。<br />
+結局トレーナー控室に預けられていて無事見つかりました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ありました<br>お騒がせしました <a href="https://t.co/tH9qo6CHgB">https://t.co/tH9qo6CHgB</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223766649574051841?ref_src=twsrc%5Etfw">February 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+<p>コースワークでは区切りの挨拶。<br />
+いつもの通り半円になって一人ずつ挨拶をしました。<br />
+みんなの前に経つと何故か安心感があってこの一年間で実際には六度ほどしか会ってないのにすごくなつかしい顔ぶれに見えて不思議な気分になりました。<br />
+あぁこれで終わりなのかな&hellip;となんだか寂しくなりました。</p>
+<p>その後は北海道回でもデータセンターにお邪魔したさくらインターネットの田中社長の公演がありました。<br />
+スライドもお話も面白くてためになりました。（聞いててすっかり引き込まれた）<br />
+みんな終わった後、田中社長やトレーナーにサインを頂いてました。</p>
+<p>最後は全員で沖縄の聖地<a href="https://okinawa-nanjo.jp/sefa/">斎場御嶽</a>に。<br />
+途中で海の前で集合写真を撮ったのですがすごい綺麗でした。<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/okinawa2.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/okinawa3.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+</p>
+<p>こんなにきれいな海を見たのは初めてかも知れません。<br />
+道中にシーサーが置かれていたり自販機がローカル感満載だったりして沖縄に来たんだなぁと思いました。（ずっと会場にいたので尚更）<br />
+
+
+<figure >
+  
+    <img data-src="/blog/images/SecHack365/caesar.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+    
+  
+</figure>
+</p>
+<p>見学の後もマンゴーアイスを食べたりサトウキビジュースを飲んだり短いながらも沖縄を満喫しました。<br />
+空港に着いてからもA&amp;Wに行ったり楽しめました。（そういう意味でも一年で成長した気がする）</p>
+<p>帰りは飛行機がまさかの遅延して帰りが0時をすぎるというハプニングもありましたが無事家にたどり着きました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">帰宅<br>今日のことは一生忘れないと思う<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1223986831395454981?ref_src=twsrc%5Etfw">February 2, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>本当に楽しくて夢のような三日感でした。<br />
+終わった後本当に寂しかったです。</p>
+<h3 id="成果発表会秋葉原回">成果発表会（秋葉原回）</h3>
+<p>さぁ成果発表会です！！！と言いたいところだったのですが2019年度の成果発表会は開催延期となってしまいました&hellip;</p>
+<blockquote>
+<p>SecHack365 成果発表会 開催延期について<br />
+3月6日（金）に開催予定でしたSecHack365成果発表会は、新型コロナウイルスの感染拡大防止の観点から開催を延期することを決定いたしました。開催時期につきましては改めて本Webサイトでご案内いたします。また、当日公開予定でした作品等につきましてはWebサイトで公開する予定です。<br />
+ご参加を予定されていた方には大変申し訳ありませんが、何卒ご理解をいただきますようお願い申し上げます。<br />
+<a href="https://sechack365.nict.go.jp/presentation.html">https://sechack365.nict.go.jp/presentation.html</a></p>
+</blockquote>
+<p>残念ですが、中止ではなく延期なのでそれまでにしっかり準備して行きたいと思います。</p>
+<h2 id="1年間参加した感想">1年間参加した感想</h2>
+<p>さて1年間SecHack365に参加した感想ですが、なにより参加して本当に良かったなと思いました。これが第一です。<br />
+1年間という長い期間、あのような素晴らしい環境で開発したり一つのことについて考えるというのはなかなかできない貴重な体験だったと思います。<br />
+今までそこまで長い期間一つのものを開発したことが無かったですし、思索を巡らせて自らが提起した問題について真摯に考えるということもなかったと思います。<br />
+ポスターやスライドもこれほど丁寧に添削されることも初めての経験でした。<br />
+予算面やトレーナーさんのバックアップにも恵まれていて本当に充実した環境だったと思います。<br />
+そんな恵まれた環境で開発を進めることができたのは今後の人生においても大きな経験になると思います。<br />
+本当に感謝してもしきれないです。</p>
+<p>また、すごい実力を持ったトレーナーやトレーニーと一緒に全国をまわったり対話したり、発表を聞きあったりしたのもすごくいい刺激でした。<br />
+本当にこんなすごい人っているんだなぁとこの目で確かめられただけじゃなくて一緒に過ごすことでその人の内面とかまで知れたのが良かったです。<br />
+多分SecHackがなければ一生出会うことが無かっただろうなというような仲間と出会えたのは本当に嬉しいことでした。<br />
+そんな仲間たちとまた違う場で強くなって再会するのが僕の密かな目標です。（待ってろよ）</p>
+<p>思索駆動コースだったからこそ得られたことも多かったです。<br />
+誰かと対話していく中で自分の提起した問題について考えを深めていったりペルソナを設定してそこに向けて機能や仕様を考えてみたり考えながら開発していくというのはとにかく新鮮でした。<br />
+いつも一度開発に入ってしまうと技術的なことばっかり頭にあって突っ走ってしまうことが多かったのですが最後まで思索の連続で学ぶことが多かったです。<br />
+思索ってひとりで悶々と考えているイメージがあったので他者との対話によってどんどん考えが膨らむのは衝撃的でした。<br />
+良い思索はいい仲間からなのかも知れません。そういう意味で思索駆動コースの仲間には感謝してもしきれないです。<br />
+オンラインゼミもニュースを取り上げて自分の感想を述べたり発表練習をしたり楽しかったです。<br />
+言葉の意味とか表現の細かい部分にまで気を配るようになりました。神は細部に宿る。</p>
+<p>あと、習慣化が僕のSecHackので活動を支える重要な要素だったなと感じます。<br />
+神奈川回を振り返ったあとでちょっと触れた、「一週間ごとにやったこととか思索をまとめたスライドを出す」という思いつきですが、今でも続いています。<br />
+2019年5月19日の週から始まったこのスライドですが、2020年4月12日までの週まで（計47+1回！）一度も途切れずに続けることができました。<br />
+本当は成果発表会のある3月8日までの週で終わらせようと思っていたのですが発表会が延期したので今でも続いています。（成果発表会までは続けるつもり）<br />
+このスライドを中心にSecHackでの活動をしていました。1年間という長い期間を戦いぬけたのはこのスライドのおかげです。<br />
+目標の細分化と習慣化による効果を知れた（そして実践できた）のは大きいなぁと思います。<br />
+まとめスライドを作ったのがあるのでここで公開したいと思います。（3月末に書いた）</p>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQNG02BFhhVIVPfOPahaCLVaYWcWoIqws4Q-o0kxz_Tx3MZP2g9ro0ik3DQM1tDVUUqTiWNbSloN7bA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="940" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<p>一年間やってみての感想とか振り返りとやってみて感じた習慣化の意義とかが書かれています。<br />
+よかったら見てみてください。</p>
+<p>この1年でたくさんのことを見て、体験して、学びました。<br />
+そのどれもが刺激的でおそらくSecHackでしか味わえない体験だったと思います。<br />
+これらの貴重な体験を大切にしてこれからも精進していきたいと思います。きっと今後の人生に大きく役立ってくれることでしょう。<br />
+SecHackで過ごしたこの1年間は僕の一生の思い出です。</p>
+<h2 id="参加を考えている人に向けて">参加を考えている人に向けて</h2>
+<p>この記事をここまで読んだなら今頃事務局に参加希望の問い合わせが殺到している頃でしょう。（多分）<br />
+もしこの記事を読んで少しでもいいなと思ったら是非とも参加を検討してみてください。<br />
+特にオススメしたい人はプログラムを書いたりものづくりがすっごい好きな人ですかね。SecHackはなんだかんだそういう人の集まりな気がします。</p>
+<p>よくあるのは自分では実力不足なのでは？と心配になってしまい参加を見送ってしまう人です。<br />
+僕は否定しません。というのもSecHack365は人生で一度しか参加できないのです。<br />
+なのである程度の実力を備えてから参加するというのもアリだと僕は思います。</p>
+<p>しかし、とりあえず応募してみるというのも悪い選択肢ではないことを書いておきます。<br />
+応募課題を出すだけでもいい練習になりますし、詰まるような部分があればそこが自分の足りないところだと分かります。<br />
+しかもSecHackは1年間という長い期間で開催されます。努力次第では追いつける部分もあると思いますしどっちにせよ勉強しながら開発する形になっていくと思います。（なるようになる（多分））<br />
+そして何よりトレーニー同士のつながりは大きいです。<br />
+SecHackに参加するトレーニーはすごい人ばっかりです。そういう人たちと交流して間近で影響を受けるのはとっても大きいことだと思います。<br />
+仲良くなるなら早いほうが良いでしょう。<br />
+そういう意味でも、もったいぶらずにじゃんじゃん応募してみる方が良いと思います。<br />
+受かるかどうかは応募すれば分かります（当然）</p>
+<p>あとこれは受かった後の話ですが、飛行機での移動が多くなるので出発する前に保安検査に引っかかりそうなものは予め荷物から出しておきましょう。（3敗）</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">vs保安検査 （1勝3敗1分）<br><br>神奈川 : 引き分け（対戦なし）<br>北海道 : 負け（はさみ）<br>福岡 : 勝ち<br>宮城 : 負け（カッター,はさみ,ナイフ）【スペシャルゲスト:ポリスメン】<br>愛媛 : 負け（はさみ,千枚通し,半田ごて）<br>沖縄 : ？？？</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1222833650082803712?ref_src=twsrc%5Etfw">January 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>（沖縄では保安検査に打ち勝ちましたが行きの飛行機に乗り遅れたので敗北）</p>
+<p>そして、この記事を書いてる間に<a href="https://sechack365.nict.go.jp/">SecHackのHP</a>が2020年度仕様に変更されていました！<br />
+そこには応募を考えている人向けの話とかコースの説明とかがたくさん乗っているので応募を考えている人は是非ともこちらを読んで準備を進めてみてはいかかがでしょうか？<br />
+去年よりも応募者向けの情報がしっかりしてる&hellip;（特に各コースの説明が充実しているのでぜひ読んでみてください）</p>
+<h2 id="終わりに">終わりに</h2>
+<p>思い出に浸っていたら結構な量になってしまいました&hellip;（書くのに4日くらいかかった）<br />
+一年間の振り返りを書きながら「あぁ&hellip;こんなこともあったなぁ&hellip;」と懐かしい気持ちになりました。<br />
+この参加録が次の応募者の参考になったら良いなぁと思います。<br />
+最後に一年間お世話になったトレーナー、トレーニーのみんなそして事務局の方に感謝申し上げます。<br />
+本当に楽しかったです。ありがとうございます。<br />
+そして、我々3期生にはまだ成果発表会が残っています。<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><br />
+SecHack365はまだ終わらないのです。これからも頑張ります！<br />
+同期のみんなは成果発表会で会いましょう。<br />
+それではさようなら。</p>
+<div class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>マジで憶えてない&hellip;コース選択した記憶があんまりないから幻なのかもしれない&hellip; <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>ただし記憶力皆無なので誰だか覚えていません。（は？） <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>よかったね。（すっとぼけ） <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>増田検事お元気かしら <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>そうわね。 <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>なんでお前他人事なの？ <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>通称SecHack500 <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </article>
+    
+    <script>
+  'use strict';
+  
+  function wrap(el, wrapper) {
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+  }
+
+  (function () {
+    var singleContentsElem = document.querySelector('.single__contents');
+    singleContentsElem ? 
+    singleContentsElem.querySelectorAll('pre > code').forEach(function(elem) {
+      var dataLang = elem.getAttribute('data-lang');
+      var dataLangWrapper = document.createElement('div');
+      var code = null;
+      var codeTitle = null;
+
+      if (dataLang && dataLang.includes(':')) {
+        code = dataLang.split(':')[0];
+        codeTitle = dataLang.split(':')[1];
+
+        dataLangWrapper.className = 'language-' + code;
+        dataLangWrapper.setAttribute('data-lang', codeTitle);
+
+        elem.className = 'language-' + code;
+        elem.setAttribute('data-lang', codeTitle);
+        elem.setAttribute('id', codeTitle);
+      } else if (!dataLang) {
+        dataLangWrapper.setAttribute('data-lang', 'Code');
+        dataLangWrapper.className = 'language-code';
+      }
+
+      if (!dataLang || codeTitle) {
+        wrap(elem.parentNode, dataLangWrapper);
+      }
+
+    }) : null;
+  })();
+
+  var langCodeElem = document.querySelectorAll('.language-code');
+  langCodeElem ? langCodeElem.forEach(function (elem) {
+    var newElem = document.createElement('span');
+    newElem.className = 'copy-to-clipboard';
+    newElem.setAttribute('title', 'Copy to clipboard');
+    elem.append(newElem);
+  }) : null;
+  
+</script>
+    
+<div class="donation">
+  <div class="donation__message">
+    Share on
+  </div>
+  <div class="donation__icons">
+    
+    
+    
+      
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2ftakana-norimasa.github.io%2fblog%2fposts%2fsechack365%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+          <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
+        </a>
+      
+    
+      
+        <a href="https://twitter.com/intent/tweet?text=SecHack365%20%2719%20%e5%8f%82%e5%8a%a0%e9%8c%b2&url=https%3a%2f%2ftakana-norimasa.github.io%2fblog%2fposts%2fsechack365%2f&hashtags=%e5%8f%82%e5%8a%a0%e9%8c%b2%2cSecHack365&via=%40lIlIIllIIIlIlIl" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+          <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
+        </a>
+      
+    
+  </div>
+</div>
+
+    
+    
+<div class="whoami__gutter"></div>
+<hr class="hr-slash whoami-hr"/>
+<section class="whoami">
+  <div class="whoami__image-wrapper">
+    
+    
+      
+        <img data-src="/blog/images/whoami/avator_mod.jpeg" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" alt="Takana Norimasa" class="lazyload whoami__image"/>
+      
+    
+  </div>
+  <div class="whoami__contents">
+    <div class="whoami__written-by">
+      WRITTEN BY
+    </div>
+    <div class="whoami__title">
+      
+        Takana Norimasa
+      
+    </div>
+    <div class="whoami__desc">
+      
+        student
+      
+    </div>
+    <div class="whoami__social">
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="j17423@kisarazu.kosen-ac.jp" title="email" aria-label="email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://github.com/Takana-Norimasa" title="github" aria-label="github">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 24 24" version="1.1">
+<g id="surface3680">
+<path fill="currentColor" d="M 10.898438 2.101562 C 6.300781 2.601562 2.601562 6.300781 2.101562 10.800781 C 1.601562 15.5 4.300781 19.699219 8.398438 21.300781 C 8.699219 21.398438 9 21.199219 9 20.800781 L 9 19.199219 C 9 19.199219 8.601562 19.300781 8.101562 19.300781 C 6.699219 19.300781 6.101562 18.101562 6 17.398438 C 5.898438 17 5.699219 16.699219 5.398438 16.398438 C 5.101562 16.300781 5 16.300781 5 16.199219 C 5 16 5.300781 16 5.398438 16 C 6 16 6.5 16.699219 6.699219 17 C 7.199219 17.800781 7.800781 18 8.101562 18 C 8.5 18 8.800781 17.898438 9 17.800781 C 9.101562 17.101562 9.398438 16.398438 10 16 C 7.699219 15.5 6 14.199219 6 12 C 6 10.898438 6.5 9.800781 7.199219 9 C 7.101562 8.800781 7 8.300781 7 7.601562 C 7 7.199219 7 6.601562 7.300781 6 C 7.300781 6 8.699219 6 10.101562 7.300781 C 10.601562 7.101562 11.300781 7 12 7 C 12.699219 7 13.398438 7.101562 14 7.300781 C 15.300781 6 16.800781 6 16.800781 6 C 17 6.601562 17 7.199219 17 7.601562 C 17 8.398438 16.898438 8.800781 16.800781 9 C 17.5 9.800781 18 10.800781 18 12 C 18 14.199219 16.300781 15.5 14 16 C 14.601562 16.5 15 17.398438 15 18.300781 L 15 20.898438 C 15 21.199219 15.300781 21.5 15.699219 21.398438 C 19.398438 19.898438 22 16.300781 22 12.101562 C 22 6.101562 16.898438 1.398438 10.898438 2.101562 Z M 10.898438 2.101562 "/>
+</g>
+</svg>
+
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/lIlIIllIIIlIlIl" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</section>
+<hr class="hr-slash whoami-hr" />
+
+
+    <section class="related">
+    
+    
+  </section>
+    <div class="grow"></div>
+<nav class="pagination-single">
+  
+    
+    <div class="grow"></div>
+    
+  
+</nav>
+    
+  
+
+    <div class="modal micromodal-slide" id="modal" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      
+      <div class="modal__content" id="modal-content">
+        <div id="mySwipe" class="swipe">
+          <div class="swipe-wrap">
+          </div>
+        </div>
+      </div>
+
+      <span class="modal__items">
+        
+        <span class="modal__header">
+          <div class="modal__paging" title="Page Info" aria-label="Current Page">
+          </div>
+          <div class="modal__icon modal__toolbar modal__toolbar--close" title="Close" aria-label="Close Button" data-micromodal-close>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="25" height="25"><path fill="currentColor" d="M 21.734375 19.640625 L 19.636719 21.734375 C 19.253906 22.121094 18.628906 22.121094 18.242188 21.734375 L 13 16.496094 L 7.761719 21.734375 C 7.375 22.121094 6.746094 22.121094 6.363281 21.734375 L 4.265625 19.640625 C 3.878906 19.253906 3.878906 18.628906 4.265625 18.242188 L 9.503906 13 L 4.265625 7.761719 C 3.882813 7.371094 3.882813 6.742188 4.265625 6.363281 L 6.363281 4.265625 C 6.746094 3.878906 7.375 3.878906 7.761719 4.265625 L 13 9.507813 L 18.242188 4.265625 C 18.628906 3.878906 19.257813 3.878906 19.636719 4.265625 L 21.734375 6.359375 C 22.121094 6.746094 22.121094 7.375 21.738281 7.761719 L 16.496094 13 L 21.734375 18.242188 C 22.121094 18.628906 22.121094 19.253906 21.734375 19.640625 Z"/></svg>
+          </div>
+          <div class="modal__icon modal__toolbar modal__toolbar--full" title="Full Screen" aria-label="Full Screen Button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25" height="25"><path fill="currentColor" d="M 5 3 C 3.9069372 3 3 3.9069372 3 5 L 3 8 A 1.0001 1.0001 0 1 0 5 8 L 5 5 L 8 5 A 1.0001 1.0001 0 1 0 8 3 L 5 3 z M 16 3 A 1.0001 1.0001 0 1 0 16 5 L 19 5 L 19 8 A 1.0001 1.0001 0 1 0 21 8 L 21 5 C 21 3.9069372 20.093063 3 19 3 L 16 3 z M 3.984375 14.986328 A 1.0001 1.0001 0 0 0 3 16 L 3 19 C 3 20.093063 3.9069372 21 5 21 L 8 21 A 1.0001 1.0001 0 1 0 8 19 L 5 19 L 5 16 A 1.0001 1.0001 0 0 0 3.984375 14.986328 z M 19.984375 14.986328 A 1.0001 1.0001 0 0 0 19 16 L 19 19 L 16 19 A 1.0001 1.0001 0 1 0 16 21 L 19 21 C 20.093063 21 21 20.093063 21 19 L 21 16 A 1.0001 1.0001 0 0 0 19.984375 14.986328 z"/></svg>
+          </div>
+          <div class="modal__icon modal__toolbar modal__toolbar--normal" title="Normal Screen" aria-label="Normal Screen Button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="25" height="25"><path fill="currentColor" d="M 16.96875 4.972656 C 15.867188 4.988281 14.984375 5.894531 15 7 L 15 15 L 7 15 C 6.277344 14.988281 5.609375 15.367188 5.246094 15.992188 C 4.878906 16.613281 4.878906 17.386719 5.246094 18.007813 C 5.609375 18.632813 6.277344 19.011719 7 19 L 19 19 L 19 7 C 19.007813 6.460938 18.796875 5.941406 18.414063 5.558594 C 18.03125 5.175781 17.511719 4.964844 16.96875 4.972656 Z M 32.96875 4.972656 C 31.921875 4.988281 31.0625 5.8125 31.003906 6.859375 C 31 6.90625 31 6.953125 31 7 L 31 19 L 43 19 C 43.066406 19 43.132813 19 43.199219 18.992188 C 44.269531 18.894531 45.070313 17.972656 45.015625 16.902344 C 44.964844 15.828125 44.074219 14.988281 43 15 L 35 15 L 35 7 C 35.007813 6.460938 34.796875 5.941406 34.414063 5.558594 C 34.03125 5.175781 33.511719 4.964844 32.96875 4.972656 Z M 7 31 C 6.277344 30.988281 5.609375 31.367188 5.246094 31.992188 C 4.878906 32.613281 4.878906 33.386719 5.246094 34.007813 C 5.609375 34.632813 6.277344 35.011719 7 35 L 15 35 L 15 43 C 14.988281 43.722656 15.367188 44.390625 15.992188 44.753906 C 16.613281 45.121094 17.386719 45.121094 18.007813 44.753906 C 18.632813 44.390625 19.011719 43.722656 19 43 L 19 31 Z M 31 31 L 31 43 C 30.988281 43.722656 31.367188 44.390625 31.992188 44.753906 C 32.613281 45.121094 33.386719 45.121094 34.007813 44.753906 C 34.632813 44.390625 35.011719 43.722656 35 43 L 35 35 L 43 35 C 43.722656 35.011719 44.390625 34.632813 44.753906 34.007813 C 45.121094 33.386719 45.121094 32.613281 44.753906 31.992188 C 44.390625 31.367188 43.722656 30.988281 43 31 Z"/></svg>
+          </div>
+        </span>
+        
+        <div class="modal__icon modal__arrow modal__arrow--left" title="Arrow Left" aria-label="Arrow Left Button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="28" height="28"><path fill="currentColor" d="M 23.28125 11 L 10 10 L 10 6.851563 C 10 6.523438 9.839844 6.277344 9.519531 6.03125 C 9.199219 5.949219 8.878906 5.949219 8.640625 6.113281 C 5.359375 8.410156 2.238281 12.257813 2.160156 12.421875 C 2.082031 12.578125 2.007813 12.8125 2.003906 12.976563 C 2.003906 12.980469 2 12.988281 2 12.992188 C 2 13.15625 2.078125 13.402344 2.160156 13.484375 C 2.238281 13.648438 5.28125 17.507813 8.640625 19.804688 C 8.960938 19.96875 9.28125 20.050781 9.519531 19.886719 C 9.839844 19.722656 10 19.476563 10 19.148438 L 10 16 L 23.28125 15 C 23.679688 14.679688 24 13.875 24 12.992188 C 24 12.195313 23.761719 11.320313 23.28125 11 Z"/></svg>
+        </div>
+        
+        <div class="modal__icon modal__arrow modal__arrow--right" title="Arrow Right" aria-label="Arrow Right Button">
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="28" height="28"><path fill="currentColor" d="M 2.71875 11.023438 L 16 10.023438 L 16 6.875 C 16 6.546875 16.160156 6.300781 16.480469 6.054688 C 16.800781 5.972656 17.121094 5.972656 17.359375 6.136719 C 20.640625 8.433594 23.761719 12.28125 23.839844 12.445313 C 23.917969 12.601563 23.992188 12.835938 23.996094 13 C 23.996094 13.003906 24 13.011719 24 13.015625 C 24 13.179688 23.921875 13.425781 23.839844 13.507813 C 23.761719 13.671875 20.71875 17.53125 17.359375 19.828125 C 17.039063 19.992188 16.71875 20.074219 16.480469 19.910156 C 16.160156 19.746094 16 19.5 16 19.171875 L 16 16.023438 L 2.71875 15.023438 C 2.320313 14.703125 2 13.898438 2 13.015625 C 2 12.21875 2.238281 11.34375 2.71875 11.023438 Z"/></svg>
+        </div>
+
+        <div class="modal__caption">
+          <div class="modal__caption--text">
+          </div>
+        </div>
+
+      </span>
+    </div>
+  </div>
+</div>
+
+
+<script defer src="/blog/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+
+<script defer src="/blog/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
+
+<script defer src="/blog/js/helper/fadeinout.min.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  
+   
+  var docElem = document.documentElement;
+
+   
+  function openFullscreen() {
+    if (docElem.requestFullscreen) {
+      docElem.requestFullscreen();
+    } else if (docElem.mozRequestFullScreen) {  
+      docElem.mozRequestFullScreen();
+    } else if (docElem.webkitRequestFullscreen) {  
+      docElem.webkitRequestFullscreen();
+    } else if (docElem.msRequestFullscreen) {  
+      docElem.msRequestFullscreen();
+    }
+  }
+
+   
+  function closeFullscreen() {
+    if (document.fullscreenElement ||
+      document.webkitFullscreenElement ||
+      document.mozFullScreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) {  
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) {  
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {  
+        document.msExitFullscreen();
+      }
+    }
+  }
+
+  var modal = document.getElementById('modal');
+  var galleryContainerElem = document.querySelector('.gallery__container');
+  var swipeWrapElem = document.querySelector('.swipe-wrap');
+  var mySwipeElem = document.getElementById('mySwipe');
+  var arrowLeftElem = document.querySelector('.modal__arrow--left');
+  var arrowRightElem = document.querySelector('.modal__arrow--right');
+  var closeElem = document.querySelector('.modal__toolbar--close');
+  var fullElem = document.querySelector('.modal__toolbar--full');
+  var normalElem = document.querySelector('.modal__toolbar--normal');
+  var captionElem = document.querySelector('.modal__caption');
+  var pagingElem = document.querySelector('.modal__paging');
+  var itemsElem = document.querySelector('.modal__items');
+  var imgTotalNum = null;
+  var myFadeTimeout = null;
+  var mySwipe = null;
+  var keydownFunction = function (e) {
+    if (e.key === 'ArrowRight') {
+      if (modal && modal.classList.contains('is-open')) {
+        mySwipe.next();
+      }
+    } else if (e.key === 'ArrowLeft') {
+      if (modal && modal.classList.contains('is-open')) {
+        mySwipe.prev();
+      }
+    }
+  }
+
+  if (galleryContainerElem) {
+    imgTotalNum = galleryContainerElem.querySelectorAll('img').length;
+  } else {
+    galleryContainerElem = document.querySelector('.single__contents');
+    imgTotalNum = galleryContainerElem.querySelectorAll('img').length;
+  }
+
+  MicroModal.init({
+    onClose: function () {
+      if (mySwipe) {
+        mySwipe.kill();
+        mySwipe = null;
+        closeFullscreen();
+      }
+      window.removeEventListener('keydown', keydownFunction);
+    },
+    disableScroll: true,
+    disableFocus: true,
+    awaitOpenAnimation: false,
+    awaitCloseAnimation: false,
+    debugMode: false,
+  });
+
+  var imageLoad = function(src) {
+    return new Promise(function(resolve, reject) {
+      var newImg = new Image;
+      newImg.onload = function() {
+        resolve(newImg);
+      }
+      newImg.onerror = reject;
+      newImg.src = src;
+    });
+  }
+
+  galleryContainerElem.querySelectorAll('img').forEach(function (elem, idx) {
+    elem.style.cursor = 'pointer';
+
+    var clonedElem = elem.cloneNode(true);
+    clonedElem.style.maxHeight = '100%';
+    clonedElem.style.maxWidth = '100%';
+    clonedElem.onclick = function (e) {
+      e.stopPropagation();
+    }
+
+    var wrapper = document.createElement('div');
+    wrapper.style.width = '100%';
+    wrapper.style.height = '100vh';
+    wrapper.setAttribute('data-micromodal-close', '');
+    wrapper.onclick = function () {
+      if (mySwipe) {
+        mySwipe.kill();
+        mySwipe = null;
+      }
+    }
+    wrapper.onmouseenter = function () {
+      clearTimeout(myFadeTimeout);
+      fadeIn(itemsElem, 200);
+    };
+    wrapper.onmouseleave = function () {
+      myFadeTimeout = setTimeout(function () {
+        fadeOut(itemsElem, 200);
+      }, 2500);
+    }
+    wrapper.ontouchstart = function() {
+      fadeIn(itemsElem, 200);
+    }
+    wrapper.append(clonedElem);
+    swipeWrapElem.append(wrapper);
+
+    elem.addEventListener('click', async function (e) {
+      MicroModal.show('modal');
+      if (mySwipe) {
+        mySwipe.kill();
+        mySwipe = null;
+      }
+
+      var imgSrc = e.target.getAttribute('data-src') || e.target.getAttribute('src');
+      var img = await imageLoad(imgSrc);
+      clonedElem.style.width = img.width + 'px';
+      clonedElem.style.height = img.height + 'px';
+      
+      
+      mySwipe = new Swipe(mySwipeElem, {
+        startSlide: idx,
+        draggable: true,
+        autoRestart: false,
+        continuous: false,
+        disableScroll: true,
+        stopPropagation: true,
+        callback: async function (index, element) {
+          
+          var imgElem = element.querySelector('img');
+          var imgSrc = imgElem.getAttribute('data-src') || imgElem.getAttribute('src');
+          var img = await imageLoad(imgSrc);
+          imgElem.style.width = img.width + 'px';
+          imgElem.style.height = img.height + 'px';
+
+          
+          if (captionElem && imgElem) {
+            var caption = null;
+            if (imgElem.getAttribute('data-caption')) {
+              caption = imgElem.getAttribute('data-caption');
+            } else if (imgElem.getAttribute('title')) {
+              caption = imgElem.getAttribute('title');
+            } else if (imgElem.getAttribute('alt')) {
+              caption = imgElem.getAttribute('alt');
+            } else {
+              caption = imgElem.getAttribute('src');
+            }
+
+            captionElem.querySelector('.modal__caption--text').innerText = caption;
+            pagingElem.innerText = (index + 1) + ' / ' + imgTotalNum;
+
+            clearTimeout(myFadeTimeout);
+            fadeIn(itemsElem, 200);
+          }
+        },
+      });
+
+      fadeIn(itemsElem);
+
+      
+      if (captionElem) {
+        var caption = null;
+        if (e.target.getAttribute('data-caption')) {
+          caption = e.target.getAttribute('data-caption');
+        } else if (e.target.getAttribute('title')) {
+          caption = e.target.getAttribute('title');
+        } else if (e.target.getAttribute('alt')) {
+          caption = e.target.getAttribute('alt');
+        } else {
+          caption = e.target.getAttribute('src');
+        }
+
+        captionElem.querySelector('.modal__caption--text').innerText = caption;
+        pagingElem.innerText = (idx + 1) + ' / ' + imgTotalNum;
+      }
+
+      if (normalElem && fullElem) {
+        normalElem.style.zIndex = -1;
+        normalElem.style.opacity = 0;
+        fullElem.style.zIndex = 25;
+        fullElem.style.opacity = 1;
+      }
+    });
+
+    window.addEventListener('keydown', keydownFunction);
+  });
+
+  arrowLeftElem ?
+    arrowLeftElem.addEventListener('click', function (e) {
+      if (mySwipe) {
+        mySwipe.prev();
+      }
+    }) : null;
+  arrowRightElem ?
+    arrowRightElem.addEventListener('click', function (e) {
+      if (mySwipe) {
+        mySwipe.next();
+      }
+    }) : null;
+
+  closeElem ?
+    closeElem.addEventListener('click', function () {
+      if (mySwipe) {
+        mySwipe.kill();
+        mySwipe = null;
+      }
+      closeFullscreen();
+      MicroModal.close('modal');
+    }) : null;
+
+  fullElem ?
+    fullElem.addEventListener('click', function (e) {
+      openFullscreen();
+      if (normalElem) {
+        normalElem.style.zIndex = 25;
+        normalElem.style.opacity = 1;
+        fullElem.style.zIndex = -1;
+        fullElem.style.opacity = 0;
+      }
+    }) : null;
+
+  normalElem ?
+    normalElem.addEventListener('click', function (e) {
+      closeFullscreen();
+      if (fullElem) {
+        fullElem.style.zIndex = 25;
+        fullElem.style.opacity = 1;
+        normalElem.style.zIndex = -1;
+        normalElem.style.opacity = 0;
+      }
+    }) : null;
+  
+});
+</script>
+
+    <div class="hide">
+      
+
+<div class="search">
+  <span class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </span>
+  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="Search" autocomplete="off">
+  <div id="search-results" class="dropdown">
+    <div id="search-menu" class="dropdown-menu" role="menu">
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</main>
+
+
+<aside class="single__side main-side">
+  
+
+
+<section class="sidebar hide">
+  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
+  <div class="toc__flexbox" data-position="fixed">
+    <h6 class="toc__title" data-ani="true">What&#39;s on this Page</h6>
+    
+      <label class="switch" data-ani="true">
+        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+    
+  </div>
+  <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#はじめに">はじめに</a></li>
+    <li><a href="#自己紹介">自己紹介</a></li>
+    <li><a href="#sechack365とは">SecHack365とは</a>
+      <ul>
+        <li><a href="#コースについて">コースについて</a></li>
+      </ul>
+    </li>
+    <li><a href="#1年間の振り返り">1年間の振り返り</a>
+      <ul>
+        <li><a href="#合否通知から神奈川回まで">合否通知から神奈川回まで</a></li>
+        <li><a href="#神奈川回">神奈川回</a>
+          <ul>
+            <li><a href="#習慣化はじまる">習慣化はじまる</a></li>
+          </ul>
+        </li>
+        <li><a href="#interop-tokyo--shownet">Interop Tokyo &amp; ShowNet</a></li>
+        <li><a href="#北海道回">北海道回</a></li>
+        <li><a href="#福岡回">福岡回</a></li>
+        <li><a href="#宮城回">宮城回</a></li>
+        <li><a href="#愛媛回">愛媛回</a></li>
+        <li><a href="#沖縄回">沖縄回</a></li>
+        <li><a href="#成果発表会秋葉原回">成果発表会（秋葉原回）</a></li>
+      </ul>
+    </li>
+    <li><a href="#1年間参加した感想">1年間参加した感想</a></li>
+    <li><a href="#参加を考えている人に向けて">参加を考えている人に向けて</a></li>
+    <li><a href="#終わりに">終わりに</a></li>
+  </ul>
+</nav>
+  </div>
+</section>
+
+
+
+</aside>
+
+<script>
+  
+  
+  
+
+  var enableToc = JSON.parse("true");
+  var toc = JSON.parse("null");
+  var tocPosition = JSON.parse("\"inner\"");
+  
+  var singleMainElem = document.querySelector('.single__main');
+  var singleSideElem = document.querySelector('.single__side');
+
+  enquire.register("screen and (max-width: 769px)", {
+    match: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        if (singleMainElem && singleSideElem) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+          singleSideElem.classList.remove('main-side');
+          singleSideElem.classList.add('hide');
+        }
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+    },
+    unmatch: function () {
+      if ((enableToc || toc) && tocPosition !== "outer") {
+        singleMainElem.classList.remove('main');
+        singleMainElem.classList.add('main-main');
+        singleSideElem.classList.remove('hide');
+        singleSideElem.classList.add('main-side');
+      } else if (tocPosition === "outer") {
+        if (singleMainElem && !singleMainElem.classList.contains('main-main')) {
+          singleMainElem.classList.remove('main-main');
+          singleMainElem.classList.add('main');
+        }
+        if (singleSideElem && !singleSideElem.classList.contains('hide')) {
+          singleSideElem.classList.add('hide');
+        }
+      }
+
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
+      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+    },
+    setup: function () { },
+    deferSetup: true,
+    destroy: function () { },
+  });
+</script>
+
+
+
+
+<script defer src="/blog/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+
+<script defer src="/blog/js/helper/getParents.min.js"></script>
+
+<script defer src="/blog/js/helper/closest.min.js"></script>
+
+<script defer src="/blog/js/helper/prev.min.js"></script>
+
+<script defer src="/blog/js/helper/prop.min.js"></script>
+
+<script defer src="/blog/js/helper/fadeinout.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  'use strict';
+
+  window.onload = function() {
+    var navbar = document.querySelector('.navbar');
+    var singleContentsElem = document.querySelector('.single__contents');
+
+    
+    
+    
+    var enableBusuanzi = JSON.parse("false");
+    var busuanziPagePV = JSON.parse("true");
+    
+    if (enableBusuanzi && busuanziPagePV) {
+      var pagePvElem = document.querySelector('#busuanzi_value_page_pv');
+      pagePvElem.textContent = pagePvElem.textContent.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+    }    
+    
+
+
+    
+    
+    
+    
+    
+    
+    var enableToc = JSON.parse("true");
+    var toc = JSON.parse("null");
+    var hideToc = JSON.parse("false");
+    var tocFlexbox = document.querySelector('.toc__flexbox');
+    var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
+    var tocFolding = JSON.parse("true");
+    
+    if ((enableToc || toc) && document.querySelector('.toc')) {
+      var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
+
+      if (false === tocFolding) {
+
+      } else {
+        tableOfContentsElem.querySelectorAll('ul') ?
+          tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+            rootUl.querySelectorAll('li').forEach(function (liElem) {
+              liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                ulElem.style.display = 'none';
+              });
+            });
+          }) : null;
+      }
+
+      if (tableOfContentsElem) {
+        if (tableOfContentsElem.querySelectorAll('a').length > 0) {
+          tableOfContentsElem.querySelectorAll('a').forEach(function (elem) {
+            elem.addEventListener('click', function () {
+              var id = elem.getAttribute('id');
+              navbar.classList.remove('navbar--show');
+              navbar.classList.remove('navbar--hide');
+              navbar.classList.add('navbar--hide');
+
+              document.querySelector('.toc').querySelectorAll('a').forEach(function (elem) {
+                elem.classList.remove('active');
+              });
+              elem.classList.add('active');
+
+              var curElem = tableOfContentsElem.querySelector('[href="#' + id + '"]');
+              if (curElem && curElem.nextElementSibling) {
+                curElem.nextElementSibling.style.display = 'block';
+              }
+              if (curElem) {
+                getParents(curElem, 'ul') ?
+                  getParents(curElem, 'ul').forEach(function (elem) {
+                    elem.style.display = 'block';
+                  }) : null;
+              }
+            });
+          });
+        } else {
+          if (tocFlexbox) {
+            tocFlexbox.setAttribute('data-position', '');
+            if (!tocFlexbox.classList.contains('hide')) {
+              tocFlexbox.classList.add('hide');
+            }
+          }
+          if (tocFlexboxOuter) {
+            tocFlexboxOuter.setAttribute('data-position', '');
+            if (!tocFlexboxOuter.classList.contains('hide')) {
+              tocFlexboxOuter.classList.add('hide');
+            }
+          }
+        }
+      }
+
+      
+      var toggleTocElem = document.getElementById("toggle-toc");
+      var visibleTocElem = document.getElementById('visible-toc');
+      var tocElem = document.querySelector('.toc');
+      var mainElem = document.querySelector('main');
+      var sideElem = document.querySelector('side');
+      var tocFlexboxElem = document.querySelector('.toc__flexbox');
+
+      toggleTocElem ? 
+      toggleTocElem.addEventListener('change', function(e) {
+        if (e.target.checked) {
+          if (tocElem) {
+            fadeIn(tocElem, 200);
+          }
+          if (tocFlexboxElem) {
+            tocFlexboxElem.setAttribute('data-position', 'fixed');
+          }
+
+          if (mainElem) {
+            mainElem.classList.remove('main-main');
+            mainElem.classList.remove('main');
+            mainElem.classList.add('main-main');
+          }
+          if (sideElem) {
+            sideElem.classList.remove('main-side');
+          }
+        } else {
+          if (tocElem) {
+            fadeOut(tocElem, 200);
+          }
+          if (tocFlexboxElem) {
+            tocFlexboxElem.setAttribute('data-position', 'absolute');
+          }
+
+          if (mainElem) {
+            mainElem.classList.remove('main-main');
+            mainElem.classList.remove('main');
+            mainElem.classList.add('main');
+          }
+          if (sideElem) {
+            sideElem.classList.remove('main-side');
+          }
+        }
+      }) : null;
+
+      visibleTocElem ?
+      visibleTocElem.addEventListener('change', function(e) {
+        if (e.target.checked) {
+          if (tocElem) {
+            fadeIn(tocElem, 200);
+          }
+        } else {
+          if (tocElem) {
+            fadeOut(tocElem, 200);
+          }
+        }
+      }) : null;
+    }
+    
+
+
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+
+    
+    var text, clip = new ClipboardJS('.anchor');
+    var headers = singleContentsElem.querySelectorAll("h1, h2, h3, h4");
+
+    
+    var languagedir = JSON.parse("\"ltr\"");
+
+    headers ? 
+    headers.forEach(function (elem) {
+      var url = encodeURI(document.location.origin + document.location.pathname);
+      var link = url + "#" + elem.getAttribute('id');
+      var newElemOuter = document.createElement('span');
+      newElemOuter.classList.add('anchor');
+      newElemOuter.classList.add('hide');
+      newElemOuter.setAttribute('data-clipboard-text', link);
+      newElemOuter.style.position = 'relative';
+
+      var newElemInner = document.createElement('span');
+      newElemInner.style.fontSize = '1rem';
+      newElemInner.style.position = 'absolute';
+      newElemInner.style.top = '50%';
+      newElemInner.style.transform = 'translateY(-50%)';
+      newElemInner.innerText = "🔗";
+
+      if (languagedir === "rtl") {
+        newElemInner.style.left = '-2rem';
+      } else {
+        newElemInner.style.right = '-2rem';
+      }
+
+      newElemOuter.append(newElemInner);
+      elem.append(newElemOuter);
+
+      elem.addEventListener('mouseenter', function() {
+        this.querySelector('.anchor').classList.remove('hide');
+      });
+      elem.addEventListener('mouseleave', function () {
+        this.querySelector('.anchor').classList.add('hide');
+      });
+    }) : null;
+
+    document.querySelectorAll('.anchor').forEach(function(elem) {
+      elem.addEventListener('mouseleave', function() {
+        elem.setAttribute('aria-label', null);
+        elem.classList.remove('tooltipped');
+        elem.classList.remove('tooltipped-s');
+        elem.classList.remove('tooltipped-w');
+      });
+    });
+
+    clip.on('success', function (e) {
+      e.clearSelection();
+      e.trigger.setAttribute('aria-label', 'Link copied to clipboard!');
+      e.trigger.classList.add('tooltipped');
+      e.trigger.classList.add('tooltipped-s');
+    });
+    
+
+
+    
+    var clipInit = false;
+    var preChromaElem = document.querySelectorAll('pre.chroma');
+    var langCodeElem = document.querySelectorAll('.language-code');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+    var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+    var makeClipboard = function(elem) {
+      var code = elem,
+        text = elem.textContent;
+        
+      if (text.length > 15) {
+        if (!clipInit) {
+          var text, clip = new ClipboardJS('.copy-to-clipboard', {
+            text: function (trigger) {
+              var codeElem = prev(trigger).querySelectorAll('code');
+              if (codeElem.length > 1) {
+                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
+              } else {
+                text = prev(trigger).querySelector('code').textContent;
+              }
+
+              return text.replace(/^\$\s/gm, '');
+            }
+          });
+
+          var inPre;
+          clip.on('success', function (e) {
+            e.clearSelection();
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clip.on('error', function (e) {
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', e.action.toString());
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clipInit = true;
+        }
+
+        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
+        var isNotAllowedIncluded = false;
+        var curClassName = code.getAttribute('class');
+
+        for (var i = 0; i < notAllowedClass.length; i++) {
+          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
+            isNotAllowedIncluded = true;
+            break;
+          }
+        }
+
+        if (!isNotAllowedIncluded) {
+          if (curClassName) {
+            var newClipboardElem = document.createElement('span');
+            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
+            newClipboardElem.setAttribute('title', 'Copy to clipboard');
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
+          }
+        }
+      }
+    }
+
+    var makeSymbolClipboard = function(elem) {
+      var clipboardSpan = document.createElement('span');
+      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
+      clipboardSpan.setAttribute('title', 'Copy to clipboard');
+      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
+    }
+
+    preChromaElem ? 
+    preChromaElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function(codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+    
+    langCodeElem ? 
+    langCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+    
+
+
+    
+    dollarCodeElem ?
+    dollarCodeElem.forEach(function(elem) {
+      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+      lnts ? 
+      lnts.forEach(function(lnt) {
+        lnt.innerHTML = '$<br/>';
+      }) : null;
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+      lnts ? 
+      lnts.forEach(function(lnt) {
+        lnt.innerHTML = '><br/>';
+      }) : null;
+    }) : null;
+    
+
+
+    
+    
+    var lib = JSON.parse("null");
+
+    if (lib && lib.includes('mermaid')) {
+      
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"mytheme\"");
+
+      if (themeVariant === "dark" || themeVariant === "hacker") {
+        mermaid.initialize({ theme: 'dark' });
+      } else {
+        mermaid.initialize({ theme: 'default' });
+      }
+      
+      var mermaids = [];
+      [].push.apply(mermaids, document.getElementsByClassName('language-mermaid'));
+      mermaids.forEach(function(elem) {
+        var elemParentNode = elem.parentNode;
+
+        if (elemParentNode !== document.body) {
+          elemParentNode.parentNode.insertBefore(elem, elemParentNode);
+          elemParentNode.parentNode.removeChild(elemParentNode);
+        }
+
+        var newElemWrapper = document.createElement('div');
+        newElemWrapper.classList.add('mermaid');
+        newElemWrapper.style.padding = '34px 4px 6px';
+        newElemWrapper.innerHTML = elem.innerHTML;
+        elem.replaceWith(newElemWrapper);
+      });
+    }
+    
+    
+
+    
+    if (lib && lib.includes('katex')) {
+      var mathElements = document.getElementsByClassName('math');
+      var options = {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false }
+        ],
+      };
+
+      renderMathInElement(document.querySelector('.single__contents'), options);
+    }
+    
+
+
+    
+    if (lib && lib.includes('flowchartjs')) {
+      
+      var options = JSON.parse("{\"arrow-end\":\"block\",\"element-color\":\"black\",\"fill\":\"white\",\"flowstate\":{\"approved\":{\"fill\":\"#58C4A3\",\"font-size\":12,\"no-text\":\"n/a\",\"yes-text\":\"APPROVED\"},\"current\":{\"fill\":\"yellow\",\"font-color\":\"red\",\"font-weight\":\"bold\"},\"future\":{\"fill\":\"#FFFF99\"},\"invalid\":{\"fill\":\"#444444\"},\"past\":{\"fill\":\"#CCCCCC\",\"font-size\":12},\"rejected\":{\"fill\":\"#C45879\",\"font-size\":12,\"no-text\":\"REJECTED\",\"yes-text\":\"n/a\"},\"request\":{\"fill\":\"blue\"}},\"font-color\":\"black\",\"font-size\":14,\"line-color\":\"black\",\"line-length\":50,\"line-width\":3,\"no-text\":\"no\",\"scale\":1,\"symbols\":{\"end\":{\"class\":\"end-element\"},\"start\":{\"element-color\":\"green\",\"fill\":\"yellow\",\"font-color\":\"red\"}},\"text-margin\":10,\"x\":0,\"y\":0,\"yes-text\":\"yes\"}");
+      var jsonContent = null;
+
+      var flowchartPrefix = "language-flowchart";
+      var index = 0;
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + flowchartPrefix + "]"), function(x){
+          x.style.display = 'none'
+          x.parentNode.style.backgroundColor = "transparent"
+          jsonContent = x.innerText;
+
+          var node0 = document.createElement('div');
+          node0.id = 'flowchart' + index;
+          x.parentNode.insertBefore(node0, x);
+
+          var diagram = flowchart.parse(jsonContent);
+          diagram.drawSVG("flowchart"+index, options);
+
+          index +=1;
+      });      
+    }
+    
+
+
+    
+    
+
+
+    
+    if (lib && lib.includes('msc')) {
+      
+      var options = JSON.parse("{\"theme\":\"hand\"}");
+      var jsonContent = null;
+
+      var index = 0;
+      var chartPrefix = "language-msc";
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + chartPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        var node0 = document.createElement('div');
+        node0.id = 'msc' + index;
+        x.parentNode.insertBefore(node0, x);
+        var diagram = Diagram.parse(jsonContent);
+        diagram.drawSVG("msc" + index, options);
+        index += 1;
+      });
+    }
+    
+
+
+    
+    if (lib && lib.includes('chart')) {
+      var borderColor = "#666";
+      var bgColor = "#ddd";
+      var borderWidth = 2;
+
+      Chart.defaults.global.elements.rectangle.borderWidth = borderWidth;
+      Chart.defaults.global.elements.rectangle.borderColor = borderColor;
+      Chart.defaults.global.elements.rectangle.backgroundColor = bgColor;
+
+      Chart.defaults.global.elements.line.borderWidth = borderWidth;
+      Chart.defaults.global.elements.line.borderColor = borderColor;
+      Chart.defaults.global.elements.line.backgroundColor = bgColor;
+
+      Chart.defaults.global.elements.point.borderWidth = borderWidth;
+      Chart.defaults.global.elements.point.borderColor = borderColor;
+      Chart.defaults.global.elements.point.backgroundColor = bgColor;
+
+      var chartPrefix = "language-chart";
+      var index = 0;
+      var jsonContent = null;
+
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + chartPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        var node0 = document.createElement('canvas');
+        var source = null;
+        node0.height = 200;
+        node0.style.height = 200;
+        node0.id = 'myChart' + index;
+        source = JSON.parse(jsonContent);
+        x.parentNode.insertBefore(node0, x);
+        var ctx = document.getElementById('myChart' + index).getContext('2d');
+        var myChart = new Chart(ctx, source);
+        index += 1;
+      });            
+    }
+    
+
+
+    
+    if (lib && lib.includes('wavedrom')) {
+      var wavePrefix = "language-wave";
+      var index = 0;
+      var jsonContent = null;
+      
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + wavePrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        var node0 = document.createElement('div');
+        var source = null;
+        node0.id = 'WaveDrom_Display_' + index;
+        source = JSON.parse(jsonContent);
+        x.parentNode.insertBefore(node0, x);
+        WaveDrom.RenderWaveForm(index, source, "WaveDrom_Display_");
+        index += 1;
+      });
+    }
+    
+
+
+    
+    if (lib && lib.includes('viz')) {
+      var vizPrefix = "language-viz-";
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        var engine;
+        x.getAttribute("class").split(" ").forEach(function (cls) {
+          if (cls.startsWith(vizPrefix)) {
+            engine = cls.substr(vizPrefix.length);
+          }
+        });
+        var viz = new Viz();
+        viz.renderSVGElement(x.innerText, { engine: engine })
+          .then(function (element) {
+            element.style.width = "100%";
+            x.parentNode.insertBefore(element, x);
+          })
+      });
+    }
+    
+    
+  }
+</script>
+
+
+            
+            <footer class="footer">
+    
+    
+<div class="footer__social">
+  <div class="social">
+    
+            
+    
+            
+    
+            
+    
+      
+      <a href="j17423@kisarazu.kosen-ac.jp" title="email" aria-label="email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
+      </a>
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://github.com/Takana-Norimasa" title="github" aria-label="github">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 24 24" version="1.1">
+<g id="surface3680">
+<path fill="currentColor" d="M 10.898438 2.101562 C 6.300781 2.601562 2.601562 6.300781 2.101562 10.800781 C 1.601562 15.5 4.300781 19.699219 8.398438 21.300781 C 8.699219 21.398438 9 21.199219 9 20.800781 L 9 19.199219 C 9 19.199219 8.601562 19.300781 8.101562 19.300781 C 6.699219 19.300781 6.101562 18.101562 6 17.398438 C 5.898438 17 5.699219 16.699219 5.398438 16.398438 C 5.101562 16.300781 5 16.300781 5 16.199219 C 5 16 5.300781 16 5.398438 16 C 6 16 6.5 16.699219 6.699219 17 C 7.199219 17.800781 7.800781 18 8.101562 18 C 8.5 18 8.800781 17.898438 9 17.800781 C 9.101562 17.101562 9.398438 16.398438 10 16 C 7.699219 15.5 6 14.199219 6 12 C 6 10.898438 6.5 9.800781 7.199219 9 C 7.101562 8.800781 7 8.300781 7 7.601562 C 7 7.199219 7 6.601562 7.300781 6 C 7.300781 6 8.699219 6 10.101562 7.300781 C 10.601562 7.101562 11.300781 7 12 7 C 12.699219 7 13.398438 7.101562 14 7.300781 C 15.300781 6 16.800781 6 16.800781 6 C 17 6.601562 17 7.199219 17 7.601562 C 17 8.398438 16.898438 8.800781 16.800781 9 C 17.5 9.800781 18 10.800781 18 12 C 18 14.199219 16.300781 15.5 14 16 C 14.601562 16.5 15 17.398438 15 18.300781 L 15 20.898438 C 15 21.199219 15.300781 21.5 15.699219 21.398438 C 19.398438 19.898438 22 16.300781 22 12.101562 C 22 6.101562 16.898438 1.398438 10.898438 2.101562 Z M 10.898438 2.101562 "/>
+</g>
+</svg>
+
+      </a>
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://twitter.com/lIlIIllIIIlIlIl" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+    
+  
+  
+    
+      <a href="https://takana-norimasa.github.io/blog/posts//index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
+      </a>
+    
+  
+
+  </div>
+</div>
+
+    
+<div id="gtt">
+  <div class="gtt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>
+  </div>
+</div>
+
+    <hr />
+
+    <div class="basicflex">
+        
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+        
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+        
+    </div>
+
+    <div class="footer__poweredby">
+        
+                
+            <p class="caption">
+                
+                    ©2020, All Rights Reserved
+                
+            </p>
+        
+
+        
+            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
+        
+        
+    </div> 
+</footer>
+        </div>
+        
+
+
+
+
+
+<div class="wrapper__right hide" data-pad="true" dir="ltr">
+  <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+</div>
+
+    </div>
+</body>
+
+</html>

@@ -13,7 +13,7 @@ tags:
 - SecHack365
 categories:
 - 参加録
-draft: true
+draft: false
 ---
 
 2019年5月の頭、部屋で500円で買ったジャンクモニタを汗だくになりながら分解してたら電話がかかってきた。
