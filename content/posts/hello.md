@@ -7,7 +7,7 @@ enableToc: true
 enableTocContent: false
 author: Takana Norimasa
 authorEmoji: false
-draft: true
+draft: false
 
 tags:
 - 日記
