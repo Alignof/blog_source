@@ -70,6 +70,7 @@ Mail: neuromancer_wg@outlook.jp
 ### 2019年
 |date	|events	|
 |-------|----------|
+|4/30-5/1	|令和CTF　参加|
 |5/17-		|[SecHack365参加](https://takana-norimasa.github.io/blog/posts/sechack365/)|
 |10/13,14	|全国高等専門学校プログラミングコンテスト本戦出場（競技部門）|
 |10/26		|KOSEN セキュリティコンテスト 2019　参加|
