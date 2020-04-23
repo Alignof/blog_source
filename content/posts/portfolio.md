@@ -31,6 +31,9 @@ link:[https://takana-norimasa.github.io/](https://takana-norimasa.github.io/)
 実際はかなり大変だった...
 
 ## 振り返り
+それじゃあ振り返っていきましょう。
+レポジトリはこちら。（実装がひどすぎるので見せたくないけど）
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/Takana-Norimasa/Takana-Norimasa.github.io" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fgithub.com%2FTakana-Norimasa%2FTakana-Norimasa.github.io&amp;key=dd60c159c87f40f1ecca839b51b281e8"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 ### 構想段階
 僕はWebの知識は皆無なのでライブラリでゴリ押すか逆にそれらに頼らず力押しするかのどっちかだったのですが、ちょうど思いついたアイデアがライブラリなしで行けそうだったので力押し作戦をとることにしました。
@@ -46,6 +49,7 @@ link:[https://takana-norimasa.github.io/](https://takana-norimasa.github.io/)
 
 ### 中盤
 見た目を整えたりボタンを実装したり...
+この時点でクリックした操作に応じてコマンド操作のアニメーションが出るって感じの方針が固まりました。
 ちなみにターミナルの見た目は僕が普段使っている設定そのものです。
 最初に出てくるAAもここで作りました。
 フォントによって表示がめちゃくちゃになる（形が崩れたりバックスラッシュと円マークがめちゃくちゃだったり...）のでWebフォントで整えることを覚えました。
@@ -55,7 +59,7 @@ link:[https://takana-norimasa.github.io/](https://takana-norimasa.github.io/)
 最初は無理だと思っていた階層構造も上手くボタンの選択肢を絞れば簡単に実現できましたし、それぞれの機能の関数化もだいたい済んでました。（本当に関数を組み合わせるだけ）
 ここらへんから地獄の入り口、同期処理が入ってきます。
 かなり勉強になりました。（n敗）
-async/awaitについてかなり勉強して任意のタイミングでタイピングアニメーションを実行することができました。
+async/awaitについて勉強して任意のタイミングでタイピングアニメーションを実行することができました。
 ```js
 async function main_stream(){
 	await typing(wait);
@@ -74,11 +78,11 @@ async function main_stream(){
 
 ### 終盤
 一番辛くてダレた「文字を書く」という作業です。
-つまり、今までやってきたことの説明とかの部分ですね。
-見栄えが良くなるように[Iframely](https://iframely.com/)を使ってみたり工夫してみました。
-ここが一番時間がかかったしモチベーションが低かったところだと思います。
+つまり、ポートフォリオの内容の部分ですね。
+ここが一番時間がかかったしモチベーションが低かったところだと思います。（リアルで他にやることがあったし）
 本気出せば2日くらいで終わる作業だったな...（今思えば）
 テストページにhtmlで記事を書いて最後にjsの変数として編集するって感じですね...（地獄）
+あとは見栄えが良くなるように[Iframely](https://iframely.com/)を使ってみたり工夫してみまたりcssを微調整してました。（最初のgithubのリポジトリへのリンクはIframelyを使ってます）
 
 ### 末期
 仕上げにして地獄です。
@@ -97,18 +101,34 @@ function scroll_bottom(){
 個人的に気に入っている処理。
 
 最大の問題だったのが同期処理です。
-軽い処理だからdelayの時間を決め打ちしてasync/awaitとdelayを併用すれば行けるでしょ。とか思っていたらやっぱりダメでした（当然）
-でもt.jsのjQueryでcallbackを基準に使うしか無いし...（ここで浮き彫りになる技術力不足）
+軽い処理だからdelayの時間を決め打ちしてasync/awaitとdelayを併用すれば行けるでしょ。とか思っていたらやっぱりダメでした...（当然）
+でもt.jsはjQueryなのでcallbackを基準に使うしか無いし...（ここで浮き彫りになる技術力不足）
+他はasync/awaitで動いているのでそっちに合わせるのも不可能だしawaitを使っても同期されるのは呼び出されるタイミングだけでhtmlを挿入して実際に動き終わるタイミングはt.jsが用意したcallbackのみぞ知るって感じなんですよね...
+肝心のアニメーションの終わりがわからないと次の出力とかコマンド操作とかに進めないし...
 結局所定のcallback関数で元のasync funcのresolve()を呼び出すという世紀末的な解決をして今回はひとまず終了ということにしました。（一応理想通りに動いたので）
 
 ```js
+const tjs=function(num,resolve){
+	//t.js
+	$((".terminal_"+num)).t({
+		/* some config and process*/
+
+		// finished callback
+		fin:function(elm){
+			$('terminal_'+num).find('.t-caret').css({opacity:0});
+			counter++;
+			resolve();// <- quit async function (and typing func)
+		}       
+	})
+}
+
 function typing(text){
 	const p=new Promise(async(resolve,reject) => {
 		scroll_bottom();
 		await new Promise(r=>setTimeout(r, 100));
 		time_update();
 		terget.insertAdjacentHTML('beforeend',text);
-		await tjs(counter,resolve);
+		tjs(counter,resolve);
 	});
 	return p;
 }
@@ -135,4 +155,8 @@ tjsという関数の先にt.jsのjQueryが待ち受けているって感じで�
 これを作ったらTLに無限に流れてくる難解なWeb用語も分かるかな？とか思ってましたが、構想段階でモダンなあれこれの採用を見送ってしまったので次はVue.jsを使ってみたいです。（なんなのかよく分かってない人）
 オシャレなサイトも作ってみたいなぁ。
 
+## 次は何やる？
+次はSecHackの成果発表会に向けての準備と去年からやりたかったCコンパイラの自作に踏み切ろうと思います。
+SecHackでやってる人を見てずっとやりたかったんですよね。自作コンパイラ。
+まぁそれも記事にしたり今回作ったポートフォリオに入れていきたいですね。
 
