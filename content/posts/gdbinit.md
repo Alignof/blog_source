@@ -41,11 +41,11 @@ Cとアセンブラによって拡張機能を使い分けたいのでこれは�
 かなりの試行錯誤の末ついに方法を見つけた。
 まず、拡張機能ごとにgdbinitを分ける。
 自分の場合はgdb dashboardは~/.gdbinitに、gdb-pedaは~/.gdbinit_pedaにそれぞれ設定を書いた。
-これで普通にgdbを実行したときには~/.gdbinitが読まれるのでgdb dashboardが使える。
+これで普通にgdbを実行したときにはデフォルトの設定ファイルである~/.gdbinitが読まれるのでgdb dashboardが使える。
 では、gdb-pedaを使いたい場合はどうするのか？
-gdb-pedaを使うときは以下のようにコマンドを叩く。
+gdb-pedaを使うときは以下のようにコマンドを叩いてgdbを起動させる。
 ```shell
-gdb -nx -ix=~/.gdbinit_peda terget_file
+gdb -nx -ix=~/.gdbinit_peda 
 ```
 -nxでデフォルトの~/.gdbinitを読まないようにして-ixで新しい~/.gdbinit_pedaを読ませるようにしている。
 ```gdb --help```の
