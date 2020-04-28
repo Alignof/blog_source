@@ -14,13 +14,51 @@
     <managingEditor>neuromancer_wg@outlook.jp (Takana Norimasa)</managingEditor>
     <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 23 Apr 2020 01:29:18 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 13:41:17 +0900</lastBuildDate>
     
         <atom:link href="https://takana-norimasa.github.io/blog/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>gdbinitを使い分ける</title>
+        <link>https://takana-norimasa.github.io/blog/posts/gdbinit/</link>
+        <pubDate>Tue, 28 Apr 2020 13:41:17 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <atom:modified>Tue, 28 Apr 2020 13:41:17 +0900</atom:modified>
+        <guid>https://takana-norimasa.github.io/blog/posts/gdbinit/</guid>
+        <description>経緯 結構詰まったのでメモ。 今まで普通のCのデバッグにはGDB、アセンブラを読むときには拡張のgdb-pedaを使っていた。 つまりgdbを使う</description>
+        
+        <dc:creator>Takana Norimasa</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>gdb</category>
+            
+          
+            
+              <category>gdb-peda</category>
+            
+          
+            
+              <category>memo</category>
+            
+          
+        
+        
+          
+            
+              <category>tech</category>
+            
+          
+        
+        
+      </item>
       
       <item>
         <title>ポートフォリオサイトを作った</title>

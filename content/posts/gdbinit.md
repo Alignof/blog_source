@@ -13,7 +13,7 @@ tags:
 - memo
 categories:
 - tech
-draft: true
+draft: false
 ---
 
 ## 経緯
