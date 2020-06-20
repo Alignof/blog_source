@@ -6,5 +6,4 @@ weight: 2
 link: https://github.com/Takana-Norimasa/Secure_I-O_Unit
 repo: https://github.com/Takana-Norimasa/Secure_I-O_Unit
 pinned: true
-thumb: feature3/css3-bare.png
 ---

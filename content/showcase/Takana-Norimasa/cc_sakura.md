@@ -6,5 +6,4 @@ weight: 1
 link: https://github.com/Takana-Norimasa/cc_sakura
 repo: https://github.com/Takana-Norimasa/cc_sakura
 pinned: true
-thumb: feature3/css3.png
 ---
