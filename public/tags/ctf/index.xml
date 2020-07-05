@@ -49,7 +49,105 @@
         
           
             
-              <category>tech</category>
+              <category>event</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>KOSENセキュリティコンテスト2019 Writeup</title>
+        <link>https://takana-norimasa.github.io/blog/posts/kosensec_2019/</link>
+        <pubDate>Tue, 05 Nov 2019 00:00:00 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <atom:modified>Tue, 05 Nov 2019 00:00:00 +0900</atom:modified>
+        <guid>https://takana-norimasa.github.io/blog/posts/kosensec_2019/</guid>
+        <description>この記事はKOSENセキュリティコンテスト2019 Writeup - Qiitaから移転してきたものです． はじめに 10/26に開催されたKOSENセキュリテ</description>
+        
+        <dc:creator>Takana Norimasa</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>CTF</category>
+            
+          
+        
+        
+          
+            
+              <category>event</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>SECCON Online 2019 Quals Writeup</title>
+        <link>https://takana-norimasa.github.io/blog/posts/seccon_2019/</link>
+        <pubDate>Tue, 22 Oct 2019 00:00:00 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <atom:modified>Tue, 22 Oct 2019 00:00:00 +0900</atom:modified>
+        <guid>https://takana-norimasa.github.io/blog/posts/seccon_2019/</guid>
+        <description>この記事はSECCON Online 2019 Quals Writeup - Qiitaから移転してきたものです． はじめに 予定が合わず友達からポケットWifiを借りて出先から参戦． サービ</description>
+        
+        <dc:creator>Takana Norimasa</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>CTF</category>
+            
+          
+            
+              <category>SECCON</category>
+            
+          
+        
+        
+          
+            
+              <category>event</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>令和CTF writeup</title>
+        <link>https://takana-norimasa.github.io/blog/posts/reiwactf/</link>
+        <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <atom:modified>Wed, 01 May 2019 00:00:00 +0900</atom:modified>
+        <guid>https://takana-norimasa.github.io/blog/posts/reiwactf/</guid>
+        <description>この記事は令和CTF writeup - Qiitaから移転してきたものです． 知らなくて普通に一時間遅刻しました． まぁ，早くいっても混んでたらしいですけど． 時</description>
+        
+        <dc:creator>Takana Norimasa</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>CTF</category>
+            
+          
+            
+              <category>SECCON</category>
+            
+          
+        
+        
+          
+            
+              <category>event</category>
             
           
         

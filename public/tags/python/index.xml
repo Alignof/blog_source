@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Python on 303 See Other</title>
+    <link>https://takana-norimasa.github.io/blog/tags/python/</link>
+    <description>Recent content in Python on 303 See Other</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>neuromancer_wg@outlook.jp (Takana Norimasa)</managingEditor>
+    <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 14 Mar 2020 18:44:25 +0900</lastBuildDate>
+    
+        <atom:link href="https://takana-norimasa.github.io/blog/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>matplotlibで特定のデータにだけマーカーを適用する方法</title>
+        <link>https://takana-norimasa.github.io/blog/posts/mplib_marker/</link>
+        <pubDate>Sat, 14 Mar 2020 18:44:25 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <atom:modified>Sat, 14 Mar 2020 18:44:25 +0900</atom:modified>
+        <guid>https://takana-norimasa.github.io/blog/posts/mplib_marker/</guid>
+        <description>この記事はmatplotlibで特定のデータにだけマーカーを適用する方法 - Qiitaから移転してきたものです． はじめに 雑誌の掲載順をグラフ化</description>
+        
+        <dc:creator>Takana Norimasa</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Python</category>
+            
+          
+            
+              <category>matplotlib</category>
+            
+          
+        
+        
+          
+            
+              <category>tech</category>
+            
+          
+        
+        
+      </item>
+      
+      <item>
+        <title>matplotlibで特定のデータをプロットしない方法</title>
+        <link>https://takana-norimasa.github.io/blog/posts/mplib_plot/</link>
+        <pubDate>Tue, 26 Feb 2019 18:44:25 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <atom:modified>Tue, 26 Feb 2019 18:44:25 +0900</atom:modified>
+        <guid>https://takana-norimasa.github.io/blog/posts/mplib_plot/</guid>
+        <description>この記事はmatplotlibで特定のデータをプロットしない方法 - Qiitaから移転してきたものです． はじめに 漫画の掲載順を取得してグラフ化</description>
+        
+        <dc:creator>Takana Norimasa</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Python</category>
+            
+          
+            
+              <category>matplotlib</category>
+            
+          
+        
+        
+          
+            
+              <category>tech</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

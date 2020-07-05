@@ -12,7 +12,7 @@ tags:
 - 参加録
 - SecHack365
 categories:
-- 参加録
+- event
 draft: false
 ---
 
