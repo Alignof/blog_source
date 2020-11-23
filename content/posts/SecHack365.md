@@ -33,7 +33,7 @@ draft: false
 SecHack365 ’19の思索駆動コースの修了生です。
 テーマは「セキュアな入出力装置の開発」。
 参加時は高専3年生でした。
-Twitter: [@lIlIIllIIIlIlIl](https://twitter.com/lIlIIllIIIlIlIl)
+Twitter: [\_Alignof](https://twitter.com/_Alignof)
 
 高専志望時からセキュリティ分野に興味があったので1年の頃からCTFとか講習会とかインターンシップとかトレンドマイクロのガーディアンプロジェクトとかセキュリティに関係がありそうなものにはかたっぱしから応募してました。
 おかげでとりあえず薄く広くセキュリティ分野について学んではいるって感じでした。

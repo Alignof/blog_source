@@ -48,6 +48,21 @@
   </url>
   
   <url>
+    <loc>https://takana-norimasa.github.io/blog/</loc>
+    <lastmod>2020-05-24T18:44:25+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://takana-norimasa.github.io/blog/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://takana-norimasa.github.io/blog/"
+                />
+  </url>
+  
+  <url>
     <loc>https://takana-norimasa.github.io/blog/posts/ctf4b_2020/</loc>
     <lastmod>2020-05-24T18:44:25+09:00</lastmod>
   </url>
@@ -295,21 +310,6 @@
   <url>
     <loc>https://takana-norimasa.github.io/blog/posts/reiwactf/</loc>
     <lastmod>2019-05-01T00:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://takana-norimasa.github.io/blog/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://takana-norimasa.github.io/blog/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://takana-norimasa.github.io/blog/"
-                />
   </url>
   
   <url>
