@@ -6,7 +6,7 @@ hideToc: false
 enableToc: true
 enableTocContent: false
 author: Takana Norimasa
-draft: true
+draft: false
 
 tags:
 - 参加録
