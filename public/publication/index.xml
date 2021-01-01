@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Publications on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/publication/</link>
+    <link>https://Alignof.github.io/blog/publication/</link>
     <description>Recent content in Publications on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/publication/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://Alignof.github.io/blog/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>article</title>
-        <link>https://takana-norimasa.github.io/blog/publication/article/</link>
+        <link>https://Alignof.github.io/blog/publication/article/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/publication/article/</guid>
+        <guid>https://Alignof.github.io/blog/publication/article/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>book</title>
-        <link>https://takana-norimasa.github.io/blog/publication/book/</link>
+        <link>https://Alignof.github.io/blog/publication/book/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/publication/book/</guid>
+        <guid>https://Alignof.github.io/blog/publication/book/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>misc</title>
-        <link>https://takana-norimasa.github.io/blog/publication/misc/</link>
+        <link>https://Alignof.github.io/blog/publication/misc/</link>
         <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Thu, 05 Mar 2020 14:08:48 +0000</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/publication/misc/</guid>
+        <guid>https://Alignof.github.io/blog/publication/misc/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>

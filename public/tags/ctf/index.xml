@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>CTF on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/tags/ctf/</link>
+    <link>https://Alignof.github.io/blog/tags/ctf/</link>
     <description>Recent content in CTF on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 24 May 2020 18:44:25 +0900</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://Alignof.github.io/blog/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,17 +24,17 @@
       
       <item>
         <title>Beginners CTF 2020 Write up</title>
-        <link>https://takana-norimasa.github.io/blog/posts/ctf4b_2020/</link>
+        <link>https://Alignof.github.io/blog/posts/ctf4b_2020/</link>
         <pubDate>Sun, 24 May 2020 18:44:25 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Sun, 24 May 2020 18:44:25 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/ctf4b_2020/</guid>
+        <guid>https://Alignof.github.io/blog/posts/ctf4b_2020/</guid>
         <description>5/23-5/24のBeginners CTFに参加した。 ぼっち参加で272pt/309位だった。（散々） 色々勉強になったし久しぶりだったので</description>
         
         <dc:creator>Takana Norimasa</dc:creator>
         
         
-        <media:content url="https://takana-norimasa.github.io/blog/https://pbs.twimg.com/profile_images/903159362830557185/jc01GTlm.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
+        <media:content url="https://Alignof.github.io/blog/https://pbs.twimg.com/profile_images/903159362830557185/jc01GTlm.jpg" medium="image"><media:title type="html">meta image</media:title></media:content>
         
           
             
@@ -58,11 +58,11 @@
       
       <item>
         <title>KOSENセキュリティコンテスト2019 Writeup</title>
-        <link>https://takana-norimasa.github.io/blog/posts/kosensec_2019/</link>
+        <link>https://Alignof.github.io/blog/posts/kosensec_2019/</link>
         <pubDate>Tue, 05 Nov 2019 00:00:00 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Tue, 05 Nov 2019 00:00:00 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/kosensec_2019/</guid>
+        <guid>https://Alignof.github.io/blog/posts/kosensec_2019/</guid>
         <description>この記事はKOSENセキュリティコンテスト2019 Writeup - Qiitaから移転してきたものです． はじめに 10/26に開催されたKOSENセキュリテ</description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -88,11 +88,11 @@
       
       <item>
         <title>SECCON Online 2019 Quals Writeup</title>
-        <link>https://takana-norimasa.github.io/blog/posts/seccon_2019/</link>
+        <link>https://Alignof.github.io/blog/posts/seccon_2019/</link>
         <pubDate>Tue, 22 Oct 2019 00:00:00 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Tue, 22 Oct 2019 00:00:00 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/seccon_2019/</guid>
+        <guid>https://Alignof.github.io/blog/posts/seccon_2019/</guid>
         <description>この記事はSECCON Online 2019 Quals Writeup - Qiitaから移転してきたものです． はじめに 予定が合わず友達からポケットWifiを借りて出先から参戦． サービ</description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -122,11 +122,11 @@
       
       <item>
         <title>令和CTF writeup</title>
-        <link>https://takana-norimasa.github.io/blog/posts/reiwactf/</link>
+        <link>https://Alignof.github.io/blog/posts/reiwactf/</link>
         <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Wed, 01 May 2019 00:00:00 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/reiwactf/</guid>
+        <guid>https://Alignof.github.io/blog/posts/reiwactf/</guid>
         <description>この記事は令和CTF writeup - Qiitaから移転してきたものです． 知らなくて普通に一時間遅刻しました． まぁ，早くいっても混んでたらしいですけど． 時</description>
         
         <dc:creator>Takana Norimasa</dc:creator>

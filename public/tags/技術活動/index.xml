@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>技術活動 on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/tags/%E6%8A%80%E8%A1%93%E6%B4%BB%E5%8B%95/</link>
+    <link>https://Alignof.github.io/blog/tags/%E6%8A%80%E8%A1%93%E6%B4%BB%E5%8B%95/</link>
     <description>Recent content in 技術活動 on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 23 Apr 2020 01:29:18 +0900</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/tags/%E6%8A%80%E8%A1%93%E6%B4%BB%E5%8B%95/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://Alignof.github.io/blog/tags/%E6%8A%80%E8%A1%93%E6%B4%BB%E5%8B%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>ポートフォリオサイトを作った</title>
-        <link>https://takana-norimasa.github.io/blog/posts/portfolio/</link>
+        <link>https://Alignof.github.io/blog/posts/portfolio/</link>
         <pubDate>Thu, 23 Apr 2020 01:29:18 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Thu, 23 Apr 2020 01:29:18 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/portfolio/</guid>
+        <guid>https://Alignof.github.io/blog/posts/portfolio/</guid>
         <description>お知らせ このブログができるずっと前から建設を進めていたポートフォリオがようやく完成しました。 疲れた&amp;hellip;（満身創痍） 上のバーのAb</description>
         
         <dc:creator>Takana Norimasa</dc:creator>

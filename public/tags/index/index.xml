@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>index on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/tags/index/</link>
+    <link>https://Alignof.github.io/blog/tags/index/</link>
     <description>Recent content in index on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/tags/index/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://Alignof.github.io/blog/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -23,11 +23,11 @@
       
       <item>
         <title>Posts</title>
-        <link>https://takana-norimasa.github.io/blog/posts/</link>
+        <link>https://Alignof.github.io/blog/posts/</link>
         <pubDate>Sun, 24 May 2020 18:44:25 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/posts/</guid>
+        <guid>https://Alignof.github.io/blog/posts/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>

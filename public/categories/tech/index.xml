@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>tech on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/categories/tech/</link>
+    <link>https://Alignof.github.io/blog/categories/tech/</link>
     <description>Recent content in tech on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 28 Apr 2020 13:41:17 +0900</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://Alignof.github.io/blog/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>gdbinitを使い分ける</title>
-        <link>https://takana-norimasa.github.io/blog/posts/gdbinit/</link>
+        <link>https://Alignof.github.io/blog/posts/gdbinit/</link>
         <pubDate>Tue, 28 Apr 2020 13:41:17 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Tue, 28 Apr 2020 13:41:17 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/gdbinit/</guid>
+        <guid>https://Alignof.github.io/blog/posts/gdbinit/</guid>
         <description>経緯 結構詰まったのでメモ。 今まで普通のCのデバッグにはGDB、アセンブラを読むときには拡張のgdb-pedaを使っていた。 つまりgdbを使う</description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -62,11 +62,11 @@
       
       <item>
         <title>ポートフォリオサイトを作った</title>
-        <link>https://takana-norimasa.github.io/blog/posts/portfolio/</link>
+        <link>https://Alignof.github.io/blog/posts/portfolio/</link>
         <pubDate>Thu, 23 Apr 2020 01:29:18 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Thu, 23 Apr 2020 01:29:18 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/portfolio/</guid>
+        <guid>https://Alignof.github.io/blog/posts/portfolio/</guid>
         <description>お知らせ このブログができるずっと前から建設を進めていたポートフォリオがようやく完成しました。 疲れた&amp;hellip;（満身創痍） 上のバーのAb</description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -108,11 +108,11 @@
       
       <item>
         <title>matplotlibで特定のデータにだけマーカーを適用する方法</title>
-        <link>https://takana-norimasa.github.io/blog/posts/mplib_marker/</link>
+        <link>https://Alignof.github.io/blog/posts/mplib_marker/</link>
         <pubDate>Sat, 14 Mar 2020 18:44:25 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Sat, 14 Mar 2020 18:44:25 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/mplib_marker/</guid>
+        <guid>https://Alignof.github.io/blog/posts/mplib_marker/</guid>
         <description>この記事はmatplotlibで特定のデータにだけマーカーを適用する方法 - Qiitaから移転してきたものです． はじめに 雑誌の掲載順をグラフ化</description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -142,11 +142,11 @@
       
       <item>
         <title>matplotlibで特定のデータをプロットしない方法</title>
-        <link>https://takana-norimasa.github.io/blog/posts/mplib_plot/</link>
+        <link>https://Alignof.github.io/blog/posts/mplib_plot/</link>
         <pubDate>Tue, 26 Feb 2019 18:44:25 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         <atom:modified>Tue, 26 Feb 2019 18:44:25 +0900</atom:modified>
-        <guid>https://takana-norimasa.github.io/blog/posts/mplib_plot/</guid>
+        <guid>https://Alignof.github.io/blog/posts/mplib_plot/</guid>
         <description>この記事はmatplotlibで特定のデータをプロットしない方法 - Qiitaから移転してきたものです． はじめに 漫画の掲載順を取得してグラフ化</description>
         
         <dc:creator>Takana Norimasa</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Categories on 303 See Other</title>
-    <link>https://takana-norimasa.github.io/blog/categories/</link>
+    <link>https://Alignof.github.io/blog/categories/</link>
     <description>Recent content in Categories on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 24 May 2020 18:44:25 +0900</lastBuildDate>
     
-        <atom:link href="https://takana-norimasa.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://Alignof.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>event</title>
-        <link>https://takana-norimasa.github.io/blog/categories/event/</link>
+        <link>https://Alignof.github.io/blog/categories/event/</link>
         <pubDate>Sun, 24 May 2020 18:44:25 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/categories/event/</guid>
+        <guid>https://Alignof.github.io/blog/categories/event/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>tech</title>
-        <link>https://takana-norimasa.github.io/blog/categories/tech/</link>
+        <link>https://Alignof.github.io/blog/categories/tech/</link>
         <pubDate>Tue, 28 Apr 2020 13:41:17 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/categories/tech/</guid>
+        <guid>https://Alignof.github.io/blog/categories/tech/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>other</title>
-        <link>https://takana-norimasa.github.io/blog/categories/other/</link>
+        <link>https://Alignof.github.io/blog/categories/other/</link>
         <pubDate>Fri, 03 Apr 2020 23:40:48 +0900</pubDate>
         <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
         
-        <guid>https://takana-norimasa.github.io/blog/categories/other/</guid>
+        <guid>https://Alignof.github.io/blog/categories/other/</guid>
         <description></description>
         
         <dc:creator>Takana Norimasa</dc:creator>
