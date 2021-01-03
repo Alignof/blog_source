@@ -34,8 +34,8 @@ SecHack365の興奮冷めやらぬ2020年4月の頭．
 Name: Takana Norimasa
 Age: 19
 Nationality: Japan
-Twitter: [@303_See_0ther](https://twitter.com/303_See_0ther)
-Github: [Takana-Norimasa](https://github.com/Takana-Norimasa)
+Twitter: [@\_Alignof](https://twitter.com/_Alignof)
+Github: [Alignof](https://github.com/Alignof)
 Mail: neuromancer_wg@outlook.jp
 
 ~~まぁ詳しくはポートフォリオを読んでください．

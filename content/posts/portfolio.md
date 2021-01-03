@@ -35,7 +35,7 @@ link:[https://takana-norimasa.github.io/](https://takana-norimasa.github.io/)
 ## 振り返り
 それじゃあ振り返っていきましょう。
 レポジトリはこちら。（実装がひどすぎるので見せたくないけど）
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/Takana-Norimasa/Takana-Norimasa.github.io" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fgithub.com%2FTakana-Norimasa%2FTakana-Norimasa.github.io&amp;key=dd60c159c87f40f1ecca839b51b281e8"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://github.com/Alignof/Alignof.github.io" data-iframely-url="//cdn.iframe.ly/api/iframe?url=https%3A%2F%2Fgithub.com%2FAlignof%2FAlignof.github.io&amp;key=dd60c159c87f40f1ecca839b51b281e8"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
 
 ### 構想段階
 僕はWebの知識は皆無なのでライブラリでゴリ押すか逆にそれらに頼らず力押しするかのどっちかだったのですが、ちょうど思いついたアイデアがライブラリなしで行けそうだったので力押し作戦をとることにしました。
