@@ -2,22 +2,25 @@
 <html lang="en" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
-	<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SecHack365 &#39;19 参加録 – 303 See Other</title>
     
 
 
+  
+  <script defer src="/blog/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
+
+
+
 <script src="/blog/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/blog/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
+<script defer src="/blog/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/blog/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
+<script defer src="/blog/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/blog/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
-
-<script defer src="/blog/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/blog/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/blog/js/helper/closest.min.js"></script>
   
@@ -96,6 +99,74 @@
           navCollapse.setAttribute('data-open', 'true');
           navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
           navCollapseBtn.classList.add('is-active');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+
+    
+    var footNoteRefs = document.querySelectorAll('.footnote-ref');
+    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
+
+    footNoteRefs ? 
+    footNoteRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function () {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+
+    footNoteBackRefs ? 
+    footNoteBackRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function() {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
         }
       }
     }) : null;
@@ -289,11 +360,13 @@
         if (st < 45) {
           return null;
         }
-        
-        if (!navbar.classList.contains('navbar--hide')) {
-          navbar.classList.add('navbar--hide');
-        } else if (navbar.classList.contains('navbar--show')) {
-          navbar.classList.remove('navbar--show');
+
+        if (navbar.classList.contains('scrolling')) {
+          if (!navbar.classList.contains('navbar--hide')) {
+            navbar.classList.add('navbar--hide');
+          } else if (navbar.classList.contains('navbar--show')) {
+            navbar.classList.remove('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -360,10 +433,12 @@
           gttBtn.style.display = "none";
         }
 
-        if (navbar.classList.contains('navbar--hide')) {
-          navbar.classList.remove('navbar--hide');
-        } else if (!navbar.classList.contains('navbar--show')) {
-          navbar.classList.add('navbar--show');
+        if (navbar.classList.contains('scrolling')) {
+          if (navbar.classList.contains('navbar--hide')) {
+            navbar.classList.remove('navbar--hide');
+          } else if (!navbar.classList.contains('navbar--show')) {
+            navbar.classList.add('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -444,6 +519,17 @@
     var rootEleme = document.getElementById('root');
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+    
+    
+    var skinDarkCode = JSON.parse("\"dark\"");
+    
+    var skinLightCode = JSON.parse("\"light\"");
+    
+    var skinHackerCode = JSON.parse("\"hacker\"");
+    
+    var skinSolarizedCode = JSON.parse("\"solarized\"");
+    
+    var skinKimbieCode = JSON.parse("\"kimbie\"");
 
     var setMetaColor = function(themeColor) {
       var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
@@ -476,7 +562,21 @@
         metaThemeColor.setAttribute('content', '#eee8d5');
         metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
         metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
-      } 
+      }
+    }
+
+    var parseSkinCode = function(themeText) {
+      if (themeText === skinDarkCode) {
+        return 'dark';
+      } else if (themeText === skinLightCode) {
+        return 'light';
+      } else if (themeText === skinHackerCode) {
+        return 'hacker';
+      } else if (themeText === skinSolarizedCode) {
+        return 'solarized';
+      } else if (themeText === skinKimbieCode) {
+        return 'kimbie';
+      }
     }
     
     if (localTheme) {
@@ -497,7 +597,7 @@
     selectThemeItemElem ? 
     selectThemeItemElem.forEach(function (v, i) {
       v.addEventListener('click', function (e) {
-        var selectedThemeVariant = e.target.text.trim();
+        var selectedThemeVariant = parseSkinCode(e.target.text.trim());
         localStorage.setItem('theme', selectedThemeVariant);
         setMetaColor(selectedThemeVariant);
 
@@ -529,12 +629,20 @@
           }
         }
 
-        var utterances = document.querySelector('iframe');
+        var utterances = document.getElementById('utterances');
         if (utterances) {
-          utterances.contentWindow.postMessage({
+          utterances.querySelector('iframe').contentWindow.postMessage({
             type: 'set-theme',
             theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
           }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
         }
       });
     }) : null;
@@ -543,60 +651,85 @@
 
   
     
+    var baseurl = JSON.parse("\"https://Alignof.github.io/blog/\"");
+    
     var permalink = JSON.parse("\"https://Alignof.github.io/blog/posts/sechack365/\"");
+    
+    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
+    
+    var enableSearch = JSON.parse("true");
+    
+    var searchDistance = JSON.parse("null");
+    
+    var searchThreshold = JSON.parse("null");
+    
+    var searchContent = JSON.parse("null");
     
     var enableSearchHighlight = JSON.parse("true");
     
     var searchResultPosition = JSON.parse("\"main\"");
     
     var sectionType = JSON.parse("\"posts\"");
-
+    
+    var kind = JSON.parse("\"page\"");
+    
     var fuse = null;
 
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-          window.fuse = fuse;
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        if (sectionType === "publication" && kind !== "page") {
+          xhr.open('GET', permalink + "index.json");
+        } else {
+          xhr.open('GET', baseurl + langprefix + "/index.json");
         }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
+        
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : 
+                searchContent ? ['title', 'description', 'content'] : ['title', 'description'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true, 
+              threshold: searchThreshold ? searchThreshold : 0.4, 
+              location: 0, 
+              distance: searchDistance ? searchDistance : 100, 
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+              isCaseSensitive: false, 
+              findAllMatches: false, 
+              useExtendedSearch: false, 
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
       li.className = 'search-result__item';
       
       var a = document.createElement('a');
-      a.innerHTML = obj.title;
+      a.innerHTML = obj.item.title;
       a.setAttribute('class', 'search-result__item--title');
-      a.setAttribute('href', obj.permalink);
+      a.setAttribute('href', obj.item.uri);
 
       var descDiv = document.createElement('div');
       descDiv.setAttribute('class', 'search-result__item--desc');
-      if (obj.description) {
-        descDiv.innerHTML = obj.description;
-      } else if (obj.content) {
-        descDiv.innerHTML = obj.content.substring(0, 225);
+      if (obj.item.description) {
+        descDiv.innerHTML = obj.item.description;
+      } else if (obj.item.content) {
+        descDiv.innerHTML = obj.item.content.substring(0, 225);
       }
       
       li.appendChild(a);
@@ -1070,7 +1203,7 @@
   
     var mobileSearchInputElem = document.querySelector('#search-mobile');
     var mobileSearchClassElem = document.querySelector('.mobile-search');
-    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
+    var mobileSearchBtnElems = document.querySelectorAll('.navbar-search');
     var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
     var mobileSearchContainer = document.querySelector('#search-mobile-container');
     var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
@@ -1080,19 +1213,21 @@
       mobileSearchClassElem.style.display = 'none';
     }
 
-    mobileSearchBtnElem ? 
-    mobileSearchBtnElem.addEventListener('click', function () {
-      if (mobileSearchContainer) {
-        mobileSearchContainer.style.display = 'block';
-      }
+    mobileSearchBtnElems ? 
+    mobileSearchBtnElems.forEach(function (elem, idx) {
+      elem.addEventListener('click', function () {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'block';
+        }
 
-      if (mobileSearchInputElem) {
-        mobileSearchInputElem.focus();
-      }
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.focus();
+        }
 
-      if (htmlElem) {
-        htmlElem.style.overflowY = 'hidden';
-      }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'hidden';
+        }
+      });
     }) : null;
 
     mobileSearchCloseBtnElem ? 
@@ -1187,7 +1322,8 @@
     }
   
   });
-</script>    
+</script>
+    
     
 
 
@@ -1214,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="SecHack365 &#39;19の参加録">
 
-<meta name="generator" content="Hugo 0.77.0" />
+<meta name="generator" content="Hugo 0.86.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1273,7 +1409,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1294,18 +1429,6 @@ if (!doNotTrack) {
 
 
     
-
-	
-	<link rel="shortcut icon" href="/blog/favicon/favicon.ico" type="image/x-icon" />
-	<link rel="apple-touch-icon" href="/blog/favicon/apple-touch-icon.png" />
-	<link rel="apple-touch-icon" sizes="57x57" href="/blog/favicon/apple-touch-icon-57x57.png" />
-	<link rel="apple-touch-icon" sizes="72x72" href="/blog/favicon/apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="76x76" href="/blog/favicon/apple-touch-icon-76x76.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="/blog/favicon/apple-touch-icon-114x114.png" />
-	<link rel="apple-touch-icon" sizes="120x120" href="/blog/favicon/apple-touch-icon-120x120.png" />
-	<link rel="apple-touch-icon" sizes="144x144" href="/blog/favicon/apple-touch-icon-144x144.png" />
-	<link rel="apple-touch-icon" sizes="152x152" href="/blog/favicon/apple-touch-icon-152x152.png" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/blog/favicon/apple-touch-icon-180x180.png" />
 </head>
 
 <body id="root" class="theme__mytheme">
@@ -1323,7 +1446,7 @@ if (!doNotTrack) {
 
 
         <div class="wrapper" data-type="posts" data-kind="page">
-            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
+            <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
     <a href="/blog/" title="Home" rel="home" class="navbar__logo-link">
@@ -1376,7 +1499,7 @@ if (!doNotTrack) {
 </div>
 
 
-<div id="mobileSearchBtn" class="mobile-search__btn" data-ani="true">
+<div class="mobile-search__btn navbar-search" data-ani="true">
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
 </div>
 
@@ -1475,6 +1598,8 @@ if (!doNotTrack) {
 </div>
   <div class="navbar__menu">
   
+  
+  
 <div class="theme" data-ani="true">
   <div class="dropdown">
     <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" data-ani="true">
@@ -1511,6 +1636,7 @@ if (!doNotTrack) {
     </div>
   </div>
 </div>
+
 
   
   
@@ -1591,6 +1717,7 @@ if (!doNotTrack) {
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">SecHack365 &#39;19 参加録</h2>
+    <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
@@ -1604,6 +1731,7 @@ if (!doNotTrack) {
     
   </span>
 </div>
+
       
 <ul class="single__tags caption">
   
@@ -1615,6 +1743,7 @@ if (!doNotTrack) {
   <li><a href="https://Alignof.github.io/blog/tags/sechack365/" class="single__tag" title="SecHack365">#SecHack365</a></li>
 
 </ul>
+
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
@@ -1628,15 +1757,16 @@ if (!doNotTrack) {
 <h2 id="はじめに">はじめに</h2>
 <p>2019年度SecHack365を修了したので参加録を書こうと思います。（そのためにこのサイトを構築した）<br />
 昨年応募する際に去年の修了生の方の記事が大いに参考になったので自分の経験も役に立ったらと思ったのと、ただ単に思い出に浸りたかったので書いていきます。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/DSC_0706.JPG"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-</p>
+  
+    <img data-src="/blog/images/SecHack365/DSC_0706.JPG"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure></p>
 <h2 id="自己紹介">自己紹介</h2>
 <p>SecHack365 ’19の思索駆動コースの修了生です。<br />
 テーマは「セキュアな入出力装置の開発」。<br />
@@ -1705,15 +1835,16 @@ SecHack365とは国立研究開発法人情報通信研究機構（NICT）が主
 出発の地は神奈川です。<br />
 わりかし家から近めなのでのんびり出た記憶。<br />
 悠長に家系ラーメン総本山の吉村家に行ってます。（SecHackラーメン3連戦の初戦「横浜ラーメン」）<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/Yokohama.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-</p>
+  
+    <img data-src="/blog/images/SecHack365/Yokohama.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure></p>
 <p>おいしかったです。ちなみにそれ以外に写真は撮ってませんでした。なんで（殺意）<br />
 駅を降りると既にそれらしい人が数人スーツケースを引いてました。<br />
 会場の前に誰かに話しかけてもらったのを覚えてます。<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
@@ -1748,40 +1879,43 @@ SecHackの特徴としてトレーナー陣が豪華だなと個人的には思�
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">一週間分の思索とかいろいろ一つのスライドにまとめて毎週出したいな</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1131214255884099584?ref_src=twsrc%5Etfw">May 22, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>せっかく念願叶ってSecHackに参加してるんだからなにかモチベーションを保てることをしたいなぁ（自分がダメ人間なのは自分がよく分かってる）と思ってこんなことを考えてました。<br />
 ちょうど神奈川回で習慣化の話を聞いた後だったのでやってみようと思ったのです。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/typetalk_ss.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/typetalk_ss.png"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 以後、この一週間ごとのスライドが僕のSecHackの活動の基準となっていきます&hellip;</p>
 <h3 id="interop-tokyo--shownet">Interop Tokyo &amp; ShowNet</h3>
 <p>SecHack365の枠で<a href="https://www.interop.jp/2019/">Interop Tokyo</a> のShowNetに招待していただきました。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/Interop.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/Interop.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 交通費は自費ですが、会場はなんと幕張メッセ。<br />
 チーバくんの口元からおへそあたりを毎日往復してる僕にしてみれば庭みたいなものです。<br />
 平日開催でしたが、運良く定期テストの終わりと被っており普通に行けました。（ラッキー）<br />
 最先端の大規模ネットワーク構築のお話と実際の運用を見られてかなり勉強になりました。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/shownet.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/shownet.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 会場で運用されている機器も大迫力です。<br />
 Interopは企業向けイベントなので学生はShownet以外はチョロっと覗くくらいが丁度いいと思います。（向こうは企業の人間だと思って話しかけてくるのでお互い気まずいかも(一敗)）<br />
 かなり勉強になったし行ってみて良かったです。</p>
@@ -1792,15 +1926,16 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 第二回は北海道回です。そして僕は初北海道です。（不要な情報）<br />
 <del>SecHackラーメン3連戦の2戦目の地でもあります。</del><br />
 着いてすぐに札幌ラーメンを食しました（当然の権利）<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/Sapporo.JPG"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-</p>
+  
+    <img data-src="/blog/images/SecHack365/Sapporo.JPG"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure></p>
 <p>久しぶりに飛行機に乗ったのですが保安検査場で引っかかりました。</p>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【悲報】保安検査WA</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1145217457918844928?ref_src=twsrc%5Etfw">June 30, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 <p>実はこれ以後保安検査場は僕の因縁の相手になります。</p>
@@ -1841,15 +1976,16 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 早めに現地に着くという勝ち確ムーブをカマしておきながら肝心の道中で道に迷って遅刻ぎりぎりのムーブをやらかす。<br />
 旅先で必ずトラブルに見舞われる僕の習性があからさまに現れていますね&hellip;<br />
 ちなみにこれはまだ時間に余裕があった頃。（早めに着いても時間を潰さなくてはならなくてあんまり変わらない（挙げ句道に迷う）ので賢い選択じゃなかった）<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/Hakata.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-</p>
+  
+    <img data-src="/blog/images/SecHack365/Hakata.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure></p>
 <p>はい。SecHackラーメン3連戦最終戦です。（横浜→札幌→博多）<br />
 福岡回のメインは全員がスライドを使って自分のテーマについて発表するというものです。</p>
 <p>1日目は<a href="https://nulab.com/ja/">nulab</a>さんのところで社員さんのお話を聞くところからスタートしました。<br />
@@ -1869,15 +2005,16 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 発表中は緊張しなくても発表前は緊張するのはあるあるですね&hellip;<br />
 聴講者は発表を聞くだけじゃなくて発表に対してコメントをするルールなので聞いてる側も暇しているわけではないですし、発表する側はたくさん意見をもらえるので良いシステムです。</p>
 <p>発表が終わった後はみんなでホテルの前の海へ。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/sea.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/sea.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 （写真はコースワークの散策で撮った）<br />
 水着を持ってきていたのでしばらくみんなで海で遊びました。<br />
 見事に綺麗な青い海と白い砂浜です。<br />
@@ -1905,39 +2042,42 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 <p>展示では色々な人に見ていただきたくさん意見を貰いました。<br />
 僕より詳しい人がいっぱいいるのでありがたかったです。<br />
 晩ごはんはもちろん素敵です（この頃から写真を撮ることを覚え始めている（えらい））<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/dinner.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-</p>
+  
+    <img data-src="/blog/images/SecHack365/dinner.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure></p>
 <p>夜にはくぼたつ道場。<br />
 珍しくトレーナー達が（無茶振りで）お手本を見せることに。（頂上決戦かな？）<br />
 いろいろなトレーナーのやりたいことが聞けておもしろかったです。（珍しくトレーナーの慌てた姿も見られました。）<br />
 僕もやってみたのですが、相手に質問をせずにどんどん自分のやりたいことを言っていくのは思索駆動的には新鮮でした。</p>
 <p>宮城回の舞台は松島だったのですが、窓からの景色が綺麗ですごい良かったです。<br />
-
-
 <figure >
+  
+  
   
     <img data-src="/blog/images/SecHack365/matsushima2.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+
+  
+  
+</figure><br />
 解散後には暇があったので松島周辺を観光しました。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/matsushima1.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/matsushima1.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 すごく綺麗でいいところです。<br />
 実際に島に上陸して中まで楽しめてよかったです。<br />
 帰りは<a href="https://twitter.com/tomio2480">@tomio2480</a>氏と牛タンを食べ圧倒的勝利を納めました。</p>
@@ -1952,25 +2092,27 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 もはやこれはどうしようもないことですが、事前に学校の予定とSecHackの予定を照らし合わせて事前に覚悟をする必要はあると思います。<br />
 なるべく早く準備を始めるとか&hellip;（分かっていても難しいですが&hellip;）</p>
 <p>舞台は奥道後です。温泉ですよ温泉。<br />
-
-
 <figure >
+  
+  
   
     <img data-src="/blog/images/SecHack365/Dougo.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+
+  
+  
+</figure><br />
 ちなみに集合場所の最寄り駅までは路面電車で行きました。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/train.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/train.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 路面電車って初めて乗ったかもしれない。風情があって素敵な電車でした。</p>
 <p>愛媛回のメインは前回同様のポスター発表とデモに加えて15分の発表もあります。<br />
 両方あるので準備が大変でした&hellip;<br />
@@ -1983,15 +2125,16 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 ハードウェアは恐ろしいですね。（毎晩会場に残ってひーひー言いながら直していたのはいい思い出）</p>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">これが会場の魔物です <a href="https://t.co/NHMGeQwGFf">https://t.co/NHMGeQwGFf</a></p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1201056164282322945?ref_src=twsrc%5Etfw">December 1, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 <p>そして当然のように現れるおいしいお食事。<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/Ehime.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/Ehime.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 最高です。鯛めしが美味しかった（小並感）<br />
 ここらへんから年の近い子と食べるようになりました（若い子っていいわね。<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>）</p>
 <p>二日目の夜にはマツダの方のセキュリティに関するお話や噺家の方の講演がありました。<br />
@@ -2005,15 +2148,16 @@ Interopは企業向けイベントなので学生はShownet以外はチョロっ
 調子に乗って遅くまで起きていました。（すごいいい思い出）</p>
 <p>いろんな人と話して上機嫌で部屋に戻る途中でこんな場所に出ました。</p>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">豆知識<br>3階の3301号室に向かう突き当たりの先はめちゃくちゃ怖い空間が広がっている<br>僕は怖すぎて引き返した</p>&mdash; Takana Norimasa (@lIlIIllIIIlIlIl) <a href="https://twitter.com/lIlIIllIIIlIlIl/status/1200427559399251968?ref_src=twsrc%5Etfw">November 29, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
 <figure >
   
+  
+  
     <img data-src="/blog/images/SecHack365/horror.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
+  
+
+  
   
 </figure>
-
 <p>廊下から一段折れていて控室という意味不明な張り紙とその奥に見える白い扉。<br />
 扉を開けると真っ暗やみでなんか外に繋がっているっぽい。<br />
 プロのビビリストである僕は即座に怖くなって引き返しました。（写真がぶれているのはそのせいです。）</p>
@@ -2032,15 +2176,16 @@ SecHackでは事務局の方がいろいろお菓子とかジュースとか用�
 <h3 id="沖縄回">沖縄回</h3>
 <p>1月31日（金）〜2月2日（日）<br />
 最終決戦の地は沖縄です。（写真はホテルからの眺め）<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/okinawa1.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
+  
+    <img data-src="/blog/images/SecHack365/okinawa1.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure><br />
 ちなみに僕は初沖縄です！（要らぬプチ情報）<br />
 そして&hellip;<strong>また定期試験と被りました（全ギレ</strong><br />
 しかも今度は初日です。（絶望）<br />
@@ -2090,35 +2235,38 @@ SecHackでは事務局の方がいろいろお菓子とかジュースとか用�
 みんな終わった後、田中社長やトレーナーにサインを頂いてました。</p>
 <p>最後は全員で沖縄の聖地<a href="https://okinawa-nanjo.jp/sefa/">斎場御嶽</a>に。<br />
 途中で海の前で集合写真を撮ったのですがすごい綺麗でした。<br />
-
-
 <figure >
+  
+  
   
     <img data-src="/blog/images/SecHack365/okinawa2.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-<br />
 
-
+  
+  
+</figure><br />
 <figure >
+  
+  
   
     <img data-src="/blog/images/SecHack365/okinawa3.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-</p>
+
+  
+  
+</figure></p>
 <p>こんなにきれいな海を見たのは初めてかも知れません。<br />
 道中にシーサーが置かれていたり自販機がローカル感満載だったりして沖縄に来たんだなぁと思いました。（ずっと会場にいたので尚更）<br />
-
-
 <figure >
   
-    <img data-src="/blog/images/SecHack365/caesar.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
-    
   
-</figure>
-</p>
+  
+    <img data-src="/blog/images/SecHack365/caesar.jpg"  data-caption="" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='' height='' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload" style="width:;height:;"/>
+  
+
+  
+  
+</figure></p>
 <p>見学の後もマンゴーアイスを食べたりサトウキビジュースを飲んだり短いながらも沖縄を満喫しました。<br />
 空港に着いてからもA&amp;Wに行ったり楽しめました。（そういう意味でも一年で成長した気がする）</p>
 <p>帰りは飛行機がまさかの遅延して帰りが0時をすぎるというハプニングもありましたが無事家にたどり着きました。</p>
@@ -2202,31 +2350,144 @@ SecHackに参加するトレーニーはすごい人ばっかりです。そう�
 <hr />
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>マジで憶えてない&hellip;コース選択した記憶があんまりないから幻なのかもしれない&hellip; <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>マジで憶えてない&hellip;コース選択した記憶があんまりないから幻なのかもしれない&hellip;&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>ただし記憶力皆無なので誰だか覚えていません。（は？） <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>ただし記憶力皆無なので誰だか覚えていません。（は？）&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>よかったね。（すっとぼけ） <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>よかったね。（すっとぼけ）&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p>増田検事お元気かしら <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>増田検事お元気かしら&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
-<p>そうわね。 <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>そうわね。&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p>なんでお前他人事なの？ <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>なんでお前他人事なの？&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7" role="doc-endnote">
-<p>通称SecHack500 <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>通称SecHack500&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
 
     </article>
     
+    
+<script defer src="/blog/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+
+<script defer src="/blog/js/helper/prev.min.js"></script>
+
+<script defer src="/blog/js/helper/prop.min.js"></script>
+<script>
+  'use strict';
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    var clipInit = false;
+    var preChromaElem = document.querySelectorAll('pre.chroma');
+    var langCodeElem = document.querySelectorAll('.language-code');
+    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+    var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+    var makeClipboard = function(elem) {
+      var code = elem,
+          text = elem.textContent;
+        
+      if (text.length > 15) {
+        if (!clipInit) {
+          var text, clip = new ClipboardJS('.copy-to-clipboard', {
+            text: function (trigger) {
+              var codeElem = prev(trigger).querySelectorAll('code');
+              if (codeElem.length > 1) {
+                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
+              } else {
+                text = prev(trigger).querySelector('code').textContent;
+              }
+
+              return text.replace(/^\$\s/gm, '');
+            }
+          });
+
+          var inPre;
+          clip.on('success', function (e) {
+            e.clearSelection();
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clip.on('error', function (e) {
+            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
+            e.trigger.setAttribute('aria-label', e.action.toString());
+            e.trigger.classList.add('tooltipped');
+            e.trigger.classList.add('tooltipped-w');
+          });
+
+          clipInit = true;
+        }
+
+        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
+        var isNotAllowedIncluded = false;
+        var curClassName = code.getAttribute('class');
+
+        for (var i = 0; i < notAllowedClass.length; i++) {
+          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
+            isNotAllowedIncluded = true;
+            break;
+          }
+        }
+
+        if (!isNotAllowedIncluded) {
+          if (curClassName) {
+            var newClipboardElem = document.createElement('span');
+            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
+            newClipboardElem.setAttribute('title', 'Copy to clipboard');
+            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
+          }
+        }
+      }
+    }
+
+    var makeSymbolClipboard = function(elem) {
+      var clipboardSpan = document.createElement('span');
+      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
+      clipboardSpan.setAttribute('title', 'Copy to clipboard');
+      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
+    }
+
+    preChromaElem ? 
+    preChromaElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function(codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+    
+    langCodeElem ? 
+    langCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeClipboard(codeElem);
+      });
+    }) : null;
+
+    dollarCodeElem ? 
+    dollarCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+
+    gtCodeElem ?
+    gtCodeElem.forEach(function(elem) {
+      elem.querySelectorAll('code').forEach(function (codeElem) {
+        makeSymbolClipboard(codeElem);
+      });
+    }) : null;
+    
+  });
+</script>
     <script>
   'use strict';
   
@@ -2274,6 +2535,31 @@ SecHackに参加するトレーニーはすごい人ばっかりです。そう�
     elem.append(newElem);
   }) : null;
   
+
+  
+
+  
+  var dollarCodeElem = document.querySelectorAll('div.language-\\$');
+  var gtCodeElem = document.querySelectorAll('div.language-\\>');
+
+  dollarCodeElem ?
+  dollarCodeElem.forEach(function(elem) {
+    var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+    lnts ? 
+    lnts.forEach(function(lnt) {
+      lnt.innerHTML = '$<br/>';
+    }) : null;
+  }) : null;
+
+  gtCodeElem ?
+  gtCodeElem.forEach(function(elem) {
+    var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
+    lnts ? 
+    lnts.forEach(function(lnt) {
+      lnt.innerHTML = '><br/>';
+    }) : null;
+  }) : null;
+  
 </script>
     
 <div class="donation">
@@ -2298,6 +2584,7 @@ SecHackに参加するトレーニーはすごい人ばっかりです。そう�
     
   </div>
 </div>
+
 
     
     
@@ -2492,7 +2779,7 @@ SecHackに参加するトレーニーはすごい人ばっかりです。そう�
 </div>
 
 
-<script defer src="/blog/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/blog/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/blog/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -2898,7 +3185,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-<script defer src="/blog/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/blog/js/helper/getParents.min.js"></script>
 
@@ -2909,6 +3195,42 @@ document.addEventListener('DOMContentLoaded', function () {
 <script defer src="/blog/js/helper/prop.min.js"></script>
 
 <script defer src="/blog/js/helper/fadeinout.min.js"></script>
+
+<script defer src="/blog/js/helper/throttle.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2946,6 +3268,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
+
     
     
     
@@ -2961,6 +3284,18 @@ document.addEventListener('DOMContentLoaded', function () {
     
     if ((enableToc || toc) && document.querySelector('.toc')) {
       var tableOfContentsElem = document.querySelector('.toc').querySelector('#TableOfContents');
+
+      tableOfContentsElem.onmouseenter = function() {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      tableOfContentsElem.onmouseleave = function() {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.add('scrolling');
+        }
+      }
 
       if (false === tocFolding) {
 
@@ -2980,10 +3315,13 @@ document.addEventListener('DOMContentLoaded', function () {
           tableOfContentsElem.querySelectorAll('a').forEach(function (elem) {
             elem.addEventListener('click', function () {
               var id = elem.getAttribute('id');
-              navbar.classList.remove('navbar--show');
-              navbar.classList.remove('navbar--hide');
-              navbar.classList.add('navbar--hide');
 
+              if (!navbar.classList.contains('scrolling')) {
+                navbar.classList.remove('navbar--show');
+                navbar.classList.remove('navbar--hide');
+                navbar.classList.add('navbar--hide');
+              }
+              
               document.querySelector('.toc').querySelectorAll('a').forEach(function (elem) {
                 elem.classList.remove('active');
               });
@@ -3076,18 +3414,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }) : null;
     }
     
-
-
     
-    var tables = document.querySelectorAll('.single__contents > table');
-    for (let i = 0; i < tables.length; i++) {
-      var table = tables[i];
-      var wrapper = document.createElement('div');
-      wrapper.className = 'table-wrapper';
-      table.parentElement.replaceChild(wrapper, table);
-      wrapper.appendChild(table);
+    
+    
+    
+    var topOffset = 120;
+    var botOffset = 70;
+    var handleWindowResize = function () {
+      if (tocElem) {
+        tocElem.style.maxHeight = (window.innerHeight - topOffset - botOffset) + 'px';
+      }
     }
+    var throttledWindowResize = throttle(handleWindowResize, 300);
+    throttledWindowResize()
+
     
+    window.addEventListener('resize', throttledWindowResize);
+    
+
 
 
     
@@ -3099,20 +3443,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
     headers ? 
     headers.forEach(function (elem) {
+      var size = parseInt(elem.tagName.substr(1), 10) * 2;
       var url = encodeURI(document.location.origin + document.location.pathname);
       var link = url + "#" + elem.getAttribute('id');
       var newElemOuter = document.createElement('span');
       newElemOuter.classList.add('anchor');
       newElemOuter.classList.add('hide');
-      newElemOuter.setAttribute('data-clipboard-text', link);
+      newElemOuter.setAttribute('data-clipboard-text', decodeURI(link));
       newElemOuter.style.position = 'relative';
 
       var newElemInner = document.createElement('span');
-      newElemInner.style.fontSize = '1rem';
       newElemInner.style.position = 'absolute';
       newElemInner.style.top = '50%';
+      newElemInner.style.left = '0.75rem';
       newElemInner.style.transform = 'translateY(-50%)';
-      newElemInner.innerText = "🔗";
+      newElemInner.innerHTML = `
+<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="${32 - size}px" height="${32 - size}px"><path d="M 5.5625 0 C 4.136719 0 2.707031 0.542969 1.625 1.625 C -0.539063 3.789063 -0.539063 7.335938 1.625 9.5 L 5.28125 13.15625 C 5.667969 13.554688 6.304688 13.558594 6.703125 13.171875 C 7.101563 12.785156 7.105469 12.148438 6.71875 11.75 L 3.03125 8.0625 C 1.632813 6.664063 1.632813 4.429688 3.03125 3.03125 C 4.429688 1.632813 6.664063 1.632813 8.0625 3.03125 L 12.96875 7.9375 C 14.367188 9.335938 14.367188 11.570313 12.96875 12.96875 C 12.804688 13.132813 12.621094 13.25 12.4375 13.375 C 11.980469 13.6875 11.859375 14.308594 12.171875 14.765625 C 12.484375 15.222656 13.105469 15.34375 13.5625 15.03125 C 13.847656 14.835938 14.125 14.625 14.375 14.375 C 16.539063 12.210938 16.539063 8.664063 14.375 6.5 L 9.5 1.625 C 8.417969 0.542969 6.988281 0 5.5625 0 Z M 10.78125 8.875 C 10.738281 8.882813 10.695313 8.894531 10.65625 8.90625 C 10.507813 8.9375 10.371094 9 10.25 9.09375 C 10.039063 9.253906 9.820313 9.429688 9.625 9.625 C 7.460938 11.789063 7.460938 15.335938 9.625 17.5 L 14.5 22.375 C 16.664063 24.539063 20.210938 24.539063 22.375 22.375 C 24.539063 20.210938 24.539063 16.664063 22.375 14.5 L 18.71875 10.875 C 18.476563 10.578125 18.089844 10.441406 17.714844 10.527344 C 17.34375 10.613281 17.050781 10.90625 16.964844 11.277344 C 16.878906 11.652344 17.015625 12.039063 17.3125 12.28125 L 20.96875 15.9375 C 22.367188 17.335938 22.367188 19.570313 20.96875 20.96875 C 19.570313 22.367188 17.335938 22.367188 15.9375 20.96875 L 11.03125 16.0625 C 9.632813 14.664063 9.632813 12.429688 11.03125 11.03125 C 11.152344 10.90625 11.300781 10.820313 11.4375 10.71875 C 11.839844 10.472656 12.015625 9.976563 11.855469 9.53125 C 11.699219 9.085938 11.25 8.8125 10.78125 8.875 Z"/></svg>`;
 
       if (languagedir === "rtl") {
         newElemInner.style.left = '-2rem';
@@ -3146,132 +3492,8 @@ document.addEventListener('DOMContentLoaded', function () {
       e.trigger.classList.add('tooltipped');
       e.trigger.classList.add('tooltipped-s');
     });
-    
+    // =================================================================
 
-
-    
-    var clipInit = false;
-    var preChromaElem = document.querySelectorAll('pre.chroma');
-    var langCodeElem = document.querySelectorAll('.language-code');
-    var dollarCodeElem = document.querySelectorAll('div.language-\\$');
-    var gtCodeElem = document.querySelectorAll('div.language-\\>');
-
-    var makeClipboard = function(elem) {
-      var code = elem,
-        text = elem.textContent;
-        
-      if (text.length > 15) {
-        if (!clipInit) {
-          var text, clip = new ClipboardJS('.copy-to-clipboard', {
-            text: function (trigger) {
-              var codeElem = prev(trigger).querySelectorAll('code');
-              if (codeElem.length > 1) {
-                text = prev(trigger).querySelector('code[class^="language-"]').textContent;
-              } else {
-                text = prev(trigger).querySelector('code').textContent;
-              }
-
-              return text.replace(/^\$\s/gm, '');
-            }
-          });
-
-          var inPre;
-          clip.on('success', function (e) {
-            e.clearSelection();
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clip.on('error', function (e) {
-            inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', e.action.toString());
-            e.trigger.classList.add('tooltipped');
-            e.trigger.classList.add('tooltipped-w');
-          });
-
-          clipInit = true;
-        }
-
-        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
-        var isNotAllowedIncluded = false;
-        var curClassName = code.getAttribute('class');
-
-        for (var i = 0; i < notAllowedClass.length; i++) {
-          if (curClassName && curClassName.startsWith(notAllowedClass[i])) {
-            isNotAllowedIncluded = true;
-            break;
-          }
-        }
-
-        if (!isNotAllowedIncluded) {
-          if (curClassName) {
-            var newClipboardElem = document.createElement('span');
-            newClipboardElem.setAttribute('class', 'copy-to-clipboard');
-            newClipboardElem.setAttribute('title', 'Copy to clipboard');
-            elem.parentNode.parentNode.insertBefore(newClipboardElem, elem.parentNode.nextElementSibling);
-          }
-        }
-      }
-    }
-
-    var makeSymbolClipboard = function(elem) {
-      var clipboardSpan = document.createElement('span');
-      clipboardSpan.setAttribute('class', 'copy-to-clipboard');
-      clipboardSpan.setAttribute('title', 'Copy to clipboard');
-      elem.parentNode.parentNode.insertBefore(clipboardSpan, elem.parentNode.nextElementSibling);
-    }
-
-    preChromaElem ? 
-    preChromaElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function(codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-    
-    langCodeElem ? 
-    langCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeClipboard(codeElem);
-      });
-    }) : null;
-
-    dollarCodeElem ? 
-    dollarCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      elem.querySelectorAll('code').forEach(function (codeElem) {
-        makeSymbolClipboard(codeElem);
-      });
-    }) : null;
-    
-
-
-    
-    dollarCodeElem ?
-    dollarCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '$<br/>';
-      }) : null;
-    }) : null;
-
-    gtCodeElem ?
-    gtCodeElem.forEach(function(elem) {
-      var lnts = elem.parentNode.parentNode ? elem.parentNode.parentNode.querySelectorAll('.lnt') : null;
-      lnts ? 
-      lnts.forEach(function(lnt) {
-        lnt.innerHTML = '><br/>';
-      }) : null;
-    }) : null;
-    
 
 
     
@@ -3306,6 +3528,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
     
 
     
@@ -3323,6 +3546,7 @@ document.addEventListener('DOMContentLoaded', function () {
       renderMathInElement(document.querySelector('.single__contents'), options);
     }
     
+
 
 
     
@@ -3350,9 +3574,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     
 
+    
 
     
+    document.querySelectorAll("mjx-container").forEach(function (x) {
+      x.parentElement.classList += 'has-jax'
+    });
     
+
 
 
     
@@ -3376,6 +3605,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
 
 
     
@@ -3419,6 +3649,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
 
+
     
     if (lib && lib.includes('wavedrom')) {
       var wavePrefix = "language-wave";
@@ -3439,6 +3670,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
     
+
 
 
     
@@ -3560,11 +3792,12 @@ document.addEventListener('DOMContentLoaded', function () {
   
   
     
-      <a href="https://Alignof.github.io/blog/posts//index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+      <a href="https://Alignof.github.io/blog/posts/index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
       </a>
     
   
+
 
   </div>
 </div>
@@ -3578,11 +3811,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <hr />
 
-    <div class="basicflex">
+    <div class="basicflex flexwrap">
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
     </div>
 
