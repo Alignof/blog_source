@@ -40,7 +40,7 @@ SecHackとseccampには一度参加しておきたかったイベントだった
 
 ### 合格から開始まで
 受かったのが9/13らしいので始まるまでⅠヶ月ちょいあったことになる．
-この間に何があったかというと，Twitter曰く旅する海とアトリエの完結が決まってメンタルが終わってたりSecHack365 '19の成果発表会に出たりしてたらしい．
+この間に何があったかというと，Twitter曰く「旅する海とアトリエ」の完結が決まってメンタルが終わってたりSecHack365 '19の成果発表会に出たりしてたらしい．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">1週間ほどTypetalkに引きこもって廃人同様の生活を送っていたが改善の傾向は見られなかった．</p>&mdash; and rsp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1309376126976892929?ref_src=twsrc%5Etfw">September 25, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">このあと15時過ぎからLT枠で習慣化とかについてゆるく語ります．<br>お楽しみに．<a href="https://twitter.com/hashtag/SecHack365?src=hash&amp;ref_src=twsrc%5Etfw">#SecHack365</a> <a href="https://t.co/5gdPHvFYYf">https://t.co/5gdPHvFYYf</a></p>&mdash; and rsp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1309722658402041862?ref_src=twsrc%5Etfw">September 26, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 キャンプが始まるまでに構造体とか諸々を実装するつもりで，最終的にセルフホストまで行く気満々だった．
@@ -53,17 +53,40 @@ SecHack365で見知った顔が講師・受講者共にたくさんいて面白�
 普通の説明の他に講演があったのだが，結構ためになる話とかグレーな話があって良き．
 LT大会もそうだがここでしか聞けない面白い話ってやつが多いと思う．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">LT大会，美少女ばっかりで震えてる<a href="https://twitter.com/hashtag/seccamp?src=hash&amp;ref_src=twsrc%5Etfw">#seccamp</a></p>&mdash; and rsp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1317753504685981696?ref_src=twsrc%5Etfw">October 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-LT大会も全部聞きたいくらい良かったなぁ...
+LT大会も全部聞きたいくらい良かったなぁ... 
+
 「美少女になろう」って発表に知ってるオタクが大集合してたのが個人的ハイライト．（最悪）
 なお，このあとはグループワークがありオタクくんが死亡した模様．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">非テキストベースの会話苦手マン参上！</p>&mdash; and rsp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1317775805183717376?ref_src=twsrc%5Etfw">October 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 コミュ症大発揮．
 TLが阿鼻叫喚で面白かった．（別に面白くはない）
 
+### 開会式後から11月くらいまで
 開会式の翌日から順次講義が始まるのだが，実はY-Ⅲは最初の週の講義が無かったのでこの間に更に開発を進めていた．
 この1週間で構造体やドット・アロー演算子の実装に成功．
 当初の目標ほどではなかったが，まぁまぁ進んだ状態で受講が始まった．
 
-### 開会式後から10月終わり
+受講はオンラインなわけだが，原則的にRuiさんの[compiler book](https://www.sigbus.info/compilerbook)を見ながら進める感じで，授業みたいな講義はなく緩やかにやっていた．
+一人ひとり画面を共有して進捗を報告したりプログラムを書いてるところを見せるのが主な流れで，疑問があればその都度質問していく．
+これだけなのに合間合間で講師陣やチューターのhsjoihsさんからC言語の歴史とかこぼれ話が聞けてかなりためになるし，面白い．
+多分こういう濃い話が聞けるのはここだけだと思う．
 
+自分はマイルールで直接的な質問をしたり誰かのコードを丸写したりしないというルールを設けていたので，質問の代わりにじゃんじゃん進めてその部分を見てもらって意見をもらうという感じでやっていた．
+見てもらって気づくのは，これで大丈夫やろーって実装したものが案外ハマりどころがあったりするというもの．
+インクリメントとかも見せてみると，関数を対象にしたときとかでコケるとか自分で気づかない実装不足やバグが結構あった．
+あと，構造体のAlignmentとか一人でやってたら知らなかった仕様とかも指摘してもらった．
+これはもうY-Ⅲじゃないと難しい経験だったと思う．
+
+実はsecampで初めて他人に見られながらコードを書く（オンラインでだけど）という経験をしたが，これはかなり緊張した．
+いや，初めてにして見てもらう人が豪華過ぎたというのもあるが．
+あとPCが非力すぎて苦しんだ．
+いつもgccとvimとブラウザが動けばいいなーアハハくらいに考えている[^2]のだが，今回はオンラインでmeetを付けつつブラウザを立ち上げつつエディタを立ち上げながらテストをぶん回したりするので結構厳しかった．
+まったく進まないテストをみんなで眺めたり...
+今思い返せばブラウザが落ちたりそれ以前にWifiが1時間に1度落ちる不具合を抱えたまま参加してたな...（なんで直さないんですかね？）[^3]
+みんなはまともなスペックのPCを用意しようね．
+
+[^2]:このカスみたいな考えが後に悲劇を生む．
+[^3]:フラグっていうのはこういうものを言う．
+
+書く→見せるを繰り返しながら，
 
