@@ -88,5 +88,28 @@ TLが阿鼻叫喚で面白かった．（別に面白くはない）
 [^2]:このカスみたいな考えが後に悲劇を生む．
 [^3]:フラグっていうのはこういうものを言う．
 
-書く→見せるを繰り返しながら，
+書く→見せる→フィードバックを繰り返しながら，じゃんじゃん開発を進めていった．
+記録では，11月初週までに複合演算子とインクリメントのバグ[^4]を修正し，翌週に多次元配列を実装してる．
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">悲しいお知らせ <a href="https://t.co/yblVULbvXR">pic.twitter.com/yblVULbvXR</a></p>&mdash; and rsp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1326414953671168001?ref_src=twsrc%5Etfw">November 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">嬉しいお知らせ <a href="https://t.co/4HF4fCeAtC">pic.twitter.com/4HF4fCeAtC</a></p>&mdash; and rsp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1326467851394326533?ref_src=twsrc%5Etfw">November 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+ここらへんスタックの伸びる方向とかが段々分かんなくなっていて書いたり消したりしてたなぁ...
+ずっとgdb-pedaとにらめっこしてた記憶．
+あと，やっぱり配列とポインタの扱いの違いとかで延々仕様修正した気がする．
+理解が難しいんだよなぁあそこ．
+
+[^4]:たしか既存の演算子のノードを使った木に修正しようとしたら失敗した記憶
+
+3週目は頑張ったみたいで，
+- 構造体の中に配列が入れられるように
+- メンバのalignmentを修正
+- ラベルのシステムを変更してネストされた(if|for|while)文を可能に
+- break文，continue文の実装
+- 構造体の中に構造体や構造体のポインタを入れることが可能に
+- 三項演算子の実装
+- switch文の実装（途中）
+
+をやったらしい．（ソースは週報）
+
 
