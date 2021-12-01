@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="KOSENセキュリティコンテスト2019のWriteup">
 
-<meta name="generator" content="Hugo 0.86.1" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1751,7 +1751,7 @@ if (!doNotTrack) {
 とりあえず，.zsh_historyと記憶を頼りに解いた順に書いてく．</p>
 <h2 id="09-プログラミング言語を当てよう">09 プログラミング言語を当てよう</h2>
 <p>早速，詰まった．いろいろ試したがヒットしないし，その割りに解答率がいいので話題のアレかとなった．（確か，returnを使った特徴的な記法で気がついた気がする．）</p>
-<pre><code>function inc(num)
+<pre tabindex="0"><code>function inc(num)
   num = num + 1
   return num
 
@@ -1762,12 +1762,12 @@ class ClassName(name)
     print(self.name)
     return
 </code></pre><p>この言語の名前はBlawnなので問題文の通り（確かそう），大文字で</p>
-<pre><code>CTFKIT{BLAWN}
+<pre tabindex="0"><code>CTFKIT{BLAWN}
 </code></pre><h2 id="17-目に見えなくても">17 目に見えなくても</h2>
 <p>問題に書いてあるリンクを踏むと何もかかれていないページが．<br />
 ページのソースを見るとflagが書いてある．<br />
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/332794/a51e9c92-f64b-e608-8099-0ba35b60cb94.png" alt="Screenshot from 2019-11-04 23-26-56.png" /></p>
-<pre><code>CTFKIT{html_may_be_including_hidden_text}
+<pre tabindex="0"><code>CTFKIT{html_may_be_including_hidden_text}
 </code></pre><h2 id="12-大人たちの無意味な慣習">12 大人たちの無意味な慣習</h2>
 <p>pcap問題．<br />
 とりあえずhtmlとcssとzipがあったのでエクスポート．<br />
@@ -1776,13 +1776,13 @@ class ClassName(name)
 <img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/332794/bd345ac2-5fff-5ef9-68f6-d715ca300ddb.png" alt="Screenshot from 2019-11-04 21-55-51.png" /><br />
 なんてこったい．<br />
 さっきエクスポートしたzipファイルにこのパスワードを突っ込んで解凍すると，</p>
-<pre><code>CTFKIT{majide_muimina_shuukan_dayonee}
+<pre tabindex="0"><code>CTFKIT{majide_muimina_shuukan_dayonee}
 </code></pre><p>##06 無言のELF<br />
 バイナリ問題．<br />
 実行すると無言で文字列の受付けをする．手がかりはなし．<br />
 gdb-pedaに投げる．</p>
 <details><summary>アセンブラ全文</summary><div>
-<pre><code>gdb-peda$ pdisass 
+<pre tabindex="0"><code>gdb-peda$ pdisass 
 Dump of assembler code for function main:
    0x000055555555480a &lt;+0&gt;:	push   rbp
    0x000055555555480b &lt;+1&gt;:	mov    rbp,rsp
@@ -1908,12 +1908,12 @@ Dump of assembler code for function main:
 End of assembler dump.
 </code></pre></div></details>
 とりあえず動かして流れを読む．
-<pre><code>gdb-peda$ start
+<pre tabindex="0"><code>gdb-peda$ start
 </code></pre><p>適当にnextを押していたら終わってしまった．<br />
 しかし，途中でstrcompとjneの分岐があった．非常に怪しい．<br />
 ここをうまく分岐の中に入れればいい感じなんじゃないか？<br />
 そこでjne命令のところでflag（レジスタの方）を書き換える．</p>
-<pre><code>gdb-peda$ info registers eflags
+<pre tabindex="0"><code>gdb-peda$ info registers eflags
 eflags         0x282               [ SF IF ]
 
 gdb-peda$ set $eflags ^= (1 &lt;&lt; 6)
@@ -1923,7 +1923,7 @@ eflags         0x2c2               [ ZF SF IF ]
 ジャンプしないまま続けるとレジスタにそれっぽい文字列が出てき始める．</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/332794/55662ecd-4cf8-fef9-14b3-3e6ee46fe02c.png" alt="Screenshot from 2019-11-04 22-16-18.png" /></p>
 <p>しばらくまたnextで進めていくとprintfにぶつかりflagが出力される．</p>
-<pre><code>CTFKIT{hpb5iphbr_et3phet5o}
+<pre tabindex="0"><code>CTFKIT{hpb5iphbr_et3phet5o}
 </code></pre><p>gdbだと出力がすぐに次に行っちゃって分かり辛いので注意．</p>
 <h2 id="02-伝統的な暗号">02 伝統的な暗号</h2>
 <p>確かキーの長さが三文字と問題文に書いてあった．<br />
@@ -1984,7 +1984,7 @@ eflags         0x2c2               [ ZF SF IF ]
 </code></pre></td></tr></table>
 </div>
 </div><p>すると，</p>
-<pre><code>8 19 16 8 19 16
+<pre tabindex="0"><code>8 19 16 8 19 16
 </code></pre><p>周期的な並びが出てくる．<br />
 つまり，8個ずらす，19個ずらす，16個ずらす&hellip;を繰り替えしているっぽい．<br />
 これを与えられた文字列すべてにやれば大丈夫そう．<br />
@@ -2055,7 +2055,7 @@ eflags         0x2c2               [ ZF SF IF ]
 <span class="nb">print</span><span class="p">()</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>CTFKIT{do_u_know_vigenere_cipher?}
+</div><pre tabindex="0"><code>CTFKIT{do_u_know_vigenere_cipher?}
 </code></pre><p>どうやら<a href="https://ja.wikipedia.org/wiki/%E3%83%B4%E3%82%A3%E3%82%B8%E3%83%A5%E3%83%8D%E3%83%AB%E6%9A%97%E5%8F%B7">ヴィジュネル暗号</a>というらしい．</p>
 <h2 id="14-お茶をさぐれ">14 お茶をさぐれ</h2>
 <p>友達から急に解き途中のプログラムが渡されて訳も分からず解いた．<br />
@@ -2990,13 +2990,13 @@ eflags         0x2c2               [ ZF SF IF ]
 <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;}&#34;</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>CTFKIT{ureshino_tea_}
+</div><pre tabindex="0"><code>CTFKIT{ureshino_tea_}
 </code></pre><h2 id="13-名前を解決したい">13 名前を解決したい</h2>
 <p>DNSの問題．もうサーバは動いてないので記憶と記録頼り．<br />
 DNSの設定ミスで名前解決ができなくて与えられたリンクにアクセスできない．<br />
 与えられたURL:http://futuregadget-9.tech</p>
 <p>とりあえず，digをうって確認．</p>
-<pre><code>$ dig http://futuregadget-9.tech
+<pre tabindex="0"><code>$ dig http://futuregadget-9.tech
 
 ; &lt;&lt;&gt;&gt; DiG 9.11.5-P4-1-Debian &lt;&lt;&gt;&gt; http://futuregadget-9.tech
 ;; global options: +cmd
@@ -3020,12 +3020,12 @@ tech.			3600	IN	SOA	ns0.centralnic.net. hostmaster.centralnic.net. 262197 900 18
 あれこれオプションを試してみるが芳しくない．<br />
 （後で他の人のwriteupを見たらこれでいけていた．何で？（殺意））</p>
 <p>自分の場合は以下でうまくいった．</p>
-<pre><code>dig http://futuregadget-9.tech -p80
+<pre tabindex="0"><code>dig http://futuregadget-9.tech -p80
 </code></pre><p>textにIPがあることは分かっていたのになぁ&hellip;<br />
 なんでダメだったんだろう．</p>
 <p>IPが出てくるのでそこにアクセスする．</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/332794/a441e92a-34fb-4932-b94b-076987497367.png" alt="Screenshot from 2019-11-04 23-28-58.png" /></p>
-<pre><code>CTFKIT{naki_nureshi_megami_no_kikan}
+<pre tabindex="0"><code>CTFKIT{naki_nureshi_megami_no_kikan}
 </code></pre><h2 id="20-偉くなりたい">20 偉くなりたい</h2>
 <p>自分が閃いて解いたのだが，肝心のhtmlが無いので解説できない．<br />
 見つかり次第追記するが，htmlのhidden属性のフォームが隠されていてそのフォームの属性をtextに変えてその欄にデフォルトでかかれている<code>is_not_admin</code>を<code>is_admin</code>に変えて送信するとflagが落ちてくる仕組み．<br />
@@ -3083,7 +3083,7 @@ tech.			3600	IN	SOA	ns0.centralnic.net. hostmaster.centralnic.net. 262197 900 18
     <span class="nb">print</span><span class="p">()</span>
 </code></pre></td></tr></table>
 </div>
-</div><pre><code>45 45
+</div><pre tabindex="0"><code>45 45
 +-----++++++--++--++--++--++++++--++--++++++-
 -++--++--++++++++++++++--++--++++++--++--++--
 ++++++++++++++-----++-----++++++-----++-----+
@@ -3132,11 +3132,11 @@ tech.			3600	IN	SOA	ns0.centralnic.net. hostmaster.centralnic.net. 262197 900 18
 </code></pre><p>これをモールス信号に整形する．<br />
 短音がマイナス2つ，長音がマイナス5つ，単語の区切りがプラス6つなのを考慮して置換する．（よく考えたらプラスとマイナス逆だなぁ&hellip;</p>
 <p>置換したものがこちらになります．</p>
-<pre><code>_ .... .. ...   .. ...   __ ___ ._. ... .   _._. ___ _.. . ._._._   _._. ._ _.   _.__ ___ .._   .._. .. _. _..   _ .... .   .._. ._.. ._ __. ..__..   _ .... .   .._. ._.. ._ __.   .. ...   _._. _ .._. _._ .. _ _.__. _ .._ .._ _..._ _ ___ _. _..._ _ ___ _. _..._ _ .._ .._ _..._ _ ___ _. _.__._   .... ._ .... ._ __..__   _._. ._ _.   _.__ ___ .._   .._. .. _. _..   .. _ ..__..                                                 
+<pre tabindex="0"><code>_ .... .. ...   .. ...   __ ___ ._. ... .   _._. ___ _.. . ._._._   _._. ._ _.   _.__ ___ .._   .._. .. _. _..   _ .... .   .._. ._.. ._ __. ..__..   _ .... .   .._. ._.. ._ __.   .. ...   _._. _ .._. _._ .. _ _.__. _ .._ .._ _..._ _ ___ _. _..._ _ ___ _. _..._ _ .._ .._ _..._ _ ___ _. _.__._   .... ._ .... ._ __..__   _._. ._ _.   _.__ ___ .._   .._. .. _. _..   .. _ ..__..                                                 
 </code></pre><p>後はこれをwebのツールに投げておしまい．</p>
 <p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/332794/569081ef-09d8-f1fb-ade1-6625d9797ca2.png" alt="Screenshot from 2019-11-04 23-57-31.png" /></p>
 <p>括弧は問題文の通り置換する．</p>
-<pre><code>CTFKIT{TUU=TON=TON=TUU=TON}
+<pre tabindex="0"><code>CTFKIT{TUU=TON=TON=TUU=TON}
 </code></pre><h1 id="感想">感想</h1>
 <p>一週間も間が空いてしまったがコマンドの履歴とソルバとかファイルが残っていてぎりぎり書けた．<br />
 難しいだろうけど運営は問題をWriteup用にしばらく残して（切実<br />

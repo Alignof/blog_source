@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="反省文。">
   
 
-<meta name="generator" content="Hugo 0.86.1" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1767,7 +1767,7 @@ Beginnerなんてタグ付けられたら諦めるわけにも行かんですし
 <h2 id="misc-welcome">[Misc] Welcome</h2>
 <p>毎度おなじみwelcome。<br />
 discordのサーバにアクセスしてflagをコピペするだけ。</p>
-<pre><code>ctf4b{sorry, we lost the ownership of our irc channel so we decided to use discord}
+<pre tabindex="0"><code>ctf4b{sorry, we lost the ownership of our irc channel so we decided to use discord}
 </code></pre><p>そういやSECCON関係なのにircじゃないなぁって思ってたけどそういうことだったのか。<br />
 Writeupを書くまで気が付かなかった。（本番のときはとりあえずコピペなので）</p>
 <h2 id="misc-emoemoencode">[Misc] emoemoencode</h2>
@@ -1776,9 +1776,9 @@ Writeupを書くまで気が付かなかった。（本番のときはとりあ�
 ecojiとかのツールを入れてみたり、色々なサイトを巡ったが全部無駄足だったようだ。<br />
 結局これが解けた最後の問題だったという&hellip;</p>
 <p>以下の短い絵文字の文字列が与えられる。</p>
-<pre><code>🍣🍴🍦🌴🍢🍻🍳🍴🍥🍧🍡🍮🌰🍧🍲🍡🍰🍨🍹🍟🍢🍹🍟🍥🍭🌰🌰🌰🌰🌰🌰🍪🍩🍽
+<pre tabindex="0"><code>🍣🍴🍦🌴🍢🍻🍳🍴🍥🍧🍡🍮🌰🍧🍲🍡🍰🍨🍹🍟🍢🍹🍟🍥🍭🌰🌰🌰🌰🌰🌰🍪🍩🍽
 </code></pre><p>困り果てた僕は取り敢えず、文字の規則性を調べてみた。</p>
-<pre><code>127843,127860,127846,127796,127842,127867,127859,127860,127845,127847,127841,127854,127792,...
+<pre tabindex="0"><code>127843,127860,127846,127796,127842,127867,127859,127860,127845,127847,127841,127854,127792,...
 </code></pre><p>pythonのord関数で数値を調べてみると、1文字目と3文字目の下一桁の値の差が丁度3つ分。<br />
 これはflagの形式のctf4bのcとfの関係にあたる。<br />
 cを基準に文字コードの差を取って復元してみると、</p>
@@ -1809,12 +1809,12 @@ cを基準に文字コードの差を取って復元してみると、</p>
 </code></pre></td></tr></table>
 </div>
 </div><p>flagが出てきた。</p>
-<pre><code>[0, 17, 3, -47, -1, 24, 16, 17, 2, 4, -2, 11, -51, 4, 15, -2, 13, 5, 22, -4, -1, 22, -4, 2, 10, -51, -51, -51, -51, -51, -51, 7, 6, 26]
+<pre tabindex="0"><code>[0, 17, 3, -47, -1, 24, 16, 17, 2, 4, -2, 11, -51, 4, 15, -2, 13, 5, 22, -4, -1, 22, -4, 2, 10, -51, -51, -51, -51, -51, -51, 7, 6, 26]
 ctf4b{stegan0graphy_by_em000000ji}
 </code></pre><h2 id="reversing-mask">[Reversing] mask</h2>
 <p>とりあえず実行。<br />
 引数に文字列を取るらしいので取り敢えずctf4b{}と入れてみる。</p>
-<pre><code>$ ./mask ctf4b{}
+<pre tabindex="0"><code>$ ./mask ctf4b{}
 Putting on masks...
 atd4`qu
 c`b bki
@@ -1822,7 +1822,7 @@ Wrong FLAG. Try again.
 </code></pre><p>二通りの謎の文字列が出てきた。<br />
 そこで、Reversingの鉄則であるstringsを試してみる。<br />
 すると、</p>
-<pre><code>$ strings mask
+<pre tabindex="0"><code>$ strings mask
 
 []A\A]A^A_
 Usage: ./mask [FLAG]
@@ -1836,7 +1836,7 @@ GCC: (Arch Linux 9.3.0-1) 9.3.0
 </code></pre><p>なんともまぁ都合の良い文字列が。<br />
 gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 天才である私はそのときのメモを残してあった。（偉い）</p>
-<pre><code>   0x000055555555520c &lt;+147&gt;:	mov    eax,DWORD PTR [rbp-0xd8]
+<pre tabindex="0"><code>   0x000055555555520c &lt;+147&gt;:	mov    eax,DWORD PTR [rbp-0xd8]
    0x0000555555555212 &lt;+153&gt;:	cdqe   
    0x0000555555555214 &lt;+155&gt;:	movzx  eax,BYTE PTR [rbp+rax*1-0xd0]	// get char
    0x000055555555521c &lt;+163&gt;:	and    eax,0x75				// char &amp; 0x75
@@ -1897,7 +1897,7 @@ gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 </div>
 </div><p>改めて見るとゴリ押しもいいとこである。<br />
 得られたflagはこちら。</p>
-<pre><code>ctf4b{dont_reverse_face_mask}
+<pre tabindex="0"><code>ctf4b{dont_reverse_face_mask}
 </code></pre><h2 id="web-spy">[Web] Spy</h2>
 <p>サーバ側で動いているであろうapp.pyと従業員一覧が書かれたemployees.txt、それからログインページらしきWebページのリンクが与えられる。<br />
 どうやらこのサイトを利用している従業員をリストから全て選ぶとflagが降ってくる具合らしい。<br />
@@ -1961,11 +1961,11 @@ gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 取り敢えず、DBにデータが無かったらすぐにindex.htmlを返すので処理時間に差が出るかもと思い計測してみる。<br />
 本来なら計測用のコードがここで出てくるはずだが、自分は面倒だったので気合で人力計測してしまった。（ワンライナーは得意なんだからこういうところで役立てたらいいのに）<br />
 見事にビンゴ。flagは、</p>
-<pre><code>ctf4b{4cc0un7_3num3r4710n_by_51d3_ch4nn3l_4774ck}
+<pre tabindex="0"><code>ctf4b{4cc0un7_3num3r4710n_by_51d3_ch4nn3l_4774ck}
 </code></pre><h2 id="crypt-rb">[Crypt] R&amp;B</h2>
 <p>フラグをあるプログラムでエンコードしたから、それを復元してねという問題。<br />
 エンコードされたフラグとプログラムは以下。</p>
-<pre><code>BQlVrOUllRGxXY2xGNVJuQjRkVFZ5U0VVMGNVZEpiRVpTZVZadmQwOWhTVEIxTkhKTFNWSkdWRUZIUlRGWFUwRklUVlpJTVhGc1NFaDFaVVY1Ukd0Rk1qbDFSM3BuVjFwNGVXVkdWWEZYU0RCTldFZ3dRVmR5VVZOTGNGSjFTMjR6VjBWSE1rMVRXak5KV1hCTGVYZEplR3BzY0VsamJFaGhlV0pGUjFOUFNEQk5Wa1pIVFZaYVVqRm9TbUZqWVhKU2NVaElNM0ZTY25kSU1VWlJUMkZJVWsxV1NESjFhVnBVY0d0R1NIVXhUVEJ4TmsweFYyeEdNVUUxUlRCNVIwa3djVmRNYlVGclJUQXhURVZIVGpWR1ZVOVpja2x4UVZwVVFURkZVblZYYmxOaWFrRktTVlJJWVhsTFJFbFhRVUY0UlZkSk1YRlRiMGcwTlE9PQ==
+<pre tabindex="0"><code>BQlVrOUllRGxXY2xGNVJuQjRkVFZ5U0VVMGNVZEpiRVpTZVZadmQwOWhTVEIxTkhKTFNWSkdWRUZIUlRGWFUwRklUVlpJTVhGc1NFaDFaVVY1Ukd0Rk1qbDFSM3BuVjFwNGVXVkdWWEZYU0RCTldFZ3dRVmR5VVZOTGNGSjFTMjR6VjBWSE1rMVRXak5KV1hCTGVYZEplR3BzY0VsamJFaGhlV0pGUjFOUFNEQk5Wa1pIVFZaYVVqRm9TbUZqWVhKU2NVaElNM0ZTY25kSU1VWlJUMkZJVWsxV1NESjFhVnBVY0d0R1NIVXhUVEJ4TmsweFYyeEdNVUUxUlRCNVIwa3djVmRNYlVGclJUQXhURVZIVGpWR1ZVOVpja2x4UVZwVVFURkZVblZYYmxOaWFrRktTVlJJWVhsTFJFbFhRVUY0UlZkSk1YRlRiMGcwTlE9PQ==
 </code></pre><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2067,7 +2067,7 @@ gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 </div><p>ループ回数は適当。<br />
 単純に与えられたコードの逆の処理を書いていくことで求まる。<br />
 結果は以下。</p>
-<pre><code>BUk9IeDlWclF5RnB4dTVySEU0cUdJbEZSeVZvd09hSTB1NHJLSVJGVEFHRTFXU0FITVZIMXFsSEh1ZUV5RGtFMjl1R3pnV1p4eWVGVXFXSDBNWEgwQVdyUVNLcFJ1S24zV0VHMk1TWjNJWXBLeXdJeGpscEljbEhheWJFR1NPSDBNVkZHTVZaUjFoSmFjYXJScUhIM3FScndIMUZRT2FIUk1WSDJ1aVpUcGtGSHUxTTBxNk0xV2xGMUE1RTB5R0kwcVdMbUFrRTAxTEVHTjVGVU9ZcklxQVpUQTFFUnVXblNiakFKSVRIYXlLRElXQUF4RVdJMXFTb0g0NQ==
+<pre tabindex="0"><code>BUk9IeDlWclF5RnB4dTVySEU0cUdJbEZSeVZvd09hSTB1NHJLSVJGVEFHRTFXU0FITVZIMXFsSEh1ZUV5RGtFMjl1R3pnV1p4eWVGVXFXSDBNWEgwQVdyUVNLcFJ1S24zV0VHMk1TWjNJWXBLeXdJeGpscEljbEhheWJFR1NPSDBNVkZHTVZaUjFoSmFjYXJScUhIM3FScndIMUZRT2FIUk1WSDJ1aVpUcGtGSHUxTTBxNk0xV2xGMUE1RTB5R0kwcVdMbUFrRTAxTEVHTjVGVU9ZcklxQVpUQTFFUnVXblNiakFKSVRIYXlLRElXQUF4RVdJMXFTb0g0NQ==
 ROHx9VrQyFpxu5rHE4qGIlFRyVowOaI0u4rKIRFTAGE1WSAHMVH1qlHHueEyDkE29uGzgWZxyeFUqWH0MXH0AWrQSKpRuKn3WEG2MSZ3IYpKywIxjlpIclHaybEGSOH0MVFGMVZR1hJacarRqHH3qRrwH1FQOaHRMVH2uiZTpkFHu1M0q6M1WlF1A5E0yGI0qWLmAkE01LEGN5FUOYrIqAZTA1ERuWnSbjAJITHayKDIWAAxEWI1qSoH45
 ROHx9RrHyyDxu5rHIHn0gWHxyuDHcSGRE5FHSWrQHkFT1GoaNkI2IkHwISFJSCIx1WpHWkrQOfE3uKqycVL2qZrRyhE1ASFHI6H0MnZzgxGTSwDz55H0gPFHSho0g1IHugGzgRrKSyGISWGIc3qGMXE09HpKyWM0cuDHIhZ05eFRyWARM6DIWWEmN9
 RODyIeBHyyETkKIRIaAJELDyIAIx51HmSnp1WeqR5EIaOVMIqBqx0lGxWvZHcgLxInGSEIEzSFZ2kdLacBnySKBIAnoKuUHmNkDyqeMQIMZwu6JGOTqyIgJaAEn3NkHII4FzARIG0=
@@ -2087,7 +2087,7 @@ result: ctf4b{rot_base_rot_base_rot_base_base}
 内容は一緒。多分サーバに負荷がかからないような配慮だと思う。<br />
 実行ファイルを実行すると、スタックが図示され入力を求められる。<br />
 とりあえず0をいっぱい入力してみる。</p>
-<pre><code>Your goal is to call `win` function (located at 0x400861)
+<pre tabindex="0"><code>Your goal is to call `win` function (located at 0x400861)
 
    [ Address ]           [ Stack ]
                    +--------------------+
@@ -2144,7 +2144,7 @@ Input: 000000000000000000000000000000000
 これならバイナリデータをそのままぶちこむことができる。<br />
 最初から最後まで自動化できるしなるほどこれは便利。</p>
 <p>こうしてreturn addressだけを書き換えることはできた。</p>
-<pre><code>                   +--------------------+
+<pre tabindex="0"><code>                   +--------------------+
 0x00007ffeed69c960 | 0x00007ffeed69c970 | &lt;-- saved rbp (vuln)
                    +--------------------+
 0x00007ffeed69c968 | 0x0000000000400861 | &lt;-- return address (vuln)
@@ -2154,7 +2154,7 @@ Input: 000000000000000000000000000000000
 0x00007ffeed69c978 | 0x00007fee2cb27b97 | &lt;-- return address (main)
                    +--------------------+
 </code></pre><p>これでOKや！！！的なことを考えていたらこんなメッセージが出てきた。</p>
-<pre><code>Oops! RSP is misaligned!
+<pre tabindex="0"><code>Oops! RSP is misaligned!
 Some functions such as `system` use `movaps` instructions in libc-2.27 and later.
 This instruction fails when RSP is not a multiple of 0x10.
 Find a way to align RSP! You're almost there!
@@ -2582,7 +2582,7 @@ vulnのreturn addressをvulnのret命令に持ってきてmainのrbpをwinの関
 </div>
 </div><p>あぁスッキリした。<br />
 この後はシェルに入れるので、</p>
-<pre><code>[+] Opening connection to bs.quals.beginners.seccon.jp on port 9001: Done
+<pre tabindex="0"><code>[+] Opening connection to bs.quals.beginners.seccon.jp on port 9001: Done
 00007ffed9108c60
 000000000040084e
 0000000000400ad0

@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="SECCON Online 2019 QualsのWriteup">
 
-<meta name="generator" content="Hugo 0.86.1" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1750,7 +1750,7 @@ if (!doNotTrack) {
 <h3 id="welcome">Welcome</h3>
 <p>いつものIRCトピックを見る奴．<br />
 毎回どうするか一瞬焦る．</p>
-<pre><code>SECCON{Welcome to the SECCON 2019 Online CTF}
+<pre tabindex="0"><code>SECCON{Welcome to the SECCON 2019 Online CTF}
 </code></pre><h3 id="coffee_break">coffee_break</h3>
 <p>唯一まともに解けた問題．<br />
 以下のpythonファイルと暗号化された文字列があるから復号してね！<br />
@@ -1802,7 +1802,7 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div><p>暗号化された文．</p>
-<pre><code>FyRyZNBO2MG6ncd3hEkC/yeYKUseI/CxYoZiIeV2fe/Jmtwx+WbWmU1gtMX9m905
+<pre tabindex="0"><code>FyRyZNBO2MG6ncd3hEkC/yeYKUseI/CxYoZiIeV2fe/Jmtwx+WbWmU1gtMX9m905
 </code></pre><p>フラグをこのpythonスクリプトで暗号化すると以上のような文字列になるらしい．<br />
 ならば逆に辿っていけばもとのflagにたどり着けるはず．<br />
 encrypt.pyの大まかな流れを整理してみる．</p>
@@ -1975,7 +1975,7 @@ decryptというencrypt()とは逆の動きをする関数を作ればよい．<
 </div><h3 id="ここで時間を取られた">#ここで時間を取られた</h3>
 <p>個人的な話．ここで詰まった．(飛ばしてくれていいですよ)<br />
 以上の出力結果はこうである．</p>
-<pre><code>S¤¢¢®­{²uccess_£ecryption_¸eah_¸eah_S¤¢¢®­}
+<pre tabindex="0"><code>S¤¢¢®­{²uccess_£ecryption_¸eah_¸eah_S¤¢¢®­}
 </code></pre><p>惜しい．非常に惜しい．エンコードミスだと思って一時間以上とられた．<br />
 実際には前述のとおりnが一意でないので最初の文字だけでnを決めてはいけなかったのである．<br />
 よく見てみるとASCIIコードの数値から微妙にずれている文字が文字化けしている．</p>
@@ -2006,7 +2006,7 @@ decryptというencrypt()とは逆の動きをする関数を作ればよい．<
 </code></pre></td></tr></table>
 </div>
 </div><p>やっと出た．</p>
-<pre><code>SECCON{Success_Decryption_Yeah_Yeah_SECCON}
+<pre tabindex="0"><code>SECCON{Success_Decryption_Yeah_Yeah_SECCON}
 </code></pre><p>solver全文</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2096,7 +2096,7 @@ decryptというencrypt()とは逆の動きをする関数を作ればよい．<
 </div>
 </div><h3 id="thank-you-for-playing">Thank you for playing!</h3>
 <p>サービス問題って前から二個だったっけ&hellip;?</p>
-<pre><code>SECCON{We have done all the challenges. Thank you!}
+<pre tabindex="0"><code>SECCON{We have done all the challenges. Thank you!}
 </code></pre><h2 id="おわりに">おわりに</h2>
 <p>久しぶりにQiitaに記事書いた．<br />
 Writeup書く気になるまでまぁまぁ時間がかかったが問題がまだ残っていてよかった．<br />
