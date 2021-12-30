@@ -11,8 +11,8 @@
     <description>Recent content in Python on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>neuromancer_wg@outlook.jp (Takana Norimasa)</managingEditor>
-    <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
+    <managingEditor>neuromancer_wg@outlook.jp (n.takana)</managingEditor>
+    <webMaster>neuromancer_wg@outlook.jp (n.takana)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 14 Mar 2020 18:44:25 +0900</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>matplotlibで特定のデータにだけマーカーを適用する方法</title>
         <link>https://Alignof.github.io/blog/posts/mplib_marker/</link>
         <pubDate>Sat, 14 Mar 2020 18:44:25 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Sat, 14 Mar 2020 18:44:25 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/mplib_marker/</guid>
         <description>この記事はmatplotlibで特定のデータにだけマーカーを適用する方法 - Qiitaから移転してきたものです． はじめに 雑誌の掲載順をグラフ化</description>
@@ -58,7 +58,7 @@
         <title>matplotlibで特定のデータをプロットしない方法</title>
         <link>https://Alignof.github.io/blog/posts/mplib_plot/</link>
         <pubDate>Tue, 26 Feb 2019 18:44:25 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Tue, 26 Feb 2019 18:44:25 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/mplib_plot/</guid>
         <description>この記事はmatplotlibで特定のデータをプロットしない方法 - Qiitaから移転してきたものです． はじめに 漫画の掲載順を取得してグラフ化</description>

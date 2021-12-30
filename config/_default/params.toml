@@ -41,7 +41,7 @@ talksGroupByDate = "2006"
 pubPaginate = 20
 
 # whoami
-myname = "Takana Norimasa"
+myname = "n.takana"
 email = "neuromancer_wg@outlook.jp"
 whoami = "student"
 bioImageUrl = "images/whoami/mybioimage.jpg"
@@ -142,11 +142,11 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "j17423@kisarazu.kosen-ac.jp"
+  email = "Alignof@outlook.com"
   phone = ""
   facebook = ""
   twitter = "https://twitter.com/_Alignof"
-  github = "https://github.com/Takana-Norimasa"
+  github = "https://github.com/Alignof"
   stack-overflow = ""
   instagram = ""
   google-plus = ""

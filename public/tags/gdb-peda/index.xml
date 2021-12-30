@@ -11,8 +11,8 @@
     <description>Recent content in gdb-peda on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>neuromancer_wg@outlook.jp (Takana Norimasa)</managingEditor>
-    <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
+    <managingEditor>neuromancer_wg@outlook.jp (n.takana)</managingEditor>
+    <webMaster>neuromancer_wg@outlook.jp (n.takana)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 28 Apr 2020 13:41:17 +0900</lastBuildDate>
     
@@ -24,7 +24,7 @@
         <title>gdbinitを使い分ける</title>
         <link>https://Alignof.github.io/blog/posts/gdbinit/</link>
         <pubDate>Tue, 28 Apr 2020 13:41:17 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Tue, 28 Apr 2020 13:41:17 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/gdbinit/</guid>
         <description>経緯 結構詰まったのでメモ。 今まで普通のCのデバッグにはGDB、アセンブラを読むときには拡張のgdb-pedaを使っていた。 つまりgdbを使う</description>

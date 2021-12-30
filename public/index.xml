@@ -11,8 +11,8 @@
     <description>Recent content on 303 See Other</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>neuromancer_wg@outlook.jp (Takana Norimasa)</managingEditor>
-    <webMaster>neuromancer_wg@outlook.jp (Takana Norimasa)</webMaster>
+    <managingEditor>neuromancer_wg@outlook.jp (n.takana)</managingEditor>
+    <webMaster>neuromancer_wg@outlook.jp (n.takana)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Dec 2020 01:31:30 +0900</lastBuildDate>
     
@@ -45,7 +45,7 @@
         <title>セキュリティ・キャンプ全国大会2020に参加してきた&lt;1&gt;</title>
         <link>https://Alignof.github.io/blog/posts/seccamp/</link>
         <pubDate>Thu, 31 Dec 2020 01:31:30 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Thu, 31 Dec 2020 01:31:30 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/seccamp/</guid>
         <description>はじめに 修了してから結構経ってしまったが，seccampの参加録を書く． もう1ヶ月位経つのか&amp;hellip;（2021 8/7追記：こう書いて</description>
@@ -79,7 +79,7 @@
         <title>Beginners CTF 2020 Write up</title>
         <link>https://Alignof.github.io/blog/posts/ctf4b_2020/</link>
         <pubDate>Sun, 24 May 2020 18:44:25 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Sun, 24 May 2020 18:44:25 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/ctf4b_2020/</guid>
         <description>5/23-5/24のBeginners CTFに参加した。 ぼっち参加で272pt/309位だった。（散々） 色々勉強になったし久しぶりだったので</description>
@@ -113,7 +113,7 @@
         <title>gdbinitを使い分ける</title>
         <link>https://Alignof.github.io/blog/posts/gdbinit/</link>
         <pubDate>Tue, 28 Apr 2020 13:41:17 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Tue, 28 Apr 2020 13:41:17 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/gdbinit/</guid>
         <description>経緯 結構詰まったのでメモ。 今まで普通のCのデバッグにはGDB、アセンブラを読むときには拡張のgdb-pedaを使っていた。 つまりgdbを使う</description>
@@ -151,7 +151,7 @@
         <title>ポートフォリオサイトを作った</title>
         <link>https://Alignof.github.io/blog/posts/portfolio/</link>
         <pubDate>Thu, 23 Apr 2020 01:29:18 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Thu, 23 Apr 2020 01:29:18 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/portfolio/</guid>
         <description>お知らせ このブログができるずっと前から建設を進めていたポートフォリオがようやく完成しました。 疲れた&amp;hellip;（満身創痍） 上のバーのAb</description>
@@ -197,7 +197,7 @@
         <title>SecHack365 &#39;19 参加録</title>
         <link>https://Alignof.github.io/blog/posts/sechack365/</link>
         <pubDate>Fri, 10 Apr 2020 15:55:05 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Fri, 10 Apr 2020 15:55:05 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/sechack365/</guid>
         <description>2019年5月の頭、部屋で500円で買ったジャンクモニタを汗だくになりながら分解してたら電話がかかってきた。 今では聞き馴染みのあるあの人の声</description>
@@ -231,7 +231,7 @@
         <title>開設の経緯とか</title>
         <link>https://Alignof.github.io/blog/posts/hello/</link>
         <pubDate>Fri, 03 Apr 2020 23:40:48 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Fri, 03 Apr 2020 23:40:48 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/hello/</guid>
         <description>SecHack365の興奮冷めやらぬ2020年4月の頭． そう言えば，参加録とか書いたこと無いな…と思った． そして，それを書く場が無いな…とも</description>
@@ -261,7 +261,7 @@
         <title>matplotlibで特定のデータにだけマーカーを適用する方法</title>
         <link>https://Alignof.github.io/blog/posts/mplib_marker/</link>
         <pubDate>Sat, 14 Mar 2020 18:44:25 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Sat, 14 Mar 2020 18:44:25 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/mplib_marker/</guid>
         <description>この記事はmatplotlibで特定のデータにだけマーカーを適用する方法 - Qiitaから移転してきたものです． はじめに 雑誌の掲載順をグラフ化</description>
@@ -295,7 +295,7 @@
         <title>KOSENセキュリティコンテスト2019 Writeup</title>
         <link>https://Alignof.github.io/blog/posts/kosensec_2019/</link>
         <pubDate>Tue, 05 Nov 2019 00:00:00 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Tue, 05 Nov 2019 00:00:00 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/kosensec_2019/</guid>
         <description>この記事はKOSENセキュリティコンテスト2019 Writeup - Qiitaから移転してきたものです． はじめに 10/26に開催されたKOSENセキュリテ</description>
@@ -325,7 +325,7 @@
         <title>SECCON Online 2019 Quals Writeup</title>
         <link>https://Alignof.github.io/blog/posts/seccon_2019/</link>
         <pubDate>Tue, 22 Oct 2019 00:00:00 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Tue, 22 Oct 2019 00:00:00 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/seccon_2019/</guid>
         <description>この記事はSECCON Online 2019 Quals Writeup - Qiitaから移転してきたものです． はじめに 予定が合わず友達からポケットWifiを借りて出先から参戦． サービ</description>
@@ -359,7 +359,7 @@
         <title>令和CTF writeup</title>
         <link>https://Alignof.github.io/blog/posts/reiwactf/</link>
         <pubDate>Wed, 01 May 2019 00:00:00 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Wed, 01 May 2019 00:00:00 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/reiwactf/</guid>
         <description>この記事は令和CTF writeup - Qiitaから移転してきたものです． 知らなくて普通に一時間遅刻しました． まぁ，早くいっても混んでたらしいですけど． 時</description>
@@ -393,7 +393,7 @@
         <title>matplotlibで特定のデータをプロットしない方法</title>
         <link>https://Alignof.github.io/blog/posts/mplib_plot/</link>
         <pubDate>Tue, 26 Feb 2019 18:44:25 +0900</pubDate>
-        <author>neuromancer_wg@outlook.jp (Takana Norimasa)</author>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
         <atom:modified>Tue, 26 Feb 2019 18:44:25 +0900</atom:modified>
         <guid>https://Alignof.github.io/blog/posts/mplib_plot/</guid>
         <description>この記事はmatplotlibで特定のデータをプロットしない方法 - Qiitaから移転してきたものです． はじめに 漫画の掲載順を取得してグラフ化</description>
