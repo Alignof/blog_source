@@ -18,7 +18,7 @@ categories:
 
 ## 今年を振り返って
 なんか気がついたらあっという間に年末になっていたので今年を振り返っていこうと思う．
-今年も受験があったりminicampのチューターやったりSECCON電脳会議で発表したり色々あった．
+今年は受験があったりminicampのチューターやったりSECCON電脳会議で発表したり色々あった．
 ほとんど受験と来年の準備に吸われて何もしてなかったように思えるが，よく書き起こしてみると意外と盛りだくさんだったり...
 というか受験中に色々やりすぎだろ...
 
@@ -246,6 +246,7 @@ TOEICはどうにか4月の回で805点(L:415, R:390)を叩き出した．730点
 
 Cコンパイラの移植は1月にやっていた課題研究のネタだったが，抄録を書いたらやる気がなくなり放置していたものだった．
 RISC-Vでもセルフホストしたい！という気持ちだったが，デバッガが使えず非常に厳しいのでテストさえろくに通ってなかった．（お前それでよく抄録出したな）
+結局手持ちのテストは全部通したが，セルフホストはやっぱりデバッガが無いとキツいのでまだやってない．
 
 PCの不具合は（僕のことを知っている人なら分かると思うが）毎度おなじみのことだがいい加減直さんとマズいということになって向き合っていた．
 色々教えてもらってMemtestやKdumpを導入したりしたが結局この場では直らなかった．（というかこの不具合は12月中頃まで直らなかった）
@@ -254,9 +255,9 @@ PCの不具合は（僕のことを知っている人なら分かると思うが
 ### 10月
 夏休みが終わる．（絶望）
 10月は去年のSECCON電脳会議で出した[Juggernaut](https://github.com/Alignof/Juggernaut)のネタをSECCON内のイベントでやらせてもらえることになったので，シミュレータの開発をしつつそれの準備をしていた．
-一応Juggernautのどんなもんかというのを説明すると，擬似的な時限爆弾を作ってそれを回路図とプログラムを元に解除する競技で今回はその第0回的な位置づけでやってた．
+一応Juggernautのどんなもんかというのを説明すると擬似的な時限爆弾を作ってそれを回路図とプログラムを元に解除する競技で，今回はその第0回的な位置づけでやってた．
 初めて100分という長い尺の中で自分の企画したネタをやるので結構気合をいれて準備した．
-スライド作成とデモ代わりの作問とリポジトリの整備とリハーサルとで色々やることがあったが，やりたい企画をやれて満足だった．
+スライド作成とデモ代わりの作問とリポジトリの整備とリハーサルとで色々やることがあったが，やりたい企画をやれてすごく良かった．
 
 本番も若干PCトラブルはあったが，リハーサルのおかげでどうにかなったし懸念していたタイムマネジメントもOKだったし結構な人が来てくれたらしく自分的には大満足だった．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「時限爆弾」をテーマにした新競技，&quot;Juggernaut&quot;の企画を今週末土曜日にSECCONのイベント内で開催します！<br>参加登録は当日の10時までなので皆さん気軽にご参加ください！<a href="https://t.co/NTg1lFuzDe">https://t.co/NTg1lFuzDe</a><a href="https://twitter.com/hashtag/Juggernaut000?src=hash&amp;ref_src=twsrc%5Etfw">#Juggernaut000</a> <a href="https://twitter.com/hashtag/seccon?src=hash&amp;ref_src=twsrc%5Etfw">#seccon</a> <a href="https://twitter.com/hashtag/secconcon?src=hash&amp;ref_src=twsrc%5Etfw">#secconcon</a></p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1448587001062584320?ref_src=twsrc%5Etfw">October 14, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -267,7 +268,7 @@ PCの不具合は（僕のことを知っている人なら分かると思うが
 今後も開催の予定があるのでまた準備を進めて行きたい．
 
 この月は忙しくミニキャンプのチューターも始まった．
-チューターというやつをするのは初めてだったので不安だった（しかもグループワークも担当）が，せっかくの機会だしやってみることにした．
+チューターというやつをするのは初めてだったので不安だった（しかもコミュ障オタクなのにグループワークも担当）が，せっかくの機会だしやってみることにした．
 それにしてもトラブル王の癖してチューターやってるの冷静に考えて面白いな．（別に面白くない）
 事前課題がまぁまぁ骨のある内容でかなり為になったし色んな裏方の動きとかも体験できてすごく良き．
 
@@ -278,7 +279,7 @@ PCの不具合は（僕のことを知っている人なら分かると思うが
 10月はCrownHandlerの2章を観たりオタクにそそのかされてプリマジを観始めたりした．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ということでね <a href="https://t.co/ggpDXtE6NF">pic.twitter.com/ggpDXtE6NF</a></p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1442348447567204356?ref_src=twsrc%5Etfw">September 27, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-とうとう自分の女児向けアニメに手を出してしまったか...とか思ってたけどよくよく考えたら中学生の時にカードキャプターさくらを全話観ておいおい泣いてたりしたのであんまり変わってない気がする．
+とうとう女児向けアニメに手を出してしまったか...とか思ってたけどよくよく考えたら中学生の時にカードキャプターさくらを全話観ておいおい泣いてたりしたのであんまり変わってない気がする．
 ちなみに僕の自作Cコンパイラの名前は[cc\_sakura](https://github.com/Alignof/cc_sakura)です．
 
 ### 11月
@@ -297,12 +298,14 @@ Rustの方は何でもRustで挑戦してみよう的な気持ちでフロント
 やプ最．
 プリマジは最高なのでオタクはアニメを履修して筐体もやろうね．
 
-もう1つデカかったのはすっと観たかった『少女☆歌劇 レヴュースタァライト』を観られたことかな．
-前回の一挙放送のときに観ようかなと思っていたが，ちょうど受験と被っていて観られなかったので悲願だった．
-ずっと観たかった分期待も大きかったがその期待を遥か上回る出来でマジでビックリした．
+
+もう1つデカかったのはずっと観たかった『少女☆歌劇 レヴュースタァライト』を観られたことかな．
+前回の一挙放送のときに今度こそ観ようかなとか思っていたが，ちょうど受験と被っていて観られなかったので悲願だった．
+ずっと観たかった分期待も大きかったが，その期待を遥か上回る出来でマジでビックリした．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">『少女☆歌劇 レヴュースタァライト』を全話視聴しました．<br>只今放心状態です．</p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1464605996404207622?ref_src=twsrc%5Etfw">November 27, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-マジで最高．というかまだ熱が冷めてない．
+マジで最高．
+周りのオタクと研究室でTVアニメやロンド・ロンド・ロンドを上映しまくった．
 
 ### 12月
 スタァライトの熱が冷めやらない僕は劇場版も観に行きたくなり調べた．
@@ -316,7 +319,8 @@ Rustの方は何でもRustで挑戦してみよう的な気持ちでフロント
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">最高 <a href="https://t.co/ZY2zb2sRuF">pic.twitter.com/ZY2zb2sRuF</a></p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1466576357270654983?ref_src=twsrc%5Etfw">December 3, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 12月はメンタルが終わってるので散財気味だったりする．
-12月の半ばに発作が起きて，
+
+さらに12月の半ばに発作が起きて，
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">劇場版スタァライトもう一回観たくなってきたな（発作）</p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1469068715421761539?ref_src=twsrc%5Etfw">December 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 行った．
@@ -340,7 +344,7 @@ Rustの方は何でもRustで挑戦してみよう的な気持ちでフロント
 HCCCの資料もこれでやった．
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTwYJ2SDv11KfxYw29j-1gkbweLwG5aK6qn2YSktz4y3zlzB_3FmsnG8AdDOVyFrleWY7O11rXuzcdn/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
-今後もじゃんじゃん作って育てていこうと思う．
+今後もスライドをじゃんじゃん作って育てていこうと思う．
 
 あとPCの不具合が（一応）直った．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新しいPCに変えてからさんざん悩まされていた何の前触れもなくログも残さずフリーズする問題，ようやく解決した．<br>本当にうれしい．<br><br>↓のgistには最大限の感謝...<a href="https://t.co/f4cJNM7GLc">https://t.co/f4cJNM7GLc</a></p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1472572093376372740?ref_src=twsrc%5Etfw">December 19, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -353,7 +357,7 @@ HCCCの資料もこれでやった．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">うふふふふふふふふ <a href="https://t.co/THfJcUDqZS">pic.twitter.com/THfJcUDqZS</a></p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1473180197776404482?ref_src=twsrc%5Etfw">December 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 冷静に考えて道端で円盤取り出して「うふふふふふふふふ」って言いながら写真撮ってるオタク気色悪すぎる．
-それはさておきArchでBlu-rayを再生するのは（というかPCで再生するのは[^8]）なかなか辛く，加えてドライブもハードオフで買ってきた外付けドライブを引っ剥がしてPCに内蔵させたので結構ヒヤヒヤした．
+それはさておきArchでBlu-rayを再生するのは（というかPCで再生するのは[^8]）なかなか辛く，加えてドライブもハードオフで買ってきた外付けドライブを引っ剥がしてPCに内蔵させたものなので結構ヒヤヒヤした．
 結局再生には成功した（VLCでだけ何故か動かんけど）ためこれでいつでもスタァライトすることが出来る．
 
 [^7]:Twitterでの表示数らしい．
@@ -370,7 +374,7 @@ rv32ui-pの3兆倍辛かった．
 まぁ色んなプロジェクトと並行してやってきたので進みが遅いのは仕方ないか．
 
 ### 2021の総括
-12/30からダラダラ振り返って書いてたらあっという間に2021年もあと1時間ちょっとになってしまった．（中々記事とか書かないくせに1度書き出したら止まらない癖辞めたいね）
+12/30からダラダラ振り返って書いてたらあっという間に2021年もあと1時間無いくらいになってしまった．（中々記事とか書かないくせに1度書き出したら止まらない癖辞めたいね）
 今年は受験に始まりシミュレータの開発からコンテストのプロジェクトまで様々なことが出来たんじゃないかなと思う．
 受験ばっかりで何にも無い1年だったなぁとか思ってたけど思ったより受験中も色々やってたし受験以外にもイベントが沢山あった．
 それに気づけただけでもこの記事を書いた甲斐が合った気がする．
