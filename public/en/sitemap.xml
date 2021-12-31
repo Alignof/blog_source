@@ -30,7 +30,7 @@
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
     <loc>https://Alignof.github.io/blog/</loc>
-    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -42,8 +42,14 @@
                 href="https://Alignof.github.io/blog/"
                 />
   </url><url>
+    <loc>https://Alignof.github.io/blog/tags/2021/</loc>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
+  </url><url>
+    <loc>https://Alignof.github.io/blog/posts/looking_back_to_2021/</loc>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
+  </url><url>
     <loc>https://Alignof.github.io/blog/categories/</loc>
-    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -55,17 +61,14 @@
                 href="https://Alignof.github.io/blog/categories/"
                 />
   </url><url>
-    <loc>https://Alignof.github.io/blog/categories/event/</loc>
-    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
+    <loc>https://Alignof.github.io/blog/categories/life/</loc>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
   </url><url>
     <loc>https://Alignof.github.io/blog/posts/</loc>
-    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
-  </url><url>
-    <loc>https://Alignof.github.io/blog/tags/seccamp/</loc>
-    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
   </url><url>
     <loc>https://Alignof.github.io/blog/tags/</loc>
-    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -76,6 +79,15 @@
                 hreflang="en"
                 href="https://Alignof.github.io/blog/tags/"
                 />
+  </url><url>
+    <loc>https://Alignof.github.io/blog/tags/%E4%BB%8A%E5%B9%B4%E3%81%AE%E3%81%BE%E3%81%A8%E3%82%81/</loc>
+    <lastmod>2021-12-31T00:00:20+09:00</lastmod>
+  </url><url>
+    <loc>https://Alignof.github.io/blog/categories/event/</loc>
+    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
+  </url><url>
+    <loc>https://Alignof.github.io/blog/tags/seccamp/</loc>
+    <lastmod>2020-12-31T01:31:30+09:00</lastmod>
   </url><url>
     <loc>https://Alignof.github.io/blog/posts/seccamp/</loc>
     <lastmod>2020-12-31T01:31:30+09:00</lastmod>

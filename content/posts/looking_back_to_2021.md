@@ -6,7 +6,7 @@ hideToc: false
 enableToc: true
 enableTocContent: false
 author: n. takana
-draft: true
+draft: false
 
 tags:
 - 2021
@@ -342,8 +342,6 @@ HCCCの資料もこれでやった．
 
 今後もじゃんじゃん作って育てていこうと思う．
 
-[^7]:Twitterでの表示数らしい．
-
 あとPCの不具合が（一応）直った．
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">新しいPCに変えてからさんざん悩まされていた何の前触れもなくログも残さずフリーズする問題，ようやく解決した．<br>本当にうれしい．<br><br>↓のgistには最大限の感謝...<a href="https://t.co/f4cJNM7GLc">https://t.co/f4cJNM7GLc</a></p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1472572093376372740?ref_src=twsrc%5Etfw">December 19, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -358,7 +356,28 @@ HCCCの資料もこれでやった．
 それはさておきArchでBlu-rayを再生するのは（というかPCで再生するのは[^8]）なかなか辛く，加えてドライブもハードオフで買ってきた外付けドライブを引っ剥がしてPCに内蔵させたので結構ヒヤヒヤした．
 結局再生には成功した（VLCでだけ何故か動かんけど）ためこれでいつでもスタァライトすることが出来る．
 
+[^7]:Twitterでの表示数らしい．
 [^8]:むしろArchは優秀な情報とパッケージが豊富で楽だったまである．
 
+それからこれはつい昨日のことだが，遂にrv32ui-vのテストが全部動いた．
+いや〜強敵だった．
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">放置しまくっていたRust製RISC-Vシミュレータだったが，そういえばこのシミュレータに卒業がかかってたなとなり頑張ってSv32まわりのriscv-testsを通した．<a href="https://t.co/GO22SomBh9">https://t.co/GO22SomBh9</a></p>&mdash; andi sp,sp,-0x10 (@\_Alignof) <a href="https://twitter.com/_Alignof/status/1476531112126332934?ref_src=twsrc%5Etfw">December 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+rv32ui-pの3兆倍辛かった．
+ディスアセンブルしてもアセンブリに書いてない部分の処理が多すぎる＆単純に分量が多いのせいでデバッグが難航してマジでキツかった．
+例外時のCSRsの扱いとか色んなところに飛び飛びで書かれていたので公式の仕様書だけ読んで頑張っていた自分には厳しいものがあった．
+あとはMMUの設計で一生悩んだのが敗因かな．
+まぁ色んなプロジェクトと並行してやってきたので進みが遅いのは仕方ないか．
+
+### 2021の総括
+12/30からダラダラ振り返って書いてたらあっという間に2021年もあと1時間ちょっとになってしまった．（中々記事とか書かないくせに1度書き出したら止まらない癖辞めたいね）
+今年は受験に始まりシミュレータの開発からコンテストのプロジェクトまで様々なことが出来たんじゃないかなと思う．
+受験ばっかりで何にも無い1年だったなぁとか思ってたけど思ったより受験中も色々やってたし受験以外にもイベントが沢山あった．
+それに気づけただけでもこの記事を書いた甲斐が合った気がする．
+
+来年はいよいよ卒業&新天地での生活なので頑張っていきたい．
+多分筑波のオタクに（技術的にも学業的にも）ボコボコにされると思うがそれも良いと思うしむしろ楽しみ．
+色んな刺激を受けて挑戦し続けられる1年にしたい．
+卒研？院試？研究室バトル？知らない子ですね．
+来年も頑張るぞ〜〜〜！
 
