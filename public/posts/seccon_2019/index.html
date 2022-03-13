@@ -18,9 +18,9 @@
 
 <script defer src="/blog/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/blog/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/blog/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/blog/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/blog/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/blog/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="SECCON Online 2019 QualsのWriteup">
 
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.93.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1779,27 +1779,27 @@ if (!doNotTrack) {
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python:enctypt.py" data-lang="python:enctypt.py"><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-
-
-<span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
-
-<span class="n">key1</span> <span class="o">=</span> <span class="s2">&#34;SECCON&#34;</span>
-<span class="n">key2</span> <span class="o">=</span> <span class="s2">&#34;seccon2019&#34;</span>
-<span class="n">text</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">enc1</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-<span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key2</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)),</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
-<span class="n">p</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">enc1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)</span>
-<span class="n">enc2</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">enc1</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">enc2</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python:enctypt.py" data-lang="python:enctypt.py"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">base64</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">key1</span> <span class="o">=</span> <span class="s2">&#34;SECCON&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">key2</span> <span class="o">=</span> <span class="s2">&#34;seccon2019&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">text</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">enc1</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key2</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)),</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">enc1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">enc2</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">enc1</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">enc2</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>暗号化された文．</p>
 <pre tabindex="0"><code>FyRyZNBO2MG6ncd3hEkC/yeYKUseI/CxYoZiIeV2fe/Jmtwx+WbWmU1gtMX9m905
@@ -1821,8 +1821,8 @@ encrypt.pyの大まかな流れを整理してみる．</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">enc2</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">enc2</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>出力された暗号文＝enc2をbase64でエンコードしたものをASCIIでデコードしたもの<br />
 ということは，逆にすると，<br />
@@ -1833,8 +1833,8 @@ enc2=出力された暗号文をASCIIでエンコードしたものをbase64で�
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">rev1</span><span class="o">=</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">rev1</span><span class="o">=</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Step1の結果がrev1に入っている．<br />
 これは，encrypt.pyのenc2とまったく同じになる．</p>
@@ -1850,12 +1850,12 @@ enc2を求める処理は，</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">key2</span> <span class="o">=</span> <span class="s2">&#34;seccon2019&#34;</span>
-
-<span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key2</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)),</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
-<span class="n">p</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">enc1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)</span>
-<span class="n">enc2</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">enc1</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">key2</span> <span class="o">=</span> <span class="s2">&#34;seccon2019&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key2</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)),</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">p</span> <span class="o">=</span> <span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">enc1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">enc2</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">enc1</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>となってる．これを逆算してenc1を求めればよい．</p>
 <p>まず，cipher.encrypt()に関してだが，運良くdecrypt()も存在する．つまり，ここの部分に関してはそのままdectypt()に置き換えればよさそう．<br />
@@ -1868,8 +1868,8 @@ pythonにおいてchr()*nの計算は数値計算ではない．<br />
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="sa">b</span><span class="s2">&#34;&#39;jff~|Ox9&#39;34G9#g52F?489&gt;B%|)173~)%8.&#39;jff~|Q</span><span class="se">\x05\x05\x05\x05\x05</span><span class="s2">&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="sa">b</span><span class="s2">&#34;&#39;jff~|Ox9&#39;34G9#g52F?489&gt;B%|)173~)%8.&#39;jff~|Q</span><span class="se">\x05\x05\x05\x05\x05</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>末尾に不自然な\x05が複数くっついている．これこそが<code>+ chr(p) * p</code>の正体なのだ．<br />
 つまり，<code>+ chr(p) * p</code>は数値を足していたのでは無く，chr(p)　(今回なら\x05)という文字列をp回enc1にくっつけていたのである．</p>
@@ -1880,9 +1880,9 @@ pythonにおいてchr()*nの計算は数値計算ではない．<br />
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">rev2</span><span class="o">=</span><span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">rev1</span><span class="p">)</span>
-<span class="n">rev3</span><span class="o">=</span><span class="n">rev2</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x05</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">rev2</span><span class="o">=</span><span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">rev1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">rev3</span><span class="o">=</span><span class="n">rev2</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x05</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>rev2の行でcipher.decrypt()で復号化を行い，<br />
 rev3の行で末尾の適当な文字列を取り除いてASCIIに復号することでenc1が求まる．<br />
@@ -1903,15 +1903,15 @@ enc1を求める処理は以下の部分．</p>
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
-
-<span class="n">key1</span> <span class="o">=</span> <span class="s2">&#34;SECCON&#34;</span>
-<span class="n">enc1</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">key1</span> <span class="o">=</span> <span class="s2">&#34;SECCON&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">enc1</span> <span class="o">=</span> <span class="n">encrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>encryptの引数であるtextが平文(=flag)である．ゴールは近い．<br />
 decryptというencrypt()とは逆の動きをする関数を作ればよい．</p>
@@ -1921,8 +1921,8 @@ decryptというencrypt()とは逆の動きをする関数を作ればよい．<
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>これの逆算には随分骨が折れそうだ．<br />
 とりあえず，処理を細分化して順番に並べてみる．</p>
@@ -1960,17 +1960,17 @@ decryptというencrypt()とは逆の動きをする関数を作ればよい．<
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">text</span><span class="p">):</span>
-    <span class="n">flag</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
-                <span class="n">flag</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">flag</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span><span class="n">rev3</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">text</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">flag</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">flag</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">flag</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span><span class="n">rev3</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="ここで時間を取られた">#ここで時間を取られた</h3>
 <p>個人的な話．ここで詰まった．(飛ばしてくれていいですよ)<br />
@@ -1994,16 +1994,16 @@ decryptというencrypt()とは逆の動きをする関数を作ればよい．<
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">flag</span><span class="o">=</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span><span class="n">rev3</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">&gt;</span><span class="mi">127</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">-</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)),</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">flag</span><span class="o">=</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span><span class="n">rev3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">&gt;</span><span class="mi">127</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">-</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)),</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>やっと出た．</p>
 <pre tabindex="0"><code>SECCON{Success_Decryption_Yeah_Yeah_SECCON}
@@ -2052,47 +2052,47 @@ decryptというencrypt()とは逆の動きをする関数を作ればよい．<
 </span><span class="lnt">40
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-
-<span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
-    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
-        <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">s</span>
-
-<span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">text</span><span class="p">):</span>
-    <span class="n">flag</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000</span><span class="p">):</span>
-        <span class="k">if</span> <span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">:</span>
-            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
-                <span class="n">flag</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">flag</span>
-
-<span class="n">key1</span> <span class="o">=</span> <span class="s2">&#34;SECCON&#34;</span>
-<span class="n">key2</span> <span class="o">=</span> <span class="s2">&#34;seccon2019&#34;</span>
-
-<span class="n">out</span><span class="o">=</span><span class="s2">&#34;FyRyZNBO2MG6ncd3hEkC/yeYKUseI/CxYoZiIeV2fe/Jmtwx+WbWmU1gtMX9m905&#34;</span>
-
-<span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key2</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)),</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
-
-<span class="n">rev1</span><span class="o">=</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
-
-<span class="n">rev2</span><span class="o">=</span><span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">rev1</span><span class="p">)</span>
-
-<span class="n">rev3</span><span class="o">=</span><span class="n">rev2</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x05</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-
-<span class="n">flag</span><span class="o">=</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span><span class="n">rev3</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)):</span>
-    <span class="k">if</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">&gt;</span><span class="mi">127</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">-</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)),</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Crypto.Cipher</span> <span class="kn">import</span> <span class="n">AES</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">base64</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">s</span> <span class="o">+=</span> <span class="nb">chr</span><span class="p">((((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span> <span class="o">-</span> <span class="mh">0x20</span><span class="p">))</span> <span class="o">%</span> <span class="p">(</span><span class="mh">0x7e</span> <span class="o">-</span> <span class="mh">0x20</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">+</span> <span class="mh">0x20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">s</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">text</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">flag</span><span class="o">=</span><span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="mi">0</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span><span class="o">==</span><span class="s1">&#39;S&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">                <span class="n">flag</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(((</span><span class="nb">ord</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="nb">len</span><span class="p">(</span><span class="n">key</span><span class="p">)])</span><span class="o">-</span><span class="mh">0x20</span><span class="p">)</span><span class="o">+</span><span class="mh">0x20</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">flag</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">key1</span> <span class="o">=</span> <span class="s2">&#34;SECCON&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">key2</span> <span class="o">=</span> <span class="s2">&#34;seccon2019&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">out</span><span class="o">=</span><span class="s2">&#34;FyRyZNBO2MG6ncd3hEkC/yeYKUseI/CxYoZiIeV2fe/Jmtwx+WbWmU1gtMX9m905&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">key2</span> <span class="o">+</span> <span class="nb">chr</span><span class="p">(</span><span class="mh">0x00</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">16</span> <span class="o">-</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">key2</span><span class="p">)</span> <span class="o">%</span> <span class="mi">16</span><span class="p">)),</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_ECB</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">rev1</span><span class="o">=</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">rev2</span><span class="o">=</span><span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">rev1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">rev3</span><span class="o">=</span><span class="n">rev2</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;ascii&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\x05</span><span class="s2">&#34;</span><span class="p">,</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">flag</span><span class="o">=</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key1</span><span class="p">,</span><span class="n">rev3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">flag</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">&gt;</span><span class="mi">127</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span><span class="o">-</span><span class="p">(</span><span class="mh">0x7e</span><span class="o">-</span><span class="mh">0x20</span><span class="o">+</span><span class="mi">1</span><span class="p">)),</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">[</span><span class="n">index</span><span class="p">],</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="thank-you-for-playing">Thank you for playing!</h3>
 <p>サービス問題って前から二個だったっけ&hellip;?</p>
@@ -2525,7 +2525,7 @@ Writeup書く気になるまでまぁまぁ時間がかかったが問題がま�
 </div>
 
 
-<script defer src="/blog/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/blog/js/swipe.min.5b45017db39b94db049dd81e997decf8d1d711d8e3efcb65cde3b58e7e456506.js"></script>
 
 <script defer src="/blog/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

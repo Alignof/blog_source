@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>C compiler on 303 See Other</title>
+    <link>https://Alignof.github.io/blog/tags/c-compiler/</link>
+    <description>Recent content in C compiler on 303 See Other</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>neuromancer_wg@outlook.jp (n.takana)</managingEditor>
+    <webMaster>neuromancer_wg@outlook.jp (n.takana)</webMaster>
+    <copyright>©2022, All Rights Reserved</copyright>
+    <lastBuildDate>Sat, 05 Mar 2022 21:04:44 +0900</lastBuildDate>
+    
+        <atom:link href="https://Alignof.github.io/blog/tags/c-compiler/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>自作Cコンパイラセルフホストへの道</title>
+        <link>https://Alignof.github.io/blog/posts/roadmap/</link>
+        <pubDate>Sat, 05 Mar 2022 21:04:44 +0900</pubDate>
+        <author>neuromancer_wg@outlook.jp (n.takana)</author>
+        <atom:modified>Sat, 05 Mar 2022 21:04:44 +0900</atom:modified>
+        <guid>https://Alignof.github.io/blog/posts/roadmap/</guid>
+        <description>Ruiさんの低レイヤを知りたい人のためのCコンパイラ作成入門の輪読回で喋った資料． この輪読回はミニキャンプ2021で僕がチューターを担当した</description>
+        
+        <dc:creator>n.takana</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>C compiler</category>
+            
+          
+        
+        
+          
+            
+              <category>tech</category>
+            
+          
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

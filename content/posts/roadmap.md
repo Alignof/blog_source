@@ -11,7 +11,7 @@ tags:
 - C compiler
 categories:
 - tech
-draft: true
+draft: false
 ---
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRdktxPg6QFMNYsHxO5GtedIBoRCDaREdz1gkUmccTq9T0lPlGNYaDttxqWYZPX5uJJ2IsZiZ2LoK_U/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>

@@ -18,9 +18,9 @@
 
 <script defer src="/blog/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/blog/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/blog/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/blog/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/blog/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/blog/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="gdb dashboardとgdb-pedaを使い分けるための奮闘録">
 
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.93.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1749,8 +1749,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ gdb -nx terget_file
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ gdb -nx terget_file
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>gdb-pedaを使うときは、</p>
 <div class="highlight"><div class="chroma">
@@ -1758,8 +1758,8 @@ if (!doNotTrack) {
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ gdb terget_file
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ gdb terget_file
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>としていたのだ。</p>
 <p>最近になって本格的にCのデバッグをするようになった（それまではpedaしか使ってなかった）のでgdb dashboardを導入することにした。<br />
@@ -1780,8 +1780,8 @@ gdb-pedaを使うときは以下のようにコマンドを叩いてgdbを起動
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">gdb -nx -ix<span class="o">=</span>~/.gdbinit_peda 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">gdb -nx -ix<span class="o">=</span>~/.gdbinit_peda 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>-nxでデフォルトの~/.gdbinitを読まないようにして-ixで新しい~/.gdbinit_pedaを読ませるようにしている。<br />
 <code>gdb --help</code>の</p>
@@ -1796,8 +1796,8 @@ Like -x but execute commands before loading inferior.</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="nb">alias</span> gdb-peda<span class="o">=</span><span class="s1">&#39;gdb -nx -ix=~/.gdbinit_peda&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-zsh" data-lang="zsh"><span class="line"><span class="cl"><span class="nb">alias</span> gdb-peda<span class="o">=</span><span class="s1">&#39;gdb -nx -ix=~/.gdbinit_peda&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>2つの拡張機能をコマンド1つで使い分けることができるようになる。</p>
 <div class="highlight"><div class="chroma">
@@ -1809,12 +1809,12 @@ Like -x but execute commands before loading inferior.</p>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># gdb dashboard</span>
-$ gdb 
-
-<span class="c1"># gdb-peda</span>
-$ gdb-peda 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># gdb dashboard</span>
+</span></span><span class="line"><span class="cl">$ gdb 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># gdb-peda</span>
+</span></span><span class="line"><span class="cl">$ gdb-peda 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>これで一見落着。</p>
 
@@ -2224,7 +2224,7 @@ $ gdb-peda
 </div>
 
 
-<script defer src="/blog/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/blog/js/swipe.min.5b45017db39b94db049dd81e997decf8d1d711d8e3efcb65cde3b58e7e456506.js"></script>
 
 <script defer src="/blog/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

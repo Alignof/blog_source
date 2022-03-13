@@ -18,9 +18,9 @@
 
 <script defer src="/blog/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/blog/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/blog/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/blog/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/blog/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/blog/js/helper/closest.min.js"></script>
   
@@ -1350,7 +1350,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="matplotlibで特定の項目にだけマーカーをつける方法">
 
-<meta name="generator" content="Hugo 0.91.2" />
+<meta name="generator" content="Hugo 0.93.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1822,23 +1822,23 @@ X番目にマーカーを付けたければX-1番目の数を配列に追加す�
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python </span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
- 
-<span class="n">X_data</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-<span class="n">Y_data</span><span class="o">=</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
-<span class="n">month_name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jan.&#39;</span><span class="p">,</span><span class="s1">&#39;Feb.&#39;</span><span class="p">,</span><span class="s1">&#39;Mar.&#39;</span><span class="p">,</span><span class="s1">&#39;Apr.&#39;</span><span class="p">,</span><span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;Jun.&#39;</span><span class="p">,</span><span class="s1">&#39;Jul.&#39;</span><span class="p">,</span><span class="s1">&#39;Aug.&#39;</span><span class="p">,</span><span class="s1">&#39;Sep.&#39;</span><span class="p">,</span><span class="s1">&#39;Oct.&#39;</span><span class="p">,</span><span class="s1">&#39;Nov.&#39;</span><span class="p">,</span><span class="s1">&#39;Dec.&#39;</span><span class="p">]</span>
-<span class="n">mark_point</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">month_name</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">Y_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">Y_data</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&#34;D&#34;</span><span class="p">,</span> <span class="n">markevery</span><span class="o">=</span><span class="n">mark_point</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python </span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">X_data</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">Y_data</span><span class="o">=</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">month_name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jan.&#39;</span><span class="p">,</span><span class="s1">&#39;Feb.&#39;</span><span class="p">,</span><span class="s1">&#39;Mar.&#39;</span><span class="p">,</span><span class="s1">&#39;Apr.&#39;</span><span class="p">,</span><span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;Jun.&#39;</span><span class="p">,</span><span class="s1">&#39;Jul.&#39;</span><span class="p">,</span><span class="s1">&#39;Aug.&#39;</span><span class="p">,</span><span class="s1">&#39;Sep.&#39;</span><span class="p">,</span><span class="s1">&#39;Oct.&#39;</span><span class="p">,</span><span class="s1">&#39;Nov.&#39;</span><span class="p">,</span><span class="s1">&#39;Dec.&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">mark_point</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">month_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">Y_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">Y_data</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&#34;D&#34;</span><span class="p">,</span> <span class="n">markevery</span><span class="o">=</span><span class="n">mark_point</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>結果<br />
@@ -1870,27 +1870,27 @@ X番目にマーカーを付けたければX-1番目の数を配列に追加す�
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python </span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
- 
-<span class="n">X_data</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-<span class="n">Y_data</span><span class="o">=</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
-<span class="n">month_name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jan.&#39;</span><span class="p">,</span><span class="s1">&#39;Feb.&#39;</span><span class="p">,</span><span class="s1">&#39;Mar.&#39;</span><span class="p">,</span><span class="s1">&#39;Apr.&#39;</span><span class="p">,</span><span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;Jun.&#39;</span><span class="p">,</span><span class="s1">&#39;Jul.&#39;</span><span class="p">,</span><span class="s1">&#39;Aug.&#39;</span><span class="p">,</span><span class="s1">&#39;Sep.&#39;</span><span class="p">,</span><span class="s1">&#39;Oct.&#39;</span><span class="p">,</span><span class="s1">&#39;Nov.&#39;</span><span class="p">,</span><span class="s1">&#39;Dec.&#39;</span><span class="p">]</span>
-<span class="n">mark_point</span><span class="o">=</span><span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Y_data</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">data</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
-        <span class="n">mark_point</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">month_name</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">Y_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">Y_data</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&#34;D&#34;</span><span class="p">,</span> <span class="n">markevery</span><span class="o">=</span><span class="n">mark_point</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python </span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">X_data</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">Y_data</span><span class="o">=</span><span class="p">[</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">13</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">month_name</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Jan.&#39;</span><span class="p">,</span><span class="s1">&#39;Feb.&#39;</span><span class="p">,</span><span class="s1">&#39;Mar.&#39;</span><span class="p">,</span><span class="s1">&#39;Apr.&#39;</span><span class="p">,</span><span class="s1">&#39;May&#39;</span><span class="p">,</span><span class="s1">&#39;Jun.&#39;</span><span class="p">,</span><span class="s1">&#39;Jul.&#39;</span><span class="p">,</span><span class="s1">&#39;Aug.&#39;</span><span class="p">,</span><span class="s1">&#39;Sep.&#39;</span><span class="p">,</span><span class="s1">&#39;Oct.&#39;</span><span class="p">,</span><span class="s1">&#39;Nov.&#39;</span><span class="p">,</span><span class="s1">&#39;Dec.&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">mark_point</span><span class="o">=</span><span class="p">[]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">data</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">Y_data</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">data</span><span class="o">%</span><span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">mark_point</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">month_name</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">max</span><span class="p">(</span><span class="n">Y_data</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X_data</span><span class="p">,</span><span class="n">Y_data</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&#34;D&#34;</span><span class="p">,</span> <span class="n">markevery</span><span class="o">=</span><span class="n">mark_point</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>結果<br />
@@ -2321,7 +2321,7 @@ X番目にマーカーを付けたければX-1番目の数を配列に追加す�
 </div>
 
 
-<script defer src="/blog/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
+<script defer src="/blog/js/swipe.min.5b45017db39b94db049dd81e997decf8d1d711d8e3efcb65cde3b58e7e456506.js"></script>
 
 <script defer src="/blog/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
